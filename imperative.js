@@ -50,14 +50,14 @@ var categories = [
 var activities = [
 
 //WEEK 01 - INTRO
-["5", "Tue 20/09/22<br/>02:00pm-04:00pm<br/>MVB2.11/1.15",   "<a href='https://seis.bristol.ac.uk/~sh1670/LinTut.pdf' target='_blank'>THE LINUX TUTORIAL</a>", "", "", "0", "0"],
-["1", "Mon 26/09/22<br/>11:00am-11:50am<br/>QB1.40 Pugsley", "WELCOME &amp; INTRODUCTION",  "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_00.pdf", "", "21", "4"],
-["0", "Tue 27/09/22<br/>03:00pm-03:50pm<br/>QB1.40 Pugsley",    "PROCEDURES &amp; PROGRAMS",       "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_01.pdf", "https://mediasite.bris.ac.uk/Mediasite/Play/91d05240456c424a922dd1c8db97569d1d", "0", "2"],
-["11","Wed 28/09/22<br/>10:00am-01:00pm<br/>MVB2.11/1.15", "GET YOUR PC READY",  "/setup.html", "", "0", "0"],
-["5", "in your own time",   "<a href='https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week01/marking.html' target='_blank'>MARKING GUIDE</a><hr/><a href='https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week01/golden.html' target='_blank'>GOLDEN C RULES</a><hr/><a href='https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week01/plagiarism.html' target='_blank'>ACADEMIC INTEGRITY</a>",         "", "", "0", "0"],
-["0", "Fri 30/09/22<br/>03:00pm-03:50pm<br/>QB1.40 Pugsley",     "TYPES, VARIABLES &amp; SCOPE",      "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_02.pdf", "https://mediasite.bris.ac.uk/Mediasite/Play/0015df077d4d4287892c1e7563a68da71d", "2", "4"],
-["9", "",                   "",                                "", "", "0", "0"],
-["8", "",                   "",                                "", "", "0", "0"],
+// ["5", "Tue 20/09/22<br/>02:00pm-04:00pm<br/>MVB2.11/1.15",   "<a href='https://seis.bristol.ac.uk/~sh1670/LinTut.pdf' target='_blank'>THE LINUX TUTORIAL</a>", "", "", "0", "0"],
+// ["1", "Mon 26/09/22<br/>11:00am-11:50am<br/>QB1.40 Pugsley", "WELCOME &amp; INTRODUCTION",  "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_00.pdf", "", "21", "4"],
+// ["0", "Tue 27/09/22<br/>03:00pm-03:50pm<br/>QB1.40 Pugsley",    "PROCEDURES &amp; PROGRAMS",       "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_01.pdf", "https://mediasite.bris.ac.uk/Mediasite/Play/91d05240456c424a922dd1c8db97569d1d", "0", "2"],
+// ["11","Wed 28/09/22<br/>10:00am-01:00pm<br/>MVB2.11/1.15", "GET YOUR PC READY",  "/setup.html", "", "0", "0"],
+// ["5", "in your own time",   "<a href='https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week01/marking.html' target='_blank'>MARKING GUIDE</a><hr/><a href='https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week01/golden.html' target='_blank'>GOLDEN C RULES</a><hr/><a href='https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week01/plagiarism.html' target='_blank'>ACADEMIC INTEGRITY</a>",         "", "", "0", "0"],
+// ["0", "Fri 30/09/22<br/>03:00pm-03:50pm<br/>QB1.40 Pugsley",     "TYPES, VARIABLES &amp; SCOPE",      "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_02.pdf", "https://mediasite.bris.ac.uk/Mediasite/Play/0015df077d4d4287892c1e7563a68da71d", "2", "4"],
+// ["9", "",                   "",                                "", "", "0", "0"],
+// ["8", "",                   "",                                "", "", "0", "0"],
 
 //WEEK 02 - WRITING SIMPLE C PROGRAMS AND RECURSION
 // ["5", "in your own time",   "<a href='https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week02/COMS10016_Make.pdf' target='_blank'>BASICS OF MAKE</a><hr/><a href='https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week02/COMS10016_Linux.pdf' target='_blank'>LINUX COMMANDS</a><hr/><a href='https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week01/style.html' target='_blank'>C-STYLE GUIDE</a>",         "", "", "0", "0"],
