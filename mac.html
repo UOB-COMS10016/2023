@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
+
+<head>
+<meta name="style" content="cs" />
+<title>University of Bristol - Computer Science - COMS10016: Imperative and Functional Programming</title>
+<link rel="stylesheet" type="text/css" href="corporate.css">
+<link rel="stylesheet" type="text/css" href="uob.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/9.9.0/styles/xcode.min.css"/>
+<script src="https://cdn.jsdelivr.net/highlight.js/9.9.0/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/highlight.js/9.9.0/languages/cpp.min.js"></script>
+<script>
+  addEventListener('load', start);
+  function start() {
+    var pres = document.querySelectorAll("pre");
+    for (var i in pres) hljs.highlightBlock(pres[i]);
+  }
+</script>
+<style>
+  body { font-size: 120%; }
+  pre, .indent { margin-left: 40px; }
+  details[open] { background-color: #cfc; }
+  body { counter-reset: step; }
+  h2::before { counter-increment: step; content: "Step " counter(step) ": "; }
+</style>
+</head>
+<body bgcolor="#EEEEFF" style="margin:0; padding:30px;">
+
+<div align="center"><img src="osx.jpg" width="100px"><br/>COMS10016 | Week 01 | Preparation<br/><h1>SYSTEM SETUP FOR OSX</h1></div>
+
+This is a brief tutorial on how to setup your personal Apple/Mac/OSX system to be ready for the COMS10016 unit. 
+The below steps represent one out of many ways of setting up your system for the unit. Before you start make sure your system is up-to-date with respect to updates and features. 
+It is your responsibility to keep your personal system and passwords safe.
+To ensure your Mac user has the required permissions, go to "System Preferences &gt; Users &amp; Groups". 
+Ensure that your user account is listed as 'Admin', otherwise log in with an Admin account.
+
+
+<h2>INSTALL THE CLANG COMPILER</h2>
+<ol>
+<li>Open the Terminal (Mac command prompt). For example, press <b>Command + Space</b> and type: <code>Terminal</code> then select <b>Terminal.app</b> - a Terminal window will open.</li>
+<li>Run <code>clang --version</code> to see if the C compiler is already available.<br />You should get ONE of the following responses:</li>
+<ul>
+<li>Information shown such as 'Apple LLVM version 10.0.1 (...)'.<br />The compiler is already installed, move on to Installing the VSCode Editor.</li>
+<li><i>OR: </i>A dialogue box pops up suggesting you install the Command Line Developer Tools.<br />Select <b>Install</b> and follow the wizard steps to install these Tools.<br />After this is complete, again run: <code>clang --version</code><br />You should now get output as above.</li>
+<li><i>OR: </i>An error showing that the command is not found.<br />Enter: <code>xcode-select --install</code> to start the Command Line Developer Tools install dialogue - follow instructions as above.</li>
+</ul>
+If all of that fails, as a last resort install 'Xcode' from the App Store on your Mac.
+</ol>
+
+<h2>INSTALL HOMEBREW</h2>
+
+<ul>
+  <li>In a terminal, run <code>brew</code> to check if the <a href="https://brew.sh" target="_blank">Homebrew</a> package manager is already installed.
+  <li>If a 'command not found' error is shown, run the following command in your terminal and follow the instructions, including the commands it tells you to run in the "Next steps" section after the installation finishes:<br/>
+    <code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code></li>
+  <li>If you encounter a permissions issue on your device you may want to check out this <a href="https://gist.github.com/irazasyed/7732946" target="_blank">discussion</a>.</li>
+  <li>Run: <code>brew update</code></li>
+</ul>
+
+<h2>INSTALL HASKELL, QUICKCHECK, and HLS</h2>
+
+<ul>
+  <li><b>Apple silicon Macs only</b> (to check if your Mac uses Apple silicon, see: <a href="https://support.apple.com/en-gb/HT211814">Mac computers with Apple silicon</a>) :
+    <ul>
+      <li>In a terminal, run <code>brew install llvm@14</code> (It has to be version 14, because version 15 makes a breaking API change which GHC has not caught up with at the time of writing, see: <a href="https://gitlab.haskell.org/ghc/ghc/-/issues/21936">GHC Issue #21936</a>)</li>
+      <li>Run <code>echo 'export PATH="$PATH:/opt/homebrew/opt/llvm@14/bin"' > ~/.zshrc</code></li>
+      <li>Restart terminal.</li>
+    </ul>
+
+  </li>
+   
+  <li>In a terminal, run <code>curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh</code></li>
+  
+  <li>Press enter to proceed</li>
+  <li>When asked about adding the required PATH variable to .zshrc, select "Yes, prepend" by typing "P" and pressing enter. [Side note: Your PATH variable contains a list of directories your terminal will look through to find executables, e.g. when you use <code>curl</code> as a command, your terminal looks for an executable named "curl" in those directories. GHCup creates a new directory where it will put executables, so this has to be added to your PATH if you want to use them in your terminal.]</li>
+  <li>When asked about installing haskell-language-server, select "Yes" by entering "Y".</li>
+  <li>When asked about installing stack, select "No" by entering "N".</li>
+  <li>Press enter to proceed and wait for the installation to finish.</li>
+  <li>This will install <code>ghc</code> (the Haskell compiler), <code>ghci</code> (the Haskell <a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop">REPL</a>), <code>cabal</code> (a Haskell package manager), and the Haskell Language Server (a.k.a. HLS, which adds <a href="https://en.wikipedia.org/wiki/Integrated_development_environment">IDE</a> support for Haskell)</li>
+  <li>Close and reopen your terminal so the updated PATH variable in .zshrc can take effect, giving you access to the programs you just installed.</li>
+  <li>Check they're working by running <code>ghc --version</code>, <code>cabal --version</code>, and <code>haskell-language-server-wrapper --version</code>. If they've installed correctly, each of these commands should print out version information.</li>
+  <li>Update cabal's package list by running <code>cabal update</code></li>
+  <li>Install QuickCheck by running <code>cabal install --lib QuickCheck</code></li>
+  
+  <li>Note: if you have any further installation issues, the Teaching Assistants (TAs) will be there in the first lab to help you with this in the setup labs.</li>
+</ul>
+
+<h2>INSTALL THE VSCODE EDITOR</h2>
+
+<ul>
+<li>In your web browser, navigate to: <a href="https://code.visualstudio.com/docs/setup/mac">https://code.visualstudio.com/docs/setup/mac</a></li>
+<li>Follow the 'Installation' and 'Launching from the command line' instructions</li>
+<li>Open a VSCode window.</li>
+<li>Install the "Haskell" extension by pressing Command + P and entering "ext install haskell.haskell".</li>
+<li>Test HLS is working by creating a new Haskell file named "test.hs" (e.g. with "File -> New File" and naming it "test.hs"). This should give you a prompt saying "How do you want the extension to manage/discover HLS and the relevant toolchain?". Select "Automatically via GHCup".</li>
+<li>If it says "Need to download stack, continue?", you can safely select either "Yes" or "No". We will not be using stack either way, but you may want to say "Yes" just to make the popup go away.</li>
+<li>In "test.hs", start typing some invalid Haskell code, e.g. <code>x = True && 'c'</code>. If HLS is working, you should see that VSCode underlines the error.</li>
+</ul>
+
+<hr/>
+
+At this point your system is ready for most of the COMS10016 unit and you are ready to start programming in C and Haskell. Further installations
+are optional at the beginning of the unit. However, during the last part of the unit we will use graphics, and for this we will need the SDL2 graphics libraries 
+and a Linux desktop environment...
+
+<h2>INSTALL THE SDL2 DEVELOPMENT PACKAGE</h2>
+<ol>
+<li>In a terminal, run: <code>brew install sdl2</code></li>
+<li>Ensure SDL2 is installed by running: <code>sdl2-config --version</code> (version information should be displayed, such as 2.24.0).</li>
+<li>Install <a href="https://formulae.brew.sh/formula/pkg-config">pkg-config</a> to make compiling with SDL2 easier: <code>brew install pkg-config</code></li>
+</ol>
+
+<h2>CHECK SDL2 GRAPHICS</h2>
+<ol>
+<li>Download the program <a href="hellosdl.c" target="_blank">hellosdl.c</a> (Right click/two finger click the link -> Download Linked File As) and save it to your terminal's current working directory (or wherever you want to save it, but you have to change directory in the Terminal to the location of the downloaded file).</li>
+<li>Compile and run the program: <code>clang -std=c11 -Wall hellosdl.c -o hellosdl `pkg-config --libs --cflags sdl2`</code></li>
+<li>If the compilation was sucessful, you will see the new executable file <b>hellosdl</b> in the current directory.</li>
+<li>Run this program by running: <code>./hellosdl</code></li>
+</ul>
+<li>If you see a sky blue 'HelloSDL' window appear then SDL2 is working properly!<li/>
+Setup is complete!</li>
+<li>Note that some parts of the SDL library unfortunately have memory leaks, but there's nothing you can do about them, so don't be alarmed if you see some warnings.</li>
+</ol>
+</body>
+</html>

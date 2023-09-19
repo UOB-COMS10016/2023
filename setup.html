@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
+
+<head>
+<meta name="style" content="cs" />
+<title>University of Bristol - Computer Science - COMS10016: Imperative and Functional Programming</title>
+<link rel="stylesheet" type="text/css" href="corporate.css">
+<link rel="stylesheet" type="text/css" href="uob.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/9.9.0/styles/xcode.min.css"/>
+<script src="https://cdn.jsdelivr.net/highlight.js/9.9.0/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/highlight.js/9.9.0/languages/cpp.min.js"></script>
+<script>
+  addEventListener('load', start);
+  function start() {
+    var pres = document.querySelectorAll("pre");
+    for (var i in pres) hljs.highlightBlock(pres[i]);
+  }
+</script>
+<style>
+  body { font-size: 120%; }
+  pre, .indent { margin-left: 40px; }
+  details[open] { background-color: #cfc; }
+  body { counter-reset: step; }
+  h2::before { counter-increment: step; content: "Step " counter(step) ": "; }
+</style>
+</head>
+<body bgcolor="#EEEEFF" style="margin:0; padding:30px;">
+
+<div align="center">COMS10016 | Week 01 | Setup Lab:<br/><h1>GETTING YOUR PC READY</h1></div>
+
+<p><b>TASK:</b> The first thing to do when you start programming is to set up your computer. 
+This page will help you to set up your environment for both imperative and functional programming. 
+You will need to work within a Linux-enabled GUI environment, which has the clang compiler, the SDL2.0 libraries,  
+the Haskell environment, the QuickCheck extension, and a file editor correctly installed. We provide tutorials for Windows 10 or 11, Linux Ubuntu, and OSX.
+We strongly recommend the use of the VS Code Editor as your main file editor, however, any  
+editor of your choice will suffice if you do not need our support.</p> 
+
+<p>We provide you with three different 'Options' to setup your system. You will need internet access and administrator permissions on your computer. 
+Try 'Option 1' first, this should work for most systems. 
+Only if this does not work for you try 'Option 2', this should work for almost all systems. If this is not successful then, as a last resort, try 'Option 3'.</p>
+
+<p>If you are a 1st year undergraduate student then note that, in addition to the installations below, you will need 
+<a href="https://www.microsoft.com/en-gb/microsoft-365/microsoft-teams/download-app" target="_blank">Microsoft Teams</a> installed on your system too. For your programming unit you will need to be able to
+access the Blackboard Website using your University of Bristol <a href="https://www.bristol.ac.uk/students/support/it" target="_blank">login details</a>, that is your username and password.</p><hr/><br/>
+
+<center><b><u>OPTION 1 - Install Software Directly (recommended)</u></b></center>
+<br/><table><tbody><tr>
+<td valign="top" style="padding:10px"><img src="win.jpg" width="200px"></td><td valign="top" style="padding:10px"><p><b>Windows:</b> If you work with Windows 10 or 11 (64bit Home or 64bit Professional) then go through the steps in 
+<a href="windows.html" target="_blank">System Setup for Windows 10 or 11</a>.</p><td>
+<td valign="top" style="padding:10px"><img src="linux.jpg" width="200px"></td><td valign="top" style="padding:10px"><p><b>Linux:</b> If you work with Ubuntu Linux then follow the installation instructions at <a href="unix.html" target="_blank">System Setup for Ubuntu Linux</a>.</p></td>
+<td valign="top" style="padding:10px"><img src="osx.jpg" width="200px"></td><td valign="top" style="padding:10px"><b>OSX:</b> If you work with Apple/Mac/OSX then follow the installation instructions at <a href="mac.html" target="_blank">System Setup for Mac OSX</a>.</p>
+</td>
+</tr>
+</tbody></table>
+<hr/><br/>
+<center><b><u>OPTION 2 - Run Ubuntu Environment via VirtualBox (fallback A)</u></b></center>
+<br />
+<p><b>VirtualBox (for all systems apart from Mac M1):</b> As an alternative to the above steps or if your system is not compatible and if you do not have an ARM processor (Mac M1), we recommend that you install Linux on a virtual machine. The
+easiest way to do this is to use <a href="https://www.virtualbox.org" target="_blank">VirtualBox</a>. For tutorials on how to install Ubuntu using VirtualBox, use a <a href="https://www.google.com/search?q=install+ubuntu+via+virtualbox&oq=install+Ubuntu+via+virtualbox" target="_blank">web search</a> or follow 
+<a href="https://brb.nci.nih.gov/seqtools/installUbuntu.html" target="_blank">this</a> online tutorial. Once Ubuntu is installed, follow the <a href="unix.html" target="_blank">System Setup for Ubuntu Linux</a>.</p>
+
+<p><b>Mac M1 Users only:</b> - VirtualBox won't work for an M1 machine. Instead, UTM will work for M1 macs which you can find and download from <a href="https://getutm.app" target="_blank">here</a>. 
+You will need to install UTM and download the Ubuntu driver. All the instructions you need are <a href="https://mac.getutm.app/gallery/ubuntu-20-04" target="_blank">here</a>. 
+After installing UTM and downloading the Ubuntu .iso file you can follow the instructions from the link above. The pictures will get you as far as installing the Ubuntu machine command line interface, and after this there are a few commands to install the GUI (the stuff that lets you use web browsers etc...)
+Once you reach the selection of the USB device to mount, you will need to access the drop-down menu and browse your computer for the Ubuntu .iso file you downloaded earlier. This is crucial for running the Ubuntu VM. 
+After you've configured all this, you will be greeted with a command line installation of Ubuntu, you will want to accept the defaults for everyhthing and then reboot. At some point the installation will ask you if you are sure you want to wipe your drive - this is just wiping the VM, not your actual computer. 
+If the reboot is taking a very very long time and nothing is happening, force the VM shut down by clicking the square stop button and restart it with the play button.
+Once you have a working command line for Ubuntu, you can run the commands at the bottom of the instructions page linked above. Again, you'll command the machine to reboot and it might not reboot properly. If it gets stuck just force it to exit and restart the VM. Once Ubuntu is installed, follow the <a href="unix.html" target="_blank">System Setup for Ubuntu Linux</a>.</p>
+
+<hr/><br/>
+<center><b><u>OPTION 3 - Remote Connect via X2Go to our LinuxLab (fallback B)</u></b></center>
+<br/><b>Remote Machine:</b> Only if you were unsuccessful and neither setting up your machine nor running a virtual machine worked, consider logging into a lab machine 
+remotely. All software required for COMS10016 is pre-installed and ready to go on these machines.
+IT services offer an installation guide for using the  
+<a href="https://uob.sharepoint.com/sites/itservices/SitePages/fits-engineering-linux-x2go.aspx" target="_blank">Linux Remote Desktop</a> services, which you should follow
+in order to use remote computers. The simplest way to use a remote MVB2.11 Linux machine on campus without a graphical user interface is via 
+<a href="https://uob.sharepoint.com/sites/itservices/SitePages/fits-engineering-linux-ssh.aspx" target="_blank">SSH to snowy.cs.bris.ac.uk</a>. Remote access is 
+supported by our <a href="https://uob.sharepoint.com/sites/itservices/SitePages/contacts.aspx" target="_blank">IT services</a> also via phone help on 01173742833, whom you should contact first if
+you encounter problems with remote logins. Only if all options have failed, contact us during our first lab in week 1, which is dedicated to meeting your peers and
+getting everybody set up. 
+</body>
+</html>
