@@ -53,7 +53,7 @@ functionalPage =
     --     }
     , Entry
         { title = "GET YOUR PC READY"
-        , spec = SetupLab{setupLink = "/setup.html"}
+        , spec = SetupLab{setupLink = "./setup.html"}
         , materials = []
         }
     ]
