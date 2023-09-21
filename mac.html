@@ -55,16 +55,21 @@ If all of that fails, as a last resort install 'Xcode' from the App Store on you
   <li>If a 'command not found' error is shown, run the following command in your terminal and follow the instructions, including the commands it tells you to run in the "Next steps" section after the installation finishes:<br/>
     <code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code></li>
   <li>If you encounter a permissions issue on your device you may want to check out this <a href="https://gist.github.com/irazasyed/7732946" target="_blank">discussion</a>.</li>
-  <li>Run: <code>brew update</code></li>
+  <li>Run:
+    <ol>
+      <li><code>brew update</code></li>
+      <li><code>brew upgrade</code></li>
+    </ol>
+  </li>
 </ul>
 
 <h2>INSTALL HASKELL, QUICKCHECK, and HLS</h2>
 
 <ul>
-  <li><b>Apple silicon Macs only</b> (to check if your Mac uses Apple silicon, see: <a href="https://support.apple.com/en-gb/HT211814">Mac computers with Apple silicon</a>) :
+  <li><b>Apple silicon Macs only</b> (to check if your Mac uses Apple silicon, see: <a href="https://support.apple.com/en-gb/HT211814" target="_blank">Mac computers with Apple silicon</a>) :
     <ul>
-      <li>In a terminal, run <code>brew install llvm@14</code> (It has to be version 14, because version 15 makes a breaking API change which GHC has not caught up with at the time of writing, see: <a href="https://gitlab.haskell.org/ghc/ghc/-/issues/21936">GHC Issue #21936</a>)</li>
-      <li>Run <code>echo 'export PATH="$PATH:/opt/homebrew/opt/llvm@14/bin"' > ~/.zshrc</code></li>
+      <li>In a terminal, run <code>brew install llvm@14</code> (It has to be version 14, because version 15 makes a breaking API change which GHC has not caught up with at the time of writing, see: <a href="https://gitlab.haskell.org/ghc/ghc/-/issues/21936" target="_blank">GHC Issue #21936</a>)</li>
+      <li>Run <code>echo 'export PATH="/opt/homebrew/opt/llvm@14/bin:$PATH"' > ~/.zshrc</code></li>
       <li>Restart terminal.</li>
     </ul>
 
@@ -75,21 +80,21 @@ If all of that fails, as a last resort install 'Xcode' from the App Store on you
   <li>Press enter to proceed</li>
   <li>When asked about adding the required PATH variable to .zshrc, select "Yes, prepend" by typing "P" and pressing enter. [Side note: Your PATH variable contains a list of directories your terminal will look through to find executables, e.g. when you use <code>curl</code> as a command, your terminal looks for an executable named "curl" in those directories. GHCup creates a new directory where it will put executables, so this has to be added to your PATH if you want to use them in your terminal.]</li>
   <li>When asked about installing haskell-language-server, select "Yes" by entering "Y".</li>
-  <li>When asked about installing stack, select "No" by entering "N".</li>
+  <li>When asked about enabling better integration of stack, select "Yes" by entering "Y".</li>
+  <!-- <li>When asked about installing stack, select "No" by entering "N".</li> -->
   <li>Press enter to proceed and wait for the installation to finish.</li>
-  <li>This will install <code>ghc</code> (the Haskell compiler), <code>ghci</code> (the Haskell <a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop">REPL</a>), <code>cabal</code> (a Haskell package manager), and the Haskell Language Server (a.k.a. HLS, which adds <a href="https://en.wikipedia.org/wiki/Integrated_development_environment">IDE</a> support for Haskell)</li>
+  <li>This will install <code>ghc</code> (the Haskell compiler), <code>ghci</code> (the Haskell <a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop" target="_blank">REPL</a>), <code>cabal</code> (a Haskell package manager), and the Haskell Language Server (a.k.a. HLS, which adds <a href="https://en.wikipedia.org/wiki/Integrated_development_environment" target="_blank">IDE</a> support for Haskell)</li>
   <li>Close and reopen your terminal so the updated PATH variable in .zshrc can take effect, giving you access to the programs you just installed.</li>
   <li>Check they're working by running <code>ghc --version</code>, <code>cabal --version</code>, and <code>haskell-language-server-wrapper --version</code>. If they've installed correctly, each of these commands should print out version information.</li>
   <li>Update cabal's package list by running <code>cabal update</code></li>
   <li>Install QuickCheck by running <code>cabal install --lib QuickCheck</code></li>
   
-  <li>Note: if you have any further installation issues, the Teaching Assistants (TAs) will be there in the first lab to help you with this in the setup labs.</li>
 </ul>
 
 <h2>INSTALL THE VSCODE EDITOR</h2>
 
 <ul>
-<li>In your web browser, navigate to: <a href="https://code.visualstudio.com/docs/setup/mac">https://code.visualstudio.com/docs/setup/mac</a></li>
+<li>In your web browser, navigate to: <a href="https://code.visualstudio.com/docs/setup/mac" target="_blank">https://code.visualstudio.com/docs/setup/mac</a></li>
 <li>Follow the 'Installation' and 'Launching from the command line' instructions</li>
 <li>Open a VSCode window.</li>
 <li>Install the "Haskell" extension by pressing Command + P and entering "ext install haskell.haskell".</li>
@@ -108,12 +113,12 @@ and a Linux desktop environment...
 <ol>
 <li>In a terminal, run: <code>brew install sdl2</code></li>
 <li>Ensure SDL2 is installed by running: <code>sdl2-config --version</code> (version information should be displayed, such as 2.24.0).</li>
-<li>Install <a href="https://formulae.brew.sh/formula/pkg-config">pkg-config</a> to make compiling with SDL2 easier: <code>brew install pkg-config</code></li>
+<li>Install <a href="https://formulae.brew.sh/formula/pkg-config" target="_blank">pkg-config</a> to make compiling with SDL2 easier: <code>brew install pkg-config</code></li>
 </ol>
 
 <h2>CHECK SDL2 GRAPHICS</h2>
 <ol>
-<li>Download the program <a href="hellosdl.c" target="_blank">hellosdl.c</a> (Right click/two finger click the link -> Download Linked File As) and save it to your terminal's current working directory (or wherever you want to save it, but you have to change directory in the Terminal to the location of the downloaded file).</li>
+<li>Download the program <a href="hellosdl.c" target="_blank">hellosdl.c</a> by running: <code>curl -o hellosdl.c https://uob-coms10016.github.io/2023/hellosdl.c</code></li>
 <li>Compile and run the program: <code>clang -std=c11 -Wall hellosdl.c -o hellosdl `pkg-config --libs --cflags sdl2`</code></li>
 <li>If the compilation was sucessful, you will see the new executable file <b>hellosdl</b> in the current directory.</li>
 <li>Run this program by running: <code>./hellosdl</code></li>
