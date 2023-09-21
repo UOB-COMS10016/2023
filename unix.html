@@ -52,9 +52,9 @@ It is your responsibility to keep your personal system and passwords safe.
   <li>Press enter to proceed</li>
   <li>When asked about adding the required PATH variable to .bashrc, select "Yes, prepend" by typing "P" and pressing enter. [Side note: Your PATH variable contains a list of directories your terminal will look through to find executables, e.g. when you use <code>curl</code> as a command, your terminal looks for an executable named "curl" in those directories. GHCup creates a new directory where it will put executables, so this has to be added to your PATH if you want to use them in your terminal.]</li>
   <li>When asked about installing haskell-language-server, select "Yes" by entering "Y".</li>
-  <li>When asked about installing stack, select "No" by entering "N".</li>
+  <li>When asked about enabling better integration of stack, select "Yes" by entering "Y".</li>
   <li>Press enter to proceed and wait for the installation to finish.</li>
-  <li>This will install <code>ghc</code> (the Haskell compiler), <code>ghci</code> (the Haskell <a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop">REPL</a>), <code>cabal</code> (a Haskell package manager), and the Haskell Language Server (a.k.a. HLS, which adds <a href="https://en.wikipedia.org/wiki/Integrated_development_environment">IDE</a> support for Haskell)</li>
+  <li>This will install <code>ghc</code> (the Haskell compiler), <code>ghci</code> (the Haskell <a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop" target="_blank">REPL</a>), <code>cabal</code> (a Haskell package manager), and the Haskell Language Server (a.k.a. HLS, which adds <a href="https://en.wikipedia.org/wiki/Integrated_development_environment" target="_blank">IDE</a> support for Haskell)</li>
   <li>Close and reopen your terminal so the updated PATH variable in .bashrc can take effect, giving you access to the programs you just installed.</li>
   <li>Check they're working by running <code>ghc --version</code>, <code>cabal --version</code>, and <code>haskell-language-server-wrapper --version</code>. If they've installed correctly, each of these commands should print out version information.</li>
   <li>Update cabal's package list by running <code>cabal update</code></li>
@@ -70,7 +70,7 @@ It is your responsibility to keep your personal system and passwords safe.
   <li>Search for 'vscode'</li>
   <li>Select the 'code' result</li>
   <li>Click install and enter your password</li>
-  <li>For alternative installation methods, see: <a href="https://code.visualstudio.com/docs/setup/linux">https://code.visualstudio.com/docs/setup/linux</a></li>
+  <li>For alternative installation methods, see: <a href="https://code.visualstudio.com/docs/setup/linux" target="_blank">https://code.visualstudio.com/docs/setup/linux</a></li>
   <li>Open a VSCode window.</li>
   <li>Install the "Haskell" extension by pressing Ctrl + P and entering "ext install haskell.haskell".</li>
   <li>Test HLS is working by creating a new Haskell file named "test.hs" (e.g. with "File -> New File" and naming it "test.hs"). This should give you a prompt saying "How do you want the extension to manage/discover HLS and the relevant toolchain?". Select "Automatically via GHCup".</li>

@@ -50,14 +50,14 @@ It is your responsibility to keep your personal system and passwords safe.
 
 <ul>
   <li>Windows search "powershell".</li> 
-  <li>Right-click "Windows PowerShell" and click "Run as administrator".</li> 
+  <li>Right-click "Windows PowerShell" (<strong>not</strong> "Windows Powershell (x86)") and click "Run as administrator".</li> 
   <li>Click yes on the consent prompt and an elevated PowerShell will open.</li>
-  <li>In PowerShell, run <code>wsl --install -d Ubuntu</code> (i.e. type "wsl --install -d Ubuntu" and press enter). If PowerShell can't find the <code>wsl</code> command, make sure your Windows is fully updated, then try again. If it still isn't there, make sure PowerShell is in 64-bit mode by running <code>[Environment]::Is64BitProcess</code> (which will return "True" if it is and "False" if it isn't). </li>
-  <li>Once the command finishes, restart your computer.</li>
+  <li>In PowerShell, run <code>wsl --set-default-version 2</code> (i.e. type "wsl --set-default-version 2" and press enter), then run <code>wsl --install -d Ubuntu</code>. If PowerShell can't find the <code>wsl</code> command, make sure your Windows is fully updated, then try again. If it still isn't there, make sure PowerShell is in 64-bit mode by running <code>[Environment]::Is64BitProcess</code> (which will return "True" if it is and "False" if it isn't). </li>
+  <li>Once the command finishes, restart your computer (unless an Ubuntu window opens immediately, in which case just continue to the next step).</li>
   <li>Soon after your computer reboots, an Ubuntu window should open and complete the installation process. This may take a few minutes.</li>
-  <li>Once the installation is complete, you will then be prompted to enter a UNIX username and password in the Ubuntu window. Make sure you remember them. You can use any username, but many people just use their name in lowercase (eg. "tilo").</li>
+  <li>Once the installation is complete, you will be prompted to enter a UNIX username and password in the Ubuntu window. Make sure you remember them. You can use any username, but many people just use their name in lowercase (eg. "tilo"). <strong>Important:</strong> When you enter your password it won't display any characters as you type. <strong>This is not a bug, your password is still being entered.</strong></li>
   <li>Update Ubuntu by running <code>sudo apt update</code> (this checks for upgrades), then <code>sudo apt upgrade</code> (this installs the upgrades). When asked "Do you want to continue? [Y/n]", press enter to select the default "Y"/"Yes" option, and wait for the upgrade to complete. [Side note: <code>apt</code> is a "package manager", which does what it says on the tin and manages packages/software on your system. <code>sudo</code> stands for "SuperUser DO" and you add it to the front of a command to run that command as the superuser (a.k.a. administrator or "root").]</li>
-  <li>Your Ubuntu files are stored in a separate filesystem to your Windows files, which makes difficult to access from Windows (and you shouldn't try to). However, you can easily access your Windows C drive from Ubuntu by going to the "/mnt/c" directory in the Ubuntu terminal (if your Windows is on the D drive, it would be "/mnt/d" instead etc.). For convenience, you can create a "symbolic link" (similar to a shortcut) from your Linux home directory to your Windows files by running: <code>ln -s /mnt/c/Users/[insert your Windows username here]/Documents ~/WindowsDocuments</code> (e.g. <code>ln -s /mnt/c/Users/tilo/Documents ~/WindowsDocuments</code>)</li>
+  <li>Your Ubuntu files are stored in a separate filesystem to your Windows files, which makes difficult to access from Windows (and you shouldn't try to). However, you can access your Windows C drive from Ubuntu by going to the "/mnt/c" directory in the Ubuntu terminal (if your Windows is on the D drive, it would be "/mnt/d" instead etc.). For convenience, you can create a "symbolic link" (similar to a shortcut) from your Linux home directory to your Windows files by running: <code>ln -s /mnt/c/Users/[insert your Windows username here]/Documents ~/WindowsDocuments</code> (e.g. <code>ln -s /mnt/c/Users/tilo/Documents ~/WindowsDocuments</code>)</li>
   <li>Whenever you want to open a new Ubuntu terminal, you can Windows search "Ubuntu" and click the Ubuntu application.</li>
 </ul>
 
@@ -78,26 +78,24 @@ It is your responsibility to keep your personal system and passwords safe.
 <li>Press enter to proceed</li>
 <li>When asked about adding the required PATH variable to .bashrc, select "Yes, prepend" by typing "P" and pressing enter. [Side note: Your PATH variable contains a list of directories your terminal will look through to find executables, e.g. when you use <code>curl</code> as a command, your terminal looks for an executable named "curl" in those directories. GHCup creates a new directory where it will put executables, so this has to be added to your PATH if you want to use them in your terminal.]</li>
 <li>When asked about installing haskell-language-server, select "Yes" by entering "Y".</li>
-<li>When asked about installing stack, select "No" by entering "N".</li>
+<li>When asked about enabling better integration of stack, select "Yes" by entering "Y".</li>
 <li>Press enter to proceed and wait for the installation to finish.</li>
-<li>This will install <code>ghc</code> (the Haskell compiler), <code>ghci</code> (the Haskell <a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop">REPL</a>), <code>cabal</code> (a Haskell package manager), and the Haskell Language Server (a.k.a. HLS, which adds <a href="https://en.wikipedia.org/wiki/Integrated_development_environment">IDE</a> support for Haskell)</li>
+<li>This will install <code>ghc</code> (the Haskell compiler), <code>ghci</code> (the Haskell <a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop" target="_blank">REPL</a>), <code>cabal</code> (a Haskell package manager), and the Haskell Language Server (a.k.a. HLS, which adds <a href="https://en.wikipedia.org/wiki/Integrated_development_environment" target="_blank">IDE</a> support for Haskell)</li>
 <li>Close and reopen your Ubuntu terminal so the updated PATH variable in .bashrc can take effect, giving you access to the programs you just installed.</li>
 <li>Check they're working by running <code>ghc --version</code>, <code>cabal --version</code>, and <code>haskell-language-server-wrapper --version</code>. If they've installed correctly, each of these commands should print out version information.</li>
 <li>Update cabal's package list by running <code>cabal update</code></li>
 <li>Install QuickCheck by running <code>cabal install --lib QuickCheck</code></li>
 
-<li>Note: if you have any further installation issues, the Teaching Assistants (TAs) will be there in the first lab to help you with this in the setup labs.</li>
-
 </ul>
 
 <h2>INSTALL THE VSCODE EDITOR</h2>
 <ul>
-  <li>go to <a href="https://code.visualstudio.com/">https://code.visualstudio.com/</a>
+  <li>go to <a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a>
   <li>download and run the installer for <b>Windows</b></li>
   <li>During installation, under the Additional Tasks step, ensure all the checkboxes under "Other:" are checked.</li>
   <li>Once VSCode is installed, open it.</li>
   <li>Install the "Remote - WSL" extension by pressing Ctrl + P and then entering "ext install ms-vscode-remote.remote-wsl".</li>
-  <li>Whenever using VSCode, make sure you're using a WSL window. The easiest way to do that is to look in the bottom-left corner of the window. If it's using WSL, it will say "WSL: Ubuntu". If it doesn't say that, click it and select one of the commands to open a WSL Window, e.g. "New WSL Window" or "Reopen Folder in WSL" if you have a folder open already. For more detailed information, see: <a href="https://code.visualstudio.com/docs/remote/wsl">Developing in WSL</a></li>
+  <li>Whenever using VSCode, make sure you're using a WSL window. The easiest way to do that is to look in the bottom-left corner of the window. If it's using WSL, it will say "WSL: Ubuntu". If it doesn't say that, click it and select one of the commands to open a WSL Window, e.g. "New WSL Window" or "Reopen Folder in WSL" if you have a folder open already. For more detailed information, see: <a href="https://code.visualstudio.com/docs/remote/wsl" target="_blank">Developing in WSL</a></li>
   <li>You can open an Ubuntu/WSL terminal from within a VSCode WSL window with "Terminal -> New Terminal" or Ctrl + Shift + `</li>
   <li>Make sure your VSCode window is in WSL mode, then open and install the "Haskell" extension by pressing Ctrl + P and entering "ext install haskell.haskell". It's important you do this in a WSL window, because it relies on GHCup, which is installed on WSL, not on Windows.</li>
   <li>Test HLS is working by creating a new Haskell file named "test.hs" (e.g. with "File -> New File" and naming it "test.hs"). This should give you a prompt saying "How do you want the extension to manage/discover HLS and the relevant toolchain?". Select "Automatically via GHCup".</li>
@@ -119,7 +117,7 @@ and a Linux desktop environment...
 
 <h2>INSTALL THE VCXSRV WINDOWS X-SERVER</h2>
 <ul>
-<li>Open a web browser and go to <a href="https://sourceforge.net/projects/vcxsrv/files/latest/download">https://sourceforge.net/projects/vcxsrv/files/latest/download</a> to download the installer</li> 
+<li>Open a web browser and go to <a href="https://sourceforge.net/projects/vcxsrv/files/latest/download" target="_blank">https://sourceforge.net/projects/vcxsrv/files/latest/download</a> to download the installer</li> 
 <li>Run the installer</li>
 <li>If your windows administrator password is required, provide it and press enter to confirm</li>
 <li>The installation window should open. Click "Next", then "Install", and finally "Close".</li>  
@@ -139,7 +137,7 @@ and a Linux desktop environment...
 <li>Select "Start no client" and click "Next".</li>
 <li>Make sure "Clipboard", "Primary Selection", "Native opengl", and "Disable access control" are ticked, then click "Next".</li>
 <li>Click "Finish" and a black VcXsrv window should open</li>
-<li>If you get a security alert saying "Windows Defender Firewall has blocked some features of VcXsrv windows xserver on all public and private networks", under "Allow VcXsrv windows xserver to communicate on these networks:", make sure "Private networks" and "Public networks" are checked, then click "Allow access". Ideally this wouldn't be necessary, but it's been an <a href="https://github.com/microsoft/WSL/issues/4139">open issue since 2019</a>.</li>
+<li>If you get a security alert saying "Windows Defender Firewall has blocked some features of VcXsrv windows xserver on all public and private networks", under "Allow VcXsrv windows xserver to communicate on these networks:", make sure "Private networks" and "Public networks" are checked, then click "Allow access". Ideally this wouldn't be necessary, but it's been an <a href="https://github.com/microsoft/WSL/issues/4139" target="_blank">open issue since 2019</a>.</li>
 <li>In an Ubuntu terminal, run <code>export DISPLAY=$(grep -m 1 nameserver /etc/resolv.conf | awk '{print $2}'):0</code></li>
 <li>Run <code>export LIBGL_ALWAYS_INDIRECT=1</code></li>
 <li>Run <code>startlxde</code></li>
