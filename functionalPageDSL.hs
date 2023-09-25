@@ -37,20 +37,33 @@ functionalPage =
     [  Entry
         { title = ""
         , spec = ExtraMaterials
-        , materials = 
+        , materials =
             [ external "Guest seminar VOD: Haskell in the Datacentre" "https://web.microsoftstream.com/video/17f0fbf7-461c-4cf1-937f-21e8407a137e"
             , external "Paper: How functional programming mattered" "https://mengwangoxf.github.io/Papers/NSR15.pdf"
             , external "Bristol PL Research Group" "https://bristolpl.github.io/"
             ]
         }
-    -- , Entry
-    --     { title = "Introduction"
-    --     , spec = Lectures
-    --         { slidesFile = BB "week1.pdf"
-    --         , revisionVideos = [] -- ["https://mediasite.bris.ac.uk/Mediasite/Play/18e6ea68ad654e9aaafc9f34805f2c831d"]
-    --         }
-    --     , materials = []
-    --     }
+    , Entry
+        { title = "Welcome & Introduction"
+        , spec = Lecture
+            { firstOrSecond = First
+            , slidesFile' = Nothing 
+            , revisionVideos' = [] -- ["https://mediasite.bris.ac.uk/Mediasite/Play/18e6ea68ad654e9aaafc9f34805f2c831d"]
+            }
+        , materials =
+            [ slide "COMS10016_intro.pdf"
+            , slide "intro-FP.pdf"
+            ]
+        }
+    , Entry
+        { title = "Using GHCi and First Program"
+        , spec = Lecture
+            { firstOrSecond = Second
+            , slidesFile' = Nothing
+            , revisionVideos' = [] -- ["https://mediasite.bris.ac.uk/Mediasite/Play/18e6ea68ad654e9aaafc9f34805f2c831d"]
+            }
+        , materials = []
+        }
     , Entry
         { title = "GET YOUR PC READY"
         , spec = SetupLab{setupLink = "./setup.html"}
@@ -112,7 +125,7 @@ functionalPage =
   --         , materials = sheets 2 ++ answers 2
   --         }
   --     ]
-    
+
   --   -- Week 4
   --   , [ Entry
   --         { title = "Modelling, Datatypes, and Testing"
@@ -403,6 +416,17 @@ entryToCategory (Entry _ details materials) = case details of
                              then "Materials"
                              else ""
         }
+  Lecture{..} -> MkCat
+      { title = "Lecture"
+      , colour = "#CCCFFF"
+      , counter = False
+      , slidesLinkName = case revisionVideos' of
+          [_] -> "Revision Video"
+          _ -> ""
+      , materialLinkName = if not (null materials)
+                            then "Materials"
+                            else ""
+      }
   LectureExtra{..} -> MkCat
         { title = "Bonus Lecture"
         , colour = "#D8CCFF"
@@ -476,6 +500,7 @@ entryToCategory (Entry _ details materials) = case details of
 isLectureCategory :: EntrySpec -> Bool
 isLectureCategory x = case x of
   Lectures{} -> True
+  Lecture{} -> True
   NotesExtra{} -> True
   LectureExtra{} -> True
   _ -> False
@@ -513,6 +538,9 @@ entryToActivity catDict entry@(Entry {title, spec, materials})
           Worksheet{} -> "Mon 15:00-18:00<br/>MVB2.11/1.15"
           WorksheetBonus{} -> "(optional)"
           Lectures{} -> "Mon 11:00-11:50<br/>Thurs 16:00-16:50<br/>PHYS BLDG 1.11 TYNDALL"
+          Lecture{firstOrSecond} -> case firstOrSecond of
+            First  -> "Mon 11:00-11:50<br/>PHYS BLDG 1.11 TYNDALL"
+            Second -> "Thurs 16:00-16:50<br/>PHYS BLDG 1.11 TYNDALL"
           LectureExtra{} -> "(optional)"
           NotesExtra -> "in your own time"
           Coursework{..} -> "Deadline: " ++ deadline
@@ -521,8 +549,9 @@ entryToActivity catDict entry@(Entry {title, spec, materials})
           _ -> ""
       , title = case spec of
           Lectures{slidesFile, revisionVideos}
-            -> href title (case slidesFile of BB path -> slideLink path; External url -> url)
-               ++ revisionVidLinks revisionVideos
+            -> titleWithSlidesAndVideos title (Just slidesFile) revisionVideos
+          -- Lecture{slidesFile', revisionVideos'}
+          --   -> titleWithSlidesAndVideos title slidesFile' revisionVideos'
           _ -> title
       , activityURL = case spec of
           SetupLab{setupLink}  -> setupLink
@@ -531,14 +560,25 @@ entryToActivity catDict entry@(Entry {title, spec, materials})
           Coursework{instructions} -> courseworkLink instructions
           FormativePractical{file} -> courseworkLink file
           LectureExtra{videoLink}  -> videoLink
+          Lecture{slidesFile'}  -> maybeSlidesPathToURL slidesFile'
           MockTest{test} -> test
           _ -> ""
       , slidesURL = case spec of
           Coursework{submissionLink} -> submissionLink
+          Lecture{revisionVideos'} -> case revisionVideos' of
+            [revVid] -> revVid
+            _ -> ""
           _ -> ""
       , materialStart = 0
       , materialRange = length materials
       }
+
+titleWithSlidesAndVideos :: String -> Maybe SlidesPath -> [URL] -> [Char]
+titleWithSlidesAndVideos title slidesFile revisionVideos
+  = (case slidesFile of
+      Nothing     -> title
+      Just slides -> href title (slidesPathToUrl slides))
+    ++ revisionVidLinks revisionVideos
 
 href :: String -> URL -> String
 href text link = printf "<a href='%s' target='_blank'>%s</a>" link text
@@ -566,6 +606,10 @@ data EntrySpec
   | Lectures  { slidesFile :: SlidesPath
               , revisionVideos :: [URL]
               }
+  | Lecture { firstOrSecond :: FirstOrSecond
+            , slidesFile' :: Maybe SlidesPath
+            , revisionVideos' :: [URL]
+            }
   | LectureExtra { videoLink :: String }
   | SetupLab  { setupLink :: URL }
   | Worksheet { file :: String }
@@ -580,6 +624,8 @@ data EntrySpec
   | MockTest { test :: URL }
   | Blank
   deriving (Show, Eq)
+
+data FirstOrSecond = First | Second deriving (Show, Eq, Ord)
 
 data SlidesPath = BB FilePath | External URL
   deriving (Show, Eq)
@@ -663,6 +709,9 @@ note name file = MkMaterial name (noteLink file)
 code :: String -> Material
 code file = MkMaterial file (codeLink file)
 
+slide :: String -> Material
+slide file = MkMaterial file (slideLink file)
+
 coursework :: String -> String -> Material
 coursework cwDir file = MkMaterial file (courseworkLink (cwDir ++ "/" ++ file))
 
@@ -698,28 +747,40 @@ answersBonus i = map sheet
 
 -- Link construction
 
-bbRootDir :: String
+bbRootDir :: URL
 bbRootDir = "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/"
 
-funcRootDir :: String
+comingSoonPage :: URL
+comingSoonPage = "" -- funcRootDir ++ "coming-soon.html"
+
+funcRootDir :: URL
 funcRootDir = bbRootDir ++ "content/functional/"
 
-dir :: String -> String -> String
+dir :: String -> String -> URL
 dir folder path = funcRootDir ++ folder ++ "/" ++ path
 
-sheetLink :: String -> String
+sheetLink :: String -> URL
 sheetLink = dir "sheets"
 
-noteLink :: String -> String
+noteLink :: String -> URL
 noteLink = dir "notes"
 
-slideLink :: String -> String
+slideLink :: String -> URL
 slideLink = dir "slides"
 
-codeLink :: String -> String
+maybeSlidesPathToURL :: Maybe SlidesPath -> URL
+maybeSlidesPathToURL = maybe comingSoonPage slidesPathToUrl
+
+slidesPathToUrl :: SlidesPath -> URL
+slidesPathToUrl slidesFile
+  = case slidesFile of
+      BB path -> slideLink path
+      External url -> url
+
+codeLink :: String -> URL
 codeLink = dir "code"
 
-courseworkLink :: String -> String
+courseworkLink :: String -> URL
 courseworkLink = dir "coursework"
 
 -- Grid entries
