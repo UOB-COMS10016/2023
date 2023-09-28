@@ -1,5 +1,5 @@
 //LAYOUT CUSTOMIZATION
-var currentWeek   = 1;                         // current week [releases content fully visible up to this week]
+var currentWeek   = 2;                         // current week [releases content fully visible up to this week]
 var activityNum   = 8;                         // number of activities per week (empty slots possible)
 var columnNum     = 4;                         // desired columns per week (yet, autofitted to max 2 rows per week)
 var title         = "IMPERATIVE PROGRAMMING";  // content title (different to unitName since multiple content streams maybe in one unit)
@@ -64,7 +64,7 @@ var activities = [
 //["22", "Tue 03/10/23<br/>04:00pm-04:50pm<br/>PHYS BLDG G42 Powell",     "</a>DECISIONS &amp; RECURSION<a>", "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_03.pdf", "https://mediasite.bris.ac.uk/Mediasite/Play/142dc3fec056475caa68332b17666b701d", "6", "5"],
 //["22", "Thu 05/10/23<br/>11:00am-11:50am<br/>PHYS BLDG G42 Powell",     "</a>LITERALS, ENUMS &amp; CONSTANTS<a>", "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_04.pdf", "https://mediasite.bris.ac.uk/Mediasite/Play/87f3017862004a37ae1ac8b3fbdab33a1d", "31", "2"],
 //["3", "Wed 04/10/23<br/>10:00am-01:00pm<br/>MVB2.11/1.15", "</a>BIG INTEGER CHALLENGE<a>",   "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week02/index.html", "", "17", "4"],
-//["3", "in your own time",     "</a>HAIL &amp; THUNDER<a>",               "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_Task01.pdf", "", "11", "6"],
+//["3", "in your own time",     "HAIL &amp; THUNDER",               "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_Task01.pdf", "", "11", "6"],
 //["22", "Thu 05/10/23<br/>11:00am-11:50am<br/>PHYS BLDG G42 Powell",     "</a>LOOPS &amp; JUMPS<a>",  "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_05.pdf",   "https://mediasite.bris.ac.uk/Mediasite/Play/ecad33ee4d3f4d6889d4a0993c8c64fc1d", "33", "2"],
 //["9", "",                     "",                                 "", "", "0", "0"],
 //["8", "",                     "",                                 "", "", "0", "0"],
