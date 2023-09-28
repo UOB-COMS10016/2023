@@ -59,10 +59,12 @@ functionalPage =
         { title = "Using GHCi and First Program"
         , spec = Lecture
             { firstOrSecond = Second
-            , slidesFile' = Nothing
+            , slidesFile' = Just (BB "GHCi-and-prelude.pdf")
             , revisionVideos' = [] -- ["https://mediasite.bris.ac.uk/Mediasite/Play/18e6ea68ad654e9aaafc9f34805f2c831d"]
             }
-        , materials = []
+        , materials =
+            [ slide "GHCi-and-prelude.pdf"
+            ]
         }
     , Entry
         { title = "GET YOUR PC READY"

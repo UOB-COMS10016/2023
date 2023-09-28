@@ -19,16 +19,15 @@ var categories = [
 ["0","","#CCCCCC","0","","",],
 ["1","Extra Materials","#DDDDDD","0","","Materials",],
 ["2","Lecture","#CCCFFF","0","","Materials",],
-["3","Lecture","#CCCFFF","0","","",],
-["4","Setup Lab:","#EEEEDD","0","","",],
+["3","Setup Lab:","#EEEEDD","0","","",],
 
 ];
 
 const activities = [
 ["1","(optional)","","","","0","3",],
 ["2","Mon 11:00-11:50<br/>PHYS BLDG 1.11 TYNDALL","Welcome & Introduction","","","3","2",],
-["3","Thurs 16:00-16:50<br/>PHYS BLDG 1.11 TYNDALL","Using GHCi and First Program","","","0","0",],
-["4","Wed 27/09/23<br/>10:00-13:00<br/>MVB2.11/1.15","GET YOUR PC READY","./setup.html","","0","0",],
+["2","Thurs 16:00-16:50<br/>PHYS BLDG 1.11 TYNDALL","Using GHCi and First Program","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/slides/GHCi-and-prelude.pdf","","5","1",],
+["3","Wed 27/09/23<br/>10:00-13:00<br/>MVB2.11/1.15","GET YOUR PC READY","./setup.html","","0","0",],
 ["0","","","","","0","0",],
 ["0","","","","","0","0",],
 ["0","","","","","0","0",],
@@ -50,6 +49,7 @@ const files = [
 ["2","https://bristolpl.github.io/","Bristol PL Research Group",],
 ["3","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/slides/COMS10016_intro.pdf","COMS10016_intro.pdf",],
 ["4","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/slides/intro-FP.pdf","intro-FP.pdf",],
+["5","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/slides/GHCi-and-prelude.pdf","GHCi-and-prelude.pdf",],
 
 ];
 
