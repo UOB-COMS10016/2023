@@ -396,7 +396,8 @@ functionalPage =
   --         }
   --     ]
 
-    -- Spare week of lectures, to make sure site doesn't break
+    -- Spare couple weeks of lectures, to make sure site doesn't break
+    , []
     , []
   ]
 
