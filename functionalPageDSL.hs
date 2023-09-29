@@ -14,7 +14,7 @@ main = putStr $ pageToJS functionalPage config
 config :: Config
 config =
   MkConfig
-    { currentWeek = 1,
+    { currentWeek = 2,
       activityNum = 8,
       columnNum = 4,
       title = "FUNCTIONAL PROGRAMMING",
@@ -73,22 +73,23 @@ functionalPage =
         }
     ]
     -- Week 2
-  -- , [ Entry
-  --       { title = "Data Types and Functions"
-  --       , spec = Lectures
-  --           { slidesFile = BB "week2.pdf"
-  --           , revisionVideos = [ "https://mediasite.bris.ac.uk/Mediasite/Play/21b78fbe973d43a599fbf79dd94f8aa51d"
-  --                              , "https://mediasite.bris.ac.uk/Mediasite/Play/7aae664dcbf94eb28fe13a6ed93f24221d"
-  --                              ]
-  --           }
-  --       , materials = []
-  --       }
-  --   , Entry
-  --       { title = "Types, Parentheses, and Inhabitants"
-  --       , spec = Worksheet "sheet01.pdf"
-  --       , materials = sheets 1 ++ answers 1
-  --       }
-  --   ]
+  , [ 
+      -- Entry
+      --   { title = "Data Types and Functions"
+      --   , spec = Lectures
+      --       { slidesFile = BB "week2.pdf"
+      --       , revisionVideos = [ "https://mediasite.bris.ac.uk/Mediasite/Play/21b78fbe973d43a599fbf79dd94f8aa51d"
+      --                          , "https://mediasite.bris.ac.uk/Mediasite/Play/7aae664dcbf94eb28fe13a6ed93f24221d"
+      --                          ]
+      --       }
+      --   , materials = []
+      --   },
+      Entry
+        { title = "GHCi and Functions"
+        , spec = Worksheet "sheet01.pdf"
+        , materials = sheets 1 ++ answers 1
+        }
+    ]
   --   -- Week 3
   --   , [ Entry
   --         { title = "History of Haskell"
