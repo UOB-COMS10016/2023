@@ -74,17 +74,29 @@ functionalPage =
     ]
     -- Week 2
   , [ 
-      -- Entry
-      --   { title = "Data Types and Functions"
-      --   , spec = Lectures
-      --       { slidesFile = BB "week2.pdf"
-      --       , revisionVideos = [ "https://mediasite.bris.ac.uk/Mediasite/Play/21b78fbe973d43a599fbf79dd94f8aa51d"
-      --                          , "https://mediasite.bris.ac.uk/Mediasite/Play/7aae664dcbf94eb28fe13a6ed93f24221d"
-      --                          ]
-      --       }
-      --   , materials = []
-      --   },
       Entry
+        { title = "Functions & Basic Types"
+        , spec = Lecture
+            { firstOrSecond = First
+            , slidesFile' = Just (BB "Functions-and-Basic-Types.pdf") 
+            , revisionVideos' = [] -- ["https://mediasite.bris.ac.uk/Mediasite/Play/18e6ea68ad654e9aaafc9f34805f2c831d"]
+            }
+        , materials =
+            [ slide "Functions-and-Basic-Types.pdf"
+            ]
+        }
+    , Entry
+        { title = "Polymorphism & Currying"
+        , spec = Lecture
+            { firstOrSecond = Second
+            , slidesFile' = Just (BB "Polymorphism-and-currying.pdf")
+            , revisionVideos' = [] -- ["https://mediasite.bris.ac.uk/Mediasite/Play/18e6ea68ad654e9aaafc9f34805f2c831d"]
+            }
+        , materials =
+            [ slide "Polymorphism-and-currying.pdf"
+            ]
+        }
+    , Entry
         { title = "GHCi and Functions"
         , spec = Worksheet "sheet01.pdf"
         , materials = concat
