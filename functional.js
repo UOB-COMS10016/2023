@@ -1,4 +1,4 @@
-const currentWeek   = 2;
+const currentWeek   = 3;
 const activityNum   = 8;
 const columnNum     = 4;
 const title         = "FUNCTIONAL PROGRAMMING";
@@ -21,13 +21,15 @@ var categories = [
 ["2","Lecture","#CCCFFF","0","","Materials",],
 ["3","Setup Lab:","#EEEEDD","0","","",],
 ["4","Worksheet","#EEEEDD","1","","Materials",],
+["5","History","#EEEEDD","0","","Materials",],
+["6","Notes ft.<br>Extra Examples<br>+ Explanations","#94e5bf","0","","Notes",],
 
 ];
 
 const activities = [
 ["1","(optional)","","","","0","3",],
 ["2","Mon 11:00-11:50<br/>PHYS BLDG 1.11 TYNDALL","Welcome & Introduction","","","3","2",],
-["2","Thurs 16:00-16:50<br/>PHYS BLDG 1.11 TYNDALL","Using GHCi and First Program","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/slides/GHCi-and-prelude.pdf","","5","1",],
+["2","Thurs 16:00-16:50<br/>PHYS BLDG 1.11 TYNDALL","Using GHCi & First Program","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/slides/GHCi-and-prelude.pdf","","5","1",],
 ["3","Wed 27/09/23<br/>10:00-13:00<br/>MVB2.11/1.15","GET YOUR PC READY","./setup.html","","0","0",],
 ["0","","","","","0","0",],
 ["0","","","","","0","0",],
@@ -36,9 +38,17 @@ const activities = [
 ["0","","","","","0","0",],
 ["2","Mon 11:00-11:50<br/>PHYS BLDG 1.11 TYNDALL","Functions & Basic Types","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/slides/Functions-and-Basic-Types.pdf","","6","1",],
 ["2","Thurs 16:00-16:50<br/>PHYS BLDG 1.11 TYNDALL","Polymorphism & Currying","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/slides/Polymorphism-and-currying.pdf","","7","1",],
-["4","Mon 15:00-18:00<br/>MVB2.11/1.15","GHCi and Functions","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/sheets/sheet01.pdf","","8","2",],
+["4","Mon 15:00-18:00<br/>MVB2.11/1.15","GHCi and Functions","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/sheets/sheet01.pdf","","8","4",],
 ["0","","","","","0","0",],
 ["0","","","","","0","0",],
+["0","","","","","0","0",],
+["0","","","","","0","0",],
+["5","(optional)","History of Haskell","","","12","2",],
+["2","Mon 11:00-11:50<br/>PHYS BLDG 1.11 TYNDALL","Data types & Type classess","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/slides/datatypes.pdf","","14","1",],
+["2","Thurs 16:00-16:50<br/>PHYS BLDG 1.11 TYNDALL","Pattern matching & Card game","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/slides/card-game.pdf","","15","1",],
+["0","","","","","0","0",],
+["0","","","","","0","0",],
+["6","in your own time","","","","16","6",],
 ["0","","","","","0","0",],
 ["0","","","","","0","0",],
 ["0","","","","","0","0",],
@@ -71,6 +81,18 @@ const files = [
 ["7","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/slides/Polymorphism-and-currying.pdf","Polymorphism-and-currying.pdf",],
 ["8","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/sheets/sheet01.pdf","sheet01.pdf",],
 ["9","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/sheets/sheet01Dyslexic.pdf","sheet01Dyslexic.pdf",],
+["10","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/sheets/answer01.pdf","answer01.pdf",],
+["11","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/sheets/answer01Dyslexic.pdf","answer01Dyslexic.pdf",],
+["12","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/notes/HistoryOfHaskell.pdf","History of Haskell",],
+["13","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/notes/HowFPMattered.pdf","How Functional Programming Mattered",],
+["14","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/slides/datatypes.pdf","datatypes.pdf",],
+["15","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/slides/card-game.pdf","card-game.pdf",],
+["16","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/notes/Types.pdf","Types",],
+["17","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/notes/HaskellPoDs.pdf","Haskell PoDs",],
+["18","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/notes/DataConstructors.pdf","Data Constructors",],
+["19","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/notes/Tuples.pdf","Tuples",],
+["20","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/notes/Branching.pdf","Branching",],
+["21","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/notes/Guards.pdf","Guards",],
 
 ];
 

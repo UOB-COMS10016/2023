@@ -14,7 +14,7 @@ main = putStr $ pageToJS functionalPage config
 config :: Config
 config =
   MkConfig
-    { currentWeek = 2,
+    { currentWeek = 3,
       activityNum = 8,
       columnNum = 4,
       title = "FUNCTIONAL PROGRAMMING",
@@ -56,7 +56,7 @@ functionalPage =
             ]
         }
     , Entry
-        { title = "Using GHCi and First Program"
+        { title = "Using GHCi & First Program"
         , spec = Lecture
             { firstOrSecond = Second
             , slidesFile' = Just (BB "GHCi-and-prelude.pdf")
@@ -101,48 +101,61 @@ functionalPage =
         , spec = Worksheet "sheet01.pdf"
         , materials = concat
             [ sheets 1
-            -- , answers 1
+            , answers 1
             ]
         }
     ]
   --   -- Week 3
-  --   , [ Entry
-  --         { title = "History of Haskell"
-  --         , spec = History
-  --         , materials =
-  --             [ note "History of Haskell" "HistoryOfHaskell.pdf"
-  --             , note "How Functional Programming Mattered" "HowFPMattered.pdf"
-  --             ]
-  --         }
-  --     , Entry
-  --         { title = "Evaluation, Currying, Cases, and Recursion"
-  --         , spec = Lectures
-  --             { slidesFile = BB "week3.pdf"
-  --             , revisionVideos = [ "https://mediasite.bris.ac.uk/Mediasite/Play/6ec18e18e6814510b259e151366aecee1d"
-  --                                , "https://mediasite.bris.ac.uk/Mediasite/Play/2da7d7439ebe40189e8e211a36208bee1d"]
-  --             }
-  --         , materials = [code "week3.hs"]
-  --         }
-  --     , Entry
-  --         { title = ""
-  --         , spec = NotesExtra
-  --         , materials = map (uncurry note)
-  --             [ ("Types", "Types.pdf")
-  --             , ("Haskell PoDs", "HaskellPoDs.pdf")
-  --             , ("Data Constructors", "DataConstructors.pdf")
-  --             , ("Tuples", "Tuples.pdf")
-  --             , ("Function Composition", "FunctionComposition.pdf")
-  --             , ("Branching", "Branching.pdf")
-  --             , ("Guards", "Guards.pdf")
-  --             , ("Laziness", "Laziness.pdf")
-  --             ]
-  --         }
-  --     , Entry
-  --         { title = "Evaluation and Guards"
-  --         , spec = Worksheet "sheet02.pdf"
-  --         , materials = sheets 2 ++ answers 2
-  --         }
-  --     ]
+    , [ Entry
+          { title = "History of Haskell"
+          , spec = History
+          , materials =
+              [ note "History of Haskell" "HistoryOfHaskell.pdf"
+              , note "How Functional Programming Mattered" "HowFPMattered.pdf"
+              ]
+          }
+      , Entry
+          { title = "Data types & Type classess"
+          , spec = Lecture
+              { firstOrSecond = First
+              , slidesFile' = Just (BB "datatypes.pdf") 
+              , revisionVideos' = [] -- ["https://mediasite.bris.ac.uk/Mediasite/Play/18e6ea68ad654e9aaafc9f34805f2c831d"]
+              }
+          , materials =
+              [ slide "datatypes.pdf"
+              ]
+          }
+      , Entry
+          { title = "Pattern matching & Card game"
+          , spec = Lecture
+              { firstOrSecond = Second
+              , slidesFile' = Just (BB "card-game.pdf")
+              , revisionVideos' = [] -- ["https://mediasite.bris.ac.uk/Mediasite/Play/18e6ea68ad654e9aaafc9f34805f2c831d"]
+              }
+          , materials =
+              [ slide "card-game.pdf"
+              ]
+          }
+      , Entry
+          { title = ""
+          , spec = NotesExtra
+          , materials = map (uncurry note)
+              [ ("Types", "Types.pdf")
+              , ("Haskell PoDs", "HaskellPoDs.pdf")
+              , ("Data Constructors", "DataConstructors.pdf")
+              , ("Tuples", "Tuples.pdf")
+              -- , ("Function Composition", "FunctionComposition.pdf")
+              , ("Branching", "Branching.pdf")
+              , ("Guards", "Guards.pdf")
+              -- , ("Laziness", "Laziness.pdf")
+              ]
+          }
+      -- , Entry
+      --     { title = "Types and Branching"
+      --     , spec = Worksheet ""
+      --     , materials = [] -- sheets 2 ++ answers 2
+      --     }
+      ]
 
   --   -- Week 4
   --   , [ Entry
