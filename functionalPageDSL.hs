@@ -155,7 +155,7 @@ functionalPage =
       , Entry
           { title = "Types, Type Classes, and Branching"
           , spec = Worksheet "sheet02.pdf"
-          , materials = sheets 2 -- ++ answers 2
+          , materials = sheets 2 ++ answers 2
           }
       ]
 
