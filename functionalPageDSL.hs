@@ -152,11 +152,11 @@ functionalPage =
               , ("Recipe for writing functions", "FunctionRecipe.pdf")
               ]
           }
-      -- , Entry
-      --     { title = "Types and Branching"
-      --     , spec = Worksheet ""
-      --     , materials = [] -- sheets 2 ++ answers 2
-      --     }
+      , Entry
+          { title = "Types, Type Classes, and Branching"
+          , spec = Worksheet "sheet02.pdf"
+          , materials = sheets 2 -- ++ answers 2
+          }
       ]
 
   --   -- Week 4
