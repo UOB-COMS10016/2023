@@ -148,6 +148,8 @@ functionalPage =
               , ("Branching", "Branching.pdf")
               , ("Guards", "Guards.pdf")
               -- , ("Laziness", "Laziness.pdf")
+              , ("Type Classes", "TypeClasses.pdf")
+              , ("Recipe for writing functions", "FunctionRecipe.pdf")
               ]
           }
       -- , Entry
@@ -211,7 +213,6 @@ functionalPage =
   --         , materials = map (uncurry note)
   --             [ ("Lists", "Lists.pdf")
   --             , ("Maybe", "Maybe.pdf")
-  --             , ("Recipe for writing functions", "FunctionRecipe.pdf")
   --             ]
   --         }
   --     , Entry
@@ -305,7 +306,7 @@ functionalPage =
   --         , materials = map (uncurry note)
   --             [ ("How to Design \"Co\"-Programs", "copro.pdf")
   --             , ("Functions Cheatsheet", "PreludeFunctionsCheatsheet.pdf")
-  --             , ("Type Classes", "TypeClasses.pdf")
+  --             
   --             ]
   --         }
   --     , Entry

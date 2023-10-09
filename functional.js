@@ -48,7 +48,7 @@ const activities = [
 ["2","Thurs 16:00-16:50<br/>PHYS BLDG 1.11 TYNDALL","Pattern matching & Card game","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/slides/card-game.pdf","","15","1",],
 ["0","","","","","0","0",],
 ["0","","","","","0","0",],
-["6","in your own time","","","","16","6",],
+["6","in your own time","","","","16","8",],
 ["0","","","","","0","0",],
 ["0","","","","","0","0",],
 ["0","","","","","0","0",],
@@ -93,6 +93,8 @@ const files = [
 ["19","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/notes/Tuples.pdf","Tuples",],
 ["20","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/notes/Branching.pdf","Branching",],
 ["21","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/notes/Guards.pdf","Guards",],
+["22","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/notes/TypeClasses.pdf","Type Classes",],
+["23","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/notes/FunctionRecipe.pdf","Recipe for writing functions",],
 
 ];
 
