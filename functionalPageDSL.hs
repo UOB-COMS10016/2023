@@ -764,6 +764,7 @@ answers :: Int -> [Material]
 answers i = map sheet
   [ printf "answer%02d.pdf" i
   , printf "answer%02dDyslexic.pdf" i
+  , printf "code%02d.hs" i
   ]
 
 sheetsBonus :: Int -> [Material]
