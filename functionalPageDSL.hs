@@ -134,6 +134,7 @@ functionalPage =
               }
           , materials =
               [ slide "card-game.pdf"
+              , code "card.hs"
               ]
           }
       , Entry
@@ -159,8 +160,8 @@ functionalPage =
           }
       ]
 
-  --   -- Week 4
-  --   , [ Entry
+    -- Week 4
+    , [ --Entry
   --         { title = "Modelling, Datatypes, and Testing"
   --         , spec = Lectures
   --             { slidesFile = BB "week4.pdf"
@@ -171,30 +172,30 @@ functionalPage =
   --             }
   --         , materials = [code "card.hs"]
   --         }
-  --     , Entry
-  --         { title = ""
-  --         , spec = NotesExtra
-  --         , materials = map (uncurry note)
-  --             [ ("Pattern Matching", "PatternMatching.pdf")
-  --             ]
-  --         }
-  --     , Entry
-  --         { title = "Pattern Matching"
-  --         , spec = Worksheet "sheet03.pdf"
-  --         , materials = sheets 3 ++ answers 3
-  --         }
-  --     , Entry
-  --         { title = "Power to the People"
-  --         , spec = Coursework
-  --             { instructions = "CW1/CW1-Instrs.pdf"
-  --             , submissionLink = "https://www.ole.bris.ac.uk/webapps/assignment/uploadAssignment?content_id=_7367855_1&course_id=_252989_1"
-  --             , deadline = "13:00 Thurs 27/10/22<br/>(submit at least 1 hour early)"
-  --             }
-  --         , materials = map (coursework "CW1")
-  --             [ "CW1-Instrs.pdf"
-  --             , "CW1-PowerToThePeople.zip" ]
-  --         }
-  --     ]
+        Entry
+          { title = ""
+          , spec = NotesExtra
+          , materials = map (uncurry note)
+              [ ("Pattern Matching", "PatternMatching.pdf")
+              ]
+          }
+      ,  Entry
+          { title = "ADTs and Pattern Matching"
+          , spec = Worksheet "sheet03.pdf"
+          , materials = sheets 3 -- ++ answers 3
+          }
+      , Entry
+          { title = "Power to the People"
+          , spec = Coursework
+              { instructions = "CW1/CW1-Instrs.pdf"
+              , submissionLink = "TBD" -- "https://www.ole.bris.ac.uk/webapps/assignment/uploadAssignment?content_id=_7367855_1&course_id=_252989_1"
+              , deadline = "TBD" -- "13:00 Thurs 27/10/22<br/>(submit at least 1 hour early)"
+              }
+          , materials = map (coursework "CW1")
+              [ "CW1-Instrs.pdf"
+              , "CW1-PowerToThePeople.zip" ]
+          }
+      ]
   --   -- Week 5
   --   , [ Entry
   --         { title = "Types and Constructors, Pattern Matching, and Lists"
