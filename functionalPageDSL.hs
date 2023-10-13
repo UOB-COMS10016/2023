@@ -14,7 +14,7 @@ main = putStr $ pageToJS functionalPage config
 config :: Config
 config =
   MkConfig
-    { currentWeek = 3,
+    { currentWeek = 4,
       activityNum = 8,
       columnNum = 4,
       title = "FUNCTIONAL PROGRAMMING",
@@ -161,18 +161,29 @@ functionalPage =
       ]
 
     -- Week 4
-    , [ --Entry
-  --         { title = "Modelling, Datatypes, and Testing"
-  --         , spec = Lectures
-  --             { slidesFile = BB "week4.pdf"
-  --             , revisionVideos =
-  --                 [ "https://mediasite.bris.ac.uk/Mediasite/Play/4361b923603143a18bdd32f7bfe710671d" 
-  --                 , "https://mediasite.bris.ac.uk/Mediasite/Play/c467dfea5fbb4d9a9fc73aea48f202ff1d"
-  --                 ]
-  --             }
-  --         , materials = [code "card.hs"]
-  --         }
-        Entry
+    , [ Entry
+          { title = "Recursion"
+          , spec = Lecture
+              { firstOrSecond = First
+              , slidesFile' = Just (BB "recursion.pdf") 
+              , revisionVideos' = [] -- ["https://mediasite.bris.ac.uk/Mediasite/Play/18e6ea68ad654e9aaafc9f34805f2c831d"]
+              }
+          , materials =
+              [ slide "recursion.pdf"
+              ]
+          }
+      , Entry
+          { title = "Evaluation"
+          , spec = Lecture
+              { firstOrSecond = Second
+              , slidesFile' = Just (BB "evaluation.pdf")
+              , revisionVideos' = [] -- ["https://mediasite.bris.ac.uk/Mediasite/Play/18e6ea68ad654e9aaafc9f34805f2c831d"]
+              }
+          , materials =
+              [ slide "evaluation.pdf"
+              ]
+          }
+      , Entry
           { title = ""
           , spec = NotesExtra
           , materials = map (uncurry note)
@@ -184,17 +195,17 @@ functionalPage =
           , spec = Worksheet "sheet03.pdf"
           , materials = sheets 3 -- ++ answers 3
           }
-      , Entry
-          { title = "Power to the People"
-          , spec = Coursework
-              { instructions = "CW1/CW1-Instrs.pdf"
-              , submissionLink = "TBD" -- "https://www.ole.bris.ac.uk/webapps/assignment/uploadAssignment?content_id=_7367855_1&course_id=_252989_1"
-              , deadline = "TBD" -- "13:00 Thurs 27/10/22<br/>(submit at least 1 hour early)"
-              }
-          , materials = map (coursework "CW1")
-              [ "CW1-Instrs.pdf"
-              , "CW1-PowerToThePeople.zip" ]
-          }
+      -- , Entry
+      --     { title = "Power to the People"
+      --     , spec = Coursework
+      --         { instructions = "CW1/CW1-Instrs.pdf"
+      --         , submissionLink = "TBD" -- "https://www.ole.bris.ac.uk/webapps/assignment/uploadAssignment?content_id=_7367855_1&course_id=_252989_1"
+      --         , deadline = "TBD" -- "13:00 Thurs 27/10/22<br/>(submit at least 1 hour early)"
+      --         }
+      --     , materials = map (coursework "CW1")
+      --         [ "CW1-Instrs.pdf"
+      --         , "CW1-PowerToThePeople.zip" ]
+      --     }
       ]
   --   -- Week 5
   --   , [ Entry
