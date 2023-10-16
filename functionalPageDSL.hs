@@ -48,7 +48,7 @@ functionalPage =
         , spec = Lecture
             { firstOrSecond = First
             , slidesFile' = Nothing 
-            , revisionVideos' = [] -- ["https://mediasite.bris.ac.uk/Mediasite/Play/18e6ea68ad654e9aaafc9f34805f2c831d"]
+            , lectureRecording = Nothing -- ["https://mediasite.bris.ac.uk/Mediasite/Play/18e6ea68ad654e9aaafc9f34805f2c831d"]
             }
         , materials =
             [ slide "COMS10016_intro.pdf"
@@ -60,7 +60,7 @@ functionalPage =
         , spec = Lecture
             { firstOrSecond = Second
             , slidesFile' = Just (BB "GHCi-and-prelude.pdf")
-            , revisionVideos' = [] -- ["https://mediasite.bris.ac.uk/Mediasite/Play/18e6ea68ad654e9aaafc9f34805f2c831d"]
+            , lectureRecording = Nothing -- ["https://mediasite.bris.ac.uk/Mediasite/Play/18e6ea68ad654e9aaafc9f34805f2c831d"]
             }
         , materials =
             [ slide "GHCi-and-prelude.pdf"
@@ -79,7 +79,7 @@ functionalPage =
         , spec = Lecture
             { firstOrSecond = First
             , slidesFile' = Just (BB "Functions-and-Basic-Types.pdf") 
-            , revisionVideos' = [] -- ["https://mediasite.bris.ac.uk/Mediasite/Play/18e6ea68ad654e9aaafc9f34805f2c831d"]
+            , lectureRecording = Nothing -- ["https://mediasite.bris.ac.uk/Mediasite/Play/18e6ea68ad654e9aaafc9f34805f2c831d"]
             }
         , materials =
             [ slide "Functions-and-Basic-Types.pdf"
@@ -90,7 +90,7 @@ functionalPage =
         , spec = Lecture
             { firstOrSecond = Second
             , slidesFile' = Just (BB "Polymorphism-and-currying.pdf")
-            , revisionVideos' = [] -- ["https://mediasite.bris.ac.uk/Mediasite/Play/18e6ea68ad654e9aaafc9f34805f2c831d"]
+            , lectureRecording = Nothing -- ["https://mediasite.bris.ac.uk/Mediasite/Play/18e6ea68ad654e9aaafc9f34805f2c831d"]
             }
         , materials =
             [ slide "Polymorphism-and-currying.pdf"
@@ -119,7 +119,7 @@ functionalPage =
           , spec = Lecture
               { firstOrSecond = First
               , slidesFile' = Just (BB "datatypes.pdf") 
-              , revisionVideos' = [] -- ["https://mediasite.bris.ac.uk/Mediasite/Play/18e6ea68ad654e9aaafc9f34805f2c831d"]
+              , lectureRecording = Just "https://mediasite.bris.ac.uk/Mediasite/Play/6b919533801c484a85eabc42a4fb00811d"
               }
           , materials =
               [ slide "datatypes.pdf"
@@ -130,7 +130,7 @@ functionalPage =
           , spec = Lecture
               { firstOrSecond = Second
               , slidesFile' = Just (BB "card-game.pdf")
-              , revisionVideos' = [] -- ["https://mediasite.bris.ac.uk/Mediasite/Play/18e6ea68ad654e9aaafc9f34805f2c831d"]
+              , lectureRecording = Just "https://mediasite.bris.ac.uk/Mediasite/Play/837fc7dcb31f4cf3883e09656e4a1a7c1d"
               }
           , materials =
               [ slide "card-game.pdf"
@@ -166,7 +166,7 @@ functionalPage =
           , spec = Lecture
               { firstOrSecond = First
               , slidesFile' = Just (BB "recursion.pdf") 
-              , revisionVideos' = [] -- ["https://mediasite.bris.ac.uk/Mediasite/Play/18e6ea68ad654e9aaafc9f34805f2c831d"]
+              , lectureRecording = Nothing -- ["https://mediasite.bris.ac.uk/Mediasite/Play/18e6ea68ad654e9aaafc9f34805f2c831d"]
               }
           , materials =
               [ slide "recursion.pdf"
@@ -177,7 +177,7 @@ functionalPage =
           , spec = Lecture
               { firstOrSecond = Second
               , slidesFile' = Just (BB "evaluation.pdf")
-              , revisionVideos' = [] -- ["https://mediasite.bris.ac.uk/Mediasite/Play/18e6ea68ad654e9aaafc9f34805f2c831d"]
+              , lectureRecording = Nothing -- ["https://mediasite.bris.ac.uk/Mediasite/Play/18e6ea68ad654e9aaafc9f34805f2c831d"]
               }
           , materials =
               [ slide "evaluation.pdf"
@@ -193,7 +193,7 @@ functionalPage =
       ,  Entry
           { title = "ADTs and Pattern Matching"
           , spec = Worksheet "sheet03.pdf"
-          , materials = sheets 3 -- ++ answers 3
+          , materials = sheets 3 ++ answers 3
           }
       -- , Entry
       --     { title = "Power to the People"
@@ -465,8 +465,8 @@ entryToCategory (Entry _ details materials) = case details of
       { title = "Lecture"
       , colour = "#CCCFFF"
       , counter = False
-      , slidesLinkName = case revisionVideos' of
-          [_] -> "Revision Video"
+      , slidesLinkName = case lectureRecording of
+          Just _ -> "Lecture Recording"
           _ -> ""
       , materialLinkName = if not (null materials)
                             then "Materials"
@@ -595,8 +595,8 @@ entryToActivity catDict entry@(Entry {title, spec, materials})
       , title = case spec of
           Lectures{slidesFile, revisionVideos}
             -> titleWithSlidesAndVideos title (Just slidesFile) revisionVideos
-          -- Lecture{slidesFile', revisionVideos'}
-          --   -> titleWithSlidesAndVideos title slidesFile' revisionVideos'
+          -- Lecture{slidesFile', revisionVideo}
+          --   -> titleWithSlidesAndVideos title slidesFile' revisionVideo
           _ -> title
       , activityURL = case spec of
           SetupLab{setupLink}  -> setupLink
@@ -610,8 +610,8 @@ entryToActivity catDict entry@(Entry {title, spec, materials})
           _ -> ""
       , slidesURL = case spec of
           Coursework{submissionLink} -> submissionLink
-          Lecture{revisionVideos'} -> case revisionVideos' of
-            [revVid] -> revVid
+          Lecture{lectureRecording} -> case lectureRecording of
+            Just revVid -> revVid
             _ -> ""
           _ -> ""
       , materialStart = 0
@@ -653,7 +653,7 @@ data EntrySpec
               }
   | Lecture { firstOrSecond :: FirstOrSecond
             , slidesFile' :: Maybe SlidesPath
-            , revisionVideos' :: [URL]
+            , lectureRecording :: Maybe URL
             }
   | LectureExtra { videoLink :: String }
   | SetupLab  { setupLink :: URL }
