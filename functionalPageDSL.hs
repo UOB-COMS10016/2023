@@ -204,6 +204,7 @@ functionalPage =
       --         }
       --     , materials = map (coursework "CW1")
       --         [ "CW1-Instrs.pdf"
+      --         , "CW1-InstrsDyslexic.pdf"
       --         , "CW1-PowerToThePeople.zip" ]
       --     }
       ]
