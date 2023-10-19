@@ -199,8 +199,8 @@ functionalPage =
       --     { title = "Power to the People"
       --     , spec = Coursework
       --         { instructions = "CW1/CW1-Instrs.pdf"
-      --         , submissionLink = "TBD" -- "https://www.ole.bris.ac.uk/webapps/assignment/uploadAssignment?content_id=_7367855_1&course_id=_252989_1"
-      --         , deadline = "TBD" -- "13:00 Thurs 27/10/22<br/>(submit at least 1 hour early)"
+      --         , submissionLink = "https://www.ole.bris.ac.uk/webapps/assignment/uploadAssignment?content_id=_8307455_1&course_id=_257219_1"
+      --         , deadline = "12:00 Thurs 09/11/23"
       --         }
       --     , materials = map (coursework "CW1")
       --         [ "CW1-Instrs.pdf"
