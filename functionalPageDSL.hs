@@ -195,18 +195,18 @@ functionalPage =
           , spec = Worksheet "sheet03.pdf"
           , materials = sheets 3 ++ answers 3
           }
-      -- , Entry
-      --     { title = "Power to the People"
-      --     , spec = Coursework
-      --         { instructions = "CW1/CW1-Instrs.pdf"
-      --         , submissionLink = "https://www.ole.bris.ac.uk/webapps/assignment/uploadAssignment?content_id=_8307455_1&course_id=_257219_1"
-      --         , deadline = "12:00 Thurs 09/11/23"
-      --         }
-      --     , materials = map (coursework "CW1")
-      --         [ "CW1-Instrs.pdf"
-      --         , "CW1-InstrsDyslexic.pdf"
-      --         , "CW1-PowerToThePeople.zip" ]
-      --     }
+      , Entry
+          { title = "Power to the People"
+          , spec = Coursework
+              { instructions = "CW1/CW1-Instrs.pdf"
+              , submissionLink = "https://www.ole.bris.ac.uk/webapps/assignment/uploadAssignment?content_id=_8307455_1&course_id=_257219_1"
+              , deadline = "12:00 Thurs 09/11/23"
+              }
+          , materials = map (coursework "CW1")
+              [ "CW1-Instrs.pdf"
+              , "CW1-InstrsDyslexic.pdf"
+              , "CW1-PowerToThePeople.zip" ]
+          }
       ]
   --   -- Week 5
   --   , [ Entry

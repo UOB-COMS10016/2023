@@ -24,6 +24,7 @@ var categories = [
 ["5","History","#EEEEDD","0","","Materials",],
 ["6","Lecture","#CCCFFF","0","Lecture Recording","Materials",],
 ["7","Notes ft.<br>Extra Examples<br>+ Explanations","#94e5bf","0","","Notes",],
+["8","Coursework","#EEEEDD","1","SUBMIT HERE (Blackboard)","Materials",],
 
 ];
 
@@ -59,7 +60,7 @@ const activities = [
 ["0","","","","","0","0",],
 ["7","in your own time","","","","38","1",],
 ["0","","","","","0","0",],
-["0","","","","","0","0",],
+["8","Deadline: 12:00 Thurs 09/11/23","Power to the People","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/coursework/CW1/CW1-Instrs.pdf","https://www.ole.bris.ac.uk/webapps/assignment/uploadAssignment?content_id=_8307455_1&course_id=_257219_1","39","3",],
 ["0","","","","","0","0",],
 ["0","","","","","0","0",],
 ["0","","","","","0","0",],
@@ -119,6 +120,9 @@ const files = [
 ["36","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/sheets/answer03Dyslexic.pdf","answer03Dyslexic.pdf",],
 ["37","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/sheets/code03.hs","code03.hs",],
 ["38","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/notes/PatternMatching.pdf","Pattern Matching",],
+["39","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/coursework/CW1/CW1-Instrs.pdf","CW1-Instrs.pdf",],
+["40","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/coursework/CW1/CW1-InstrsDyslexic.pdf","CW1-InstrsDyslexic.pdf",],
+["41","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/coursework/CW1/CW1-PowerToThePeople.zip","CW1-PowerToThePeople.zip",],
 
 ];
 
