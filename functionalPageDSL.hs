@@ -14,7 +14,7 @@ main = putStr $ pageToJS functionalPage config
 config :: Config
 config =
   MkConfig
-    { currentWeek = 4,
+    { currentWeek = 5,
       activityNum = 8,
       columnNum = 4,
       title = "FUNCTIONAL PROGRAMMING",
@@ -162,25 +162,25 @@ functionalPage =
 
     -- Week 4
     , [ Entry
-          { title = "Recursion"
+          { title = "Recursion I"
           , spec = Lecture
               { firstOrSecond = First
-              , slidesFile' = Just (BB "recursion.pdf") 
-              , lectureRecording = Nothing -- ["https://mediasite.bris.ac.uk/Mediasite/Play/18e6ea68ad654e9aaafc9f34805f2c831d"]
+              , slidesFile' = Just (BB "recursion1.pdf") 
+              , lectureRecording = Just "https://mediasite.bris.ac.uk/Mediasite/Play/a278ef2cf905455ab298fd11701a14101d"
               }
           , materials =
-              [ slide "recursion.pdf"
+              [ slide "recursion1.pdf"
               ]
           }
       , Entry
-          { title = "Evaluation"
+          { title = "Recursion II: Lists"
           , spec = Lecture
               { firstOrSecond = Second
-              , slidesFile' = Just (BB "evaluation.pdf")
-              , lectureRecording = Nothing -- ["https://mediasite.bris.ac.uk/Mediasite/Play/18e6ea68ad654e9aaafc9f34805f2c831d"]
+              , slidesFile' = Just (BB "recursion2.pdf")
+              , lectureRecording = Just "https://mediasite.bris.ac.uk/Mediasite/Play/8cfe56ca3375406a80c5f3ed9ad6f1381d"
               }
           , materials =
-              [ slide "evaluation.pdf"
+              [ slide "recursion2.pdf"
               ]
           }
       , Entry
@@ -208,40 +208,51 @@ functionalPage =
               , "CW1-PowerToThePeople.zip" ]
           }
       ]
-  --   -- Week 5
-  --   , [ Entry
-  --         { title = "Types and Constructors, Pattern Matching, and Lists"
-  --         , spec = Lectures
-  --             { slidesFile = BB "week5.pdf"
-  --             , revisionVideos =
-  --                 [ "https://mediasite.bris.ac.uk/Mediasite/Play/8f441a50546745c4bf1d796c084ebfa91d"
-  --                 , "https://mediasite.bris.ac.uk/Mediasite/Play/6e8c8a6d980d45feb4808288da7bce771d"
-  --                 ]
-  --             }
-  --         , materials = [code "week5.hs"]
-  --         }
-  --     , Entry
-  --         { title = ""
-  --         , spec = NotesExtra
-  --         , materials = map (uncurry note)
-  --             [ ("Lists", "Lists.pdf")
-  --             , ("Maybe", "Maybe.pdf")
-  --             ]
-  --         }
-  --     , Entry
-  --         { title = "List and Property Testing"
-  --         , spec = Worksheet "sheet04.pdf"
-  --         , materials = sheets 4 ++ answers 4
-  --         }
-  --     , Entry
-  --         { title = "Structural Inductive Proofs"
-  --         , spec = WorksheetBonus "sheetBonus1.pdf"
-  --         , materials = sheetsBonus 1 ++ [note "Structural Inductive Proofs" "StructuralInductiveProofs.pdf"] ++ answersBonus 1
-  --         }
-  --     ]
+    -- Week 5
+    , [ Entry
+          { title = "Lists & List Comprehensions"
+          , spec = Lecture
+              { firstOrSecond = First
+              , slidesFile' = Just (BB "list-comp.pdf") 
+              , lectureRecording = Nothing
+              }
+          , materials =
+              [ slide "list-comp.pdf"
+              ]
+          }
+        , Entry
+            { title = "Evaluation"
+            , spec = Lecture
+                { firstOrSecond = Second
+                , slidesFile' = Just (BB "evaluation.pdf") 
+                , lectureRecording = Nothing
+                }
+            , materials =
+                [ slide "evaluation.pdf"
+                ]
+            }
+      , Entry
+          { title = ""
+          , spec = NotesExtra
+          , materials = map (uncurry note)
+              [ ("Lists", "Lists.pdf")
+              , ("Maybe", "Maybe.pdf")
+              ]
+          }
+      , Entry
+          { title = "Recursive Pattern Matching"
+          , spec = Worksheet "sheet04.pdf"
+          , materials = sheets 4 -- ++ answers 4
+          }
+      -- , Entry
+      --     { title = "Structural Inductive Proofs"
+      --     , spec = WorksheetBonus "sheetBonus1.pdf"
+      --     , materials = sheetsBonus 1 ++ [note "Structural Inductive Proofs" "StructuralInductiveProofs.pdf"] ++ answersBonus 1
+      --     }
+      ]
 
-  --   -- Reading week
-  --   , []
+    -- Reading week
+    , []
 
   --   -- Week 7
   --   , [ Entry
