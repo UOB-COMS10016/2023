@@ -218,6 +218,7 @@ functionalPage =
               }
           , materials =
               [ slide "list-comp.pdf"
+              , code "list.hs"
               ]
           }
         , Entry
