@@ -205,7 +205,9 @@ functionalPage =
           , materials = map (coursework "CW1")
               [ "CW1-Instrs.pdf"
               , "CW1-InstrsDyslexic.pdf"
-              , "CW1-PowerToThePeople.zip" ]
+              , "CW1-PowerToThePeople.zip"
+              , "PowerTest.hs"
+              ]
           }
       ]
     -- Week 5
@@ -214,7 +216,7 @@ functionalPage =
           , spec = Lecture
               { firstOrSecond = First
               , slidesFile' = Just (BB "list-comp.pdf") 
-              , lectureRecording = Nothing
+              , lectureRecording = Just "https://mediasite.bris.ac.uk/Mediasite/Play/6b795e3925a94303abbe44b1d5964f521d"
               }
           , materials =
               [ slide "list-comp.pdf"
@@ -242,7 +244,7 @@ functionalPage =
       , Entry
           { title = "Recursive Pattern Matching"
           , spec = Worksheet "sheet04.pdf"
-          , materials = sheets 4 -- ++ answers 4
+          , materials = sheets 4 ++ answers 4
           }
       -- , Entry
       --     { title = "Structural Inductive Proofs"
