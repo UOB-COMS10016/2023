@@ -93,12 +93,11 @@ var activities = [
 ["4", "in your own time",   "BITS &amp; POINTERS",                   "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_Task04.pdf", "", "171", "6"],
 ["0", "Tue 24/10/23<br/>04:00pm-04:50pm<br/>PHYS BLDG G42 Powell",    "STRUCTURES &amp; USER TYPES",             "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_12_OR.pdf",  "https://mediasite.bris.ac.uk/Mediasite/Play/7d3fe970d51b4ce69c1de4f69a99629a1d", "59", "2"],
 ["0", "Tue 24/10/23<br/>04:00pm-04:50pm<br/>PHYS BLDG G42 Powell",    "DYNAMIC DATA",          "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_13_OR.pdf",        "https://web.microsoftstream.com/video/1c746e39-efab-4eea-9d42-35dfa9a876f9", "81", "5"],
-["8", "",                     "",                                 "", "", "0", "0"],
+["7", "in your own time", "LIST ASSIGNMENT<hr/>", "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week06/index.html", "", "91", "3"],
 ["10", "",                     "",                                 "", "", "0", "0"],
 ["0", "Thu 26/10/23<br/>11:00am-11:50am<br/>PHYS BLDG G42 Powell",   "STACKS",            "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_14_OR.pdf",           "https://web.microsoftstream.com/video/125300f5-3aec-4318-a1ad-b80bc0aad486",  "79", "2"],
 ["0", "Thu 26/10/23<br/>11:00am-11:50am<br/>PHYS BLDG G42 Powell",   "LISTS",             "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_15_OR.pdf",           "https://web.microsoftstream.com/video/40263cce-c988-4df7-9a24-1d28dc34b659",  "86", "2"],
-//["8", "",                     "",                                 "", "", "0", "0"],
-["7", "in your own time", "LIST ASSIGNMENT<hr/>", "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week06/index.html", "", "91", "3"],
+["8", "Submission Deadline<br/>Thu 09/11/23<br/>01:00pm UK time<hr/>",                     "<a target='_blank' href='https://www.ole.bris.ac.uk/webapps/assignment/uploadAssignment?content_id=_8307454_1&course_id=_257219_1&group_id=&mode=view' target='_blank'>SUBMIT HERE</a><br/>(Blackboard)<hr/>",     
 //["7", "in your own time", "</a>LIST ASSIGNMENT<hr/><a>", "", "", "0", "0"],
 
 //WEEK 06 - READING WEEK
