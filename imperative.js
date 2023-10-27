@@ -83,7 +83,7 @@ var activities = [
 ["4", "in your own time",   "PRIME SUSPECT",                   "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_Task03.pdf", "", "53", "1"],
 ["0", "Tue 17/10/23<br/>04:00pm-04:50pm<br/>PHYS BLDG G42 Powell",   "RUNTIME COMPLEXITY",             "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_09.pdf",  "https://mediasite.bris.ac.uk/Mediasite/Play/953a9c1c02e7421b86ea1bbee3ec83ec1d", "43", "1"],
 ["0", "Tue 17/10/23<br/>04:00pm-04:50pm<br/>PHYS BLDG G42 Powell",    "BITS",          "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_10.pdf",        "https://mediasite.bris.ac.uk/Mediasite/Play/a3533af3bc4e4fc0906e5ca4f2133dcf1d", "56", "1"],
-["6", "Weds 18+25/10/23<br/>10:00am-01:00pm<br/>MVB2.11/1.15", "TRIANGLE CHALLENGE<br/></a target='_blank' href='https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week04/sample/triangle.c' target='_blank'>(Triangle Solution)<a><br/></a target='_blank' href='https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week04/sample/strings.c' target='_blank'>(Strings Solution)<a>",              "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week04/index.html", "", "44", "4"],
+["6", "Weds 18+25/10/23<br/>10:00am-01:00pm<br/>MVB2.11/1.15", "TRIANGLE CHALLENGE<br/><a target='_blank' href='https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week04/sample/triangle.c' target='_blank'>(Triangle Solution)</a><br/><a target='_blank' href='https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week04/sample/strings.c' target='_blank'>(Strings Solution)</a>",              "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week04/index.html", "", "44", "4"],
 ["10", "",                     "",                                 "", "", "0", "0"],
 ["0", "Thu 19/10/23<br/>11:00am-11:50am<br/>PHYS BLDG G42 Powell",   "POINTERS",             "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_11.pdf",           "https://mediasite.bris.ac.uk/Mediasite/Play/388e5402b8404f5d8dc76f2115f16cb31d",  "57", "2"],
 ["9", "",                     "",                                 "", "", "0", "0"],
@@ -97,8 +97,8 @@ var activities = [
 ["10", "",                     "",                                 "", "", "0", "0"],
 ["0", "Thu 26/10/23<br/>11:00am-11:50am<br/>PHYS BLDG G42 Powell",   "STACKS",            "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_14_OR.pdf",           "https://web.microsoftstream.com/video/125300f5-3aec-4318-a1ad-b80bc0aad486",  "79", "2"],
 ["0", "Thu 26/10/23<br/>11:00am-11:50am<br/>PHYS BLDG G42 Powell",   "LISTS",             "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_15_OR.pdf",           "https://web.microsoftstream.com/video/40263cce-c988-4df7-9a24-1d28dc34b659",  "86", "2"],
-["8", "",                     "",                                 "", "", "0", "0"],
-// ["7", "in your own time", "LIST ASSIGNMENT<hr/>", "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week06/index.html", "", "91", "3"],
+//["8", "",                     "",                                 "", "", "0", "0"],
+["7", "in your own time", "LIST ASSIGNMENT<hr/>", "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week06/index.html", "", "91", "3"],
 //["7", "in your own time", "</a>LIST ASSIGNMENT<hr/><a>", "", "", "0", "0"],
 
 //WEEK 06 - READING WEEK
