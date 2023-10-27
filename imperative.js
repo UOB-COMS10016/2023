@@ -97,7 +97,7 @@ var activities = [
 ["10", "",                     "",                                 "", "", "0", "0"],
 ["0", "Thu 26/10/23<br/>11:00am-11:50am<br/>PHYS BLDG G42 Powell",   "STACKS",            "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_14_OR.pdf",           "https://web.microsoftstream.com/video/125300f5-3aec-4318-a1ad-b80bc0aad486",  "79", "2"],
 ["0", "Thu 26/10/23<br/>11:00am-11:50am<br/>PHYS BLDG G42 Powell",   "LISTS",             "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_15_OR.pdf",           "https://web.microsoftstream.com/video/40263cce-c988-4df7-9a24-1d28dc34b659",  "86", "2"],
-["8", "Submission Deadline<br/>Thu 09/11/23<br/>01:00pm UK time<hr/>", "<a target='_blank' href='https://www.ole.bris.ac.uk/webapps/assignment/uploadAssignment?content_id=_8307454_1&course_id=_257219_1&group_id=&mode=view' target='_blank'>SUBMIT HERE</a><br/>(Blackboard)<hr/>", "0", "0"], 
+["8", "Submission Deadline<br/>Thu 09/11/23<br/>01:00pm UK time<hr/>", "<a target='_blank' href='https://www.ole.bris.ac.uk/webapps/assignment/uploadAssignment?content_id=_8307454_1&course_id=_257219_1&group_id=&mode=view' target='_blank'>SUBMIT HERE</a><br/>(Blackboard)<hr/>", "", "0", "0"], 
 //["7", "in your own time", "</a>LIST ASSIGNMENT<hr/><a>", "", "", "0", "0"],
 
 //WEEK 06 - READING WEEK
