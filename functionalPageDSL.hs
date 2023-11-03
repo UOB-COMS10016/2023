@@ -14,7 +14,7 @@ main = putStr $ pageToJS functionalPage config
 config :: Config
 config =
   MkConfig
-    { currentWeek = 5,
+    { currentWeek = 7,
       activityNum = 8,
       columnNum = 4,
       title = "FUNCTIONAL PROGRAMMING",
@@ -228,7 +228,7 @@ functionalPage =
             , spec = Lecture
                 { firstOrSecond = Second
                 , slidesFile' = Just (BB "evaluation.pdf") 
-                , lectureRecording = Nothing
+                , lectureRecording = Just "https://mediasite.bris.ac.uk/Mediasite/Play/9f89d107dd6c412c8f768a88660e83071d"
                 }
             , materials =
                 [ slide "evaluation.pdf"
@@ -257,45 +257,47 @@ functionalPage =
     -- Reading week
     , []
 
-  --   -- Week 7
-  --   , [ Entry
-  --         { title = "Higher-Order Functions"
-  --         , spec = Lectures
-  --             { slidesFile = BB "week7.pdf"
-  --             , revisionVideos =
-  --                 [ "https://mediasite.bris.ac.uk/Mediasite/Play/cb5a2aad0fed4dc385ea5db8da9c4c801d"
-  --                 , "https://mediasite.bris.ac.uk/Mediasite/Play/c3299d40b82d4163b30f89d3da36afcc1d"
-  --                 ]
-  --             }
-  --         , materials = [code "week7.hs"]
-  --         }
-  --     , Entry
-  --         { title = ""
-  --         , spec = NotesExtra
-  --         , materials = map (uncurry note)
-  --             [ ("Universal Quantification", "UniversalQuantification.pdf")
-  --             , ("Higher-Order Functions", "HigherOrderFunctions.pdf")
-  --             , ("Map", "Map.pdf")
-  --             , ("Folds", "Folds.pdf")
-  --             , ("Record Syntax", "RecordSyntax.pdf")
-  --             ]
-  --         }
-  --     , Entry
-  --         { title = "Folding"
-  --         , spec = Worksheet "sheet05.pdf"
-  --         , materials = sheets 5 ++ answers 5
-  --         }
-  --     , Entry
-  --         { title = "Sudoku"
-  --         , spec = FormativePractical "Sudoku/SudokuInstrs.pdf"
-  --         , materials = map (coursework "Sudoku")
-  --             [ "SudokuInstrs.pdf"
-  --             , "SudokuInstrsDyslexic.pdf"
-  --             , "Sudoku.hs"
-  --             , "hard.txt"
-  --             ]
-  --         }
-  --     ]
+    -- Week 7
+    , [ Entry
+          { title = "High Order Functions I"
+          , spec = Lecture
+              { firstOrSecond = First
+              , slidesFile' = Just (BB "week7.pdf")
+              , lectureRecording = Nothing
+              }
+          , materials =
+              [ code "HObp.hs"
+              , slide "week7.pdf"
+              ]
+          }
+        , Entry
+            { title = "High Order Functions II"
+            , spec = Lecture
+                { firstOrSecond = Second
+                , slidesFile' = Just (BB "week7.pdf")
+                , lectureRecording = Nothing
+                }
+            , materials =
+                [ code "HObp.hs"
+                , slide "week7.pdf"
+                ]
+            }
+      , Entry
+          { title = "List Comprehensions, Property Tests, and Evaluation"
+          , spec = Worksheet "sheet05.pdf"
+          , materials = sheets 5 -- ++ answers 5
+          }
+      , Entry
+          { title = "Sudoku"
+          , spec = FormativePractical "Sudoku/SudokuInstrs.pdf"
+          , materials = map (coursework "Sudoku")
+              [ "SudokuInstrs.pdf"
+              , "SudokuInstrsDyslexic.pdf"
+              , "Sudoku.hs"
+              , "hard.txt"
+              ]
+          }
+      ]
 
   --   -- Week 8
   --   , [ Entry

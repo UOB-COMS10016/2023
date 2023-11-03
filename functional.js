@@ -1,4 +1,4 @@
-const currentWeek   = 5;
+const currentWeek   = 7;
 const activityNum   = 8;
 const columnNum     = 4;
 const title         = "FUNCTIONAL PROGRAMMING";
@@ -25,6 +25,7 @@ var categories = [
 ["6","Lecture","#CCCFFF","0","Lecture Recording","Materials",],
 ["7","Notes ft.<br>Extra Examples<br>+ Explanations","#94e5bf","0","","Notes",],
 ["8","Coursework","#EEEEDD","1","SUBMIT HERE (Blackboard)","Materials",],
+["9","Formative Practical","#EEEEDD","1","","Materials",],
 
 ];
 
@@ -63,7 +64,7 @@ const activities = [
 ["8","Deadline: 12:00 Thurs 09/11/23","Power to the People","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/coursework/CW1/CW1-Instrs.pdf","https://www.ole.bris.ac.uk/webapps/assignment/uploadAssignment?content_id=_8307455_1&course_id=_257219_1","39","4",],
 ["0","","","","","0","0",],
 ["6","Mon 11:00-11:50<br/>PHYS BLDG 1.11 TYNDALL","Lists & List Comprehensions","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/slides/list-comp.pdf","https://mediasite.bris.ac.uk/Mediasite/Play/6b795e3925a94303abbe44b1d5964f521d","43","2",],
-["2","Thurs 16:00-16:50<br/>PHYS BLDG 1.11 TYNDALL","Evaluation","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/slides/evaluation.pdf","","45","1",],
+["6","Thurs 16:00-16:50<br/>PHYS BLDG 1.11 TYNDALL","Evaluation","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/slides/evaluation.pdf","https://mediasite.bris.ac.uk/Mediasite/Play/9f89d107dd6c412c8f768a88660e83071d","45","1",],
 ["4","Mon 15:00-18:00<br/>MVB2.11/1.15","Recursive Pattern Matching","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/sheets/sheet04.pdf","","46","5",],
 ["0","","","","","0","0",],
 ["7","in your own time","","","","51","2",],
@@ -77,6 +78,14 @@ const activities = [
 ["0","","","","","0","0",],
 ["0","","","","","0","0",],
 ["0","","","","","0","0",],
+["0","","","","","0","0",],
+["2","Mon 11:00-11:50<br/>PHYS BLDG 1.11 TYNDALL","High Order Functions I","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/slides/week7.pdf","","53","2",],
+["2","Thurs 16:00-16:50<br/>PHYS BLDG 1.11 TYNDALL","High Order Functions II","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/slides/week7.pdf","","55","2",],
+["4","Mon 15:00-18:00<br/>MVB2.11/1.15","List Comprehensions, Property Tests, and Evaluation","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/sheets/sheet05.pdf","","57","2",],
+["0","","","","","0","0",],
+["0","","","","","0","0",],
+["0","","","","","0","0",],
+["9","","Sudoku","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/coursework/Sudoku/SudokuInstrs.pdf","","59","4",],
 ["0","","","","","0","0",],
 ["0","","","","","0","0",],
 ["0","","","","","0","0",],
@@ -150,6 +159,16 @@ const files = [
 ["50","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/sheets/code04.hs","code04.hs",],
 ["51","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/notes/Lists.pdf","Lists",],
 ["52","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/notes/Maybe.pdf","Maybe",],
+["53","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/code/HObp.hs","HObp.hs",],
+["54","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/slides/week7.pdf","week7.pdf",],
+["55","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/code/HObp.hs","HObp.hs",],
+["56","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/slides/week7.pdf","week7.pdf",],
+["57","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/sheets/sheet05.pdf","sheet05.pdf",],
+["58","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/sheets/sheet05Dyslexic.pdf","sheet05Dyslexic.pdf",],
+["59","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/coursework/Sudoku/SudokuInstrs.pdf","SudokuInstrs.pdf",],
+["60","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/coursework/Sudoku/SudokuInstrsDyslexic.pdf","SudokuInstrsDyslexic.pdf",],
+["61","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/coursework/Sudoku/Sudoku.hs","Sudoku.hs",],
+["62","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/coursework/Sudoku/hard.txt","hard.txt",],
 
 ];
 
