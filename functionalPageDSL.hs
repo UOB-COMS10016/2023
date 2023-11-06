@@ -1,5 +1,6 @@
 {-# LANGUAGE DuplicateRecordFields #-}
 {-# LANGUAGE NamedFieldPuns, RecordWildCards #-}
+{-# LANGUAGE ImportQualifiedPost #-}
 
 module Main where
 
@@ -268,6 +269,8 @@ functionalPage =
           , materials =
               [ code "HObp.hs"
               , slide "week7.pdf"
+              , code "HO.hs"
+              , code "MinuteSheetQR.png"
               ]
           }
         , Entry
@@ -280,6 +283,8 @@ functionalPage =
             , materials =
                 [ code "HObp.hs"
                 , slide "week7.pdf"
+                , code "HO.hs"
+                , code "MinuteSheetQR.png"
                 ]
             }
       , Entry
