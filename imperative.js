@@ -1,5 +1,5 @@
 //LAYOUT CUSTOMIZATION
-var currentWeek   = 5;                         // current week [releases content fully visible up to this week]
+var currentWeek   = 7;                         // current week [releases content fully visible up to this week]
 var activityNum   = 8;                         // number of activities per week (empty slots possible)
 var columnNum     = 4;                         // desired columns per week (yet, autofitted to max 2 rows per week)
 var title         = "IMPERATIVE PROGRAMMING";  // content title (different to unitName since multiple content streams maybe in one unit)
@@ -101,27 +101,24 @@ var activities = [
 //["7", "in your own time", "</a>LIST ASSIGNMENT<hr/><a>", "", "", "0", "0"],
 
 //WEEK 06 - READING WEEK
-//["10", "",                     "",                                 "", "", "0", "0"],
-//["12", "",                     "",                                 "", "", "0", "0"],
-//["12", "",                     "",                                 "", "", "0", "0"],
-////["8", "Submission Deadline<br/>Thu 10/11/22<br/>01:00pm UK time<hr/>",                     "SUBMIT HERE<br/>(Blackboard)<hr/>",                                 "https://www.ole.bris.ac.uk/webapps/assignment/uploadAssignment?content_id=_7367854_1&course_id=_252989_1&group_id=&mode=view", "", "0", "0"],
-//["12", "",                     "",                                 "", "", "0", "0"],
-//["10", "",                     "",                                 "", "", "0", "0"],
-//["10", "",                     "",                                 "", "", "0", "0"],
-//["10", "",                     "",                                 "", "", "0", "0"],
-//["10", "",                     "",                                 "", "", "0", "0"],
-////["8", "Extra Help via<br/><a href='https://teams.microsoft.com/l/channel/19%3a36aaf52e957147cf98f49ee558b8a878%40thread.tacv2/Week%252005-07%2520(Imp)%2520-%2520List%2520Assignment?groupId=7830f761-4803-4b75-8a0d-36308e7d5c31&tenantId=b2e47f30-cd7d-4a4e-a5da-b18cf1a4151b' target='_blank'>MS Teams Channel</a><hr/>",                     "",                              "", "", "0", "0"],
+["12", "",                     "",                                 "", "", "0", "0"],
+["10", "",                     "",                                 "", "", "0", "0"],
+["10", "",                     "",                                 "", "", "0", "0"],
+["8", "",                     "",                                  "", "", "0", "0"],
+["12", "",                     "",                                 "", "", "0", "0"],
+["10", "",                     "",                                 "", "", "0", "0"],
+["10", "",                     "",                                 "", "", "0", "0"],
+["8", "",                     "",                                  "", "", "0", "0"],
 
 //WEEK 07 - 
-//["10", "",                     "",                                 "", "", "0", "0"],
-//["0", "Tue 07/11/23<br/>04:00pm-04:50pm<br/>PHYS BLDG G42 Powell",   "TREES",                       "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_16_OR.pdf",   "https://mediasite.bris.ac.uk/Mediasite/Play/ba910510d107433b8ef0b94b1e92d2d81d", "94", "1"],
-//["15", "",                     "",                                 "", "", "0", "0"],
-////["8", "Final Support Lab<br/>Wed 09/11/22<br/>10:00am-01:00pm<br/>MVB2.11/1.15",                     "",                                 "", "", "0", "0"],
-//["9", "",                     "",                                 "", "", "0", "0"],
-//["10", "",                     "",                                 "", "", "0", "0"],
-//["0", "Thu 09/11/22<br/>11:00am-11:50am<br/>PHYS BLDG G42 Powell",   "SORTING",                   "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_17_OR.pdf",      "https://mediasite.bris.ac.uk/Mediasite/Play/ab93766ee4b64918925dd1d8e18f8e111d", "105", "1"],
-//["10", "",                     "",                                 "", "", "0", "0"],
-//["9", "",                     "",                                 "", "", "0", "0"],
+["10", "",                     "",                                 "", "", "0", "0"],
+["0", "Tue 07/11/23<br/>04:00pm-04:50pm<br/>PHYS BLDG G42 Powell",   "TREES",                       "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_16_OR.pdf",   "https://mediasite.bris.ac.uk/Mediasite/Play/ba910510d107433b8ef0b94b1e92d2d81d", "94", "1"],
+["15", "",                     "",                                 "", "", "0", "0"],
+["8", "",                     "",                                  "", "", "0", "0"],//["9", "",                     "",                                 "", "", "0", "0"],
+["10", "",                     "",                                 "", "", "0", "0"],
+["0", "Thu 09/11/22<br/>11:00am-11:50am<br/>PHYS BLDG G42 Powell",   "SORTING",                   "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_17_OR.pdf",      "https://mediasite.bris.ac.uk/Mediasite/Play/ab93766ee4b64918925dd1d8e18f8e111d", "105", "1"],
+["10", "",                     "",                                 "", "", "0", "0"],
+["9", "",                     "",                                 "", "", "0", "0"],
  
 //WEEK 08 - 
 //["4", "in your own time",   "CELLULAR",                   "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_Task05.pdf", "", "88", "1"],
