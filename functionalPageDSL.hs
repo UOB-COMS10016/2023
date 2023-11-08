@@ -288,6 +288,15 @@ functionalPage =
                 ]
             }
       , Entry
+          { title = ""
+          , spec = NotesExtra
+          , materials = map (uncurry note)
+              [ ("HO Functions", "HigherOrderFunctions.pdf")
+              , ("Map", "Map.pdf")
+              , ("Prelude Functions Cheatsheet", "PreludeFunctionsCheatsheet.pdf")
+              ]
+          }
+      , Entry
           { title = "List Comprehensions, Property Tests, and Evaluation"
           , spec = Worksheet "sheet05.pdf"
           , materials = sheets 5 -- ++ answers 5
