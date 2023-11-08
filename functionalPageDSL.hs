@@ -260,7 +260,7 @@ functionalPage =
 
     -- Week 7
     , [ Entry
-          { title = "High Order Functions I"
+          { title = "Higher Order Functions I"
           , spec = Lecture
               { firstOrSecond = First
               , slidesFile' = Just (BB "week7.pdf")
@@ -274,7 +274,7 @@ functionalPage =
               ]
           }
         , Entry
-            { title = "High Order Functions II"
+            { title = "Higher Order Functions II"
             , spec = Lecture
                 { firstOrSecond = Second
                 , slidesFile' = Just (BB "week7.pdf")
