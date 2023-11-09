@@ -95,7 +95,7 @@ const activities = [
 ["0","","","","","0","0",],
 ["11","(optional)","Binary Trees with Alex Kavvos","https://mediasite.bris.ac.uk/Mediasite/Play/b3fcbbfaf52a4ea0a850d131b088c8ac1d","","0","0",],
 ["7","in your own time","","","","83","3",],
-["8","Deadline: 13:00 Thurs 01/12/22<br/>(submit at least 1 hour early)","Simplify","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/coursework/CW2/CW2-Instrs.pdf","https://www.ole.bris.ac.uk/webapps/assignment/uploadAssignment?content_id=_7367856_1&course_id=_252989_1","86","2",],
+["0","","","","","0","0",],
 ["0","","","","","0","0",],
 ["0","","","","","0","0",],
 ["0","","","","","0","0",],
@@ -202,8 +202,6 @@ const files = [
 ["83","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/notes/Folds.pdf","Folds",],
 ["84","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/notes/copro.pdf","How to Design \"Co\"-Programs",],
 ["85","https://www.cs.ox.ac.uk/jeremy.gibbons/publications/hodgp-journal.pdf","Design Patterns as Higher-Order Datatype-Generic Programs",],
-["86","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/coursework/CW2/CW2-Instrs.pdf","CW2-Instrs.pdf",],
-["87","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/coursework/CW2/CW2-Simplify.zip","CW2-Simplify.zip",],
 
 ];
 
