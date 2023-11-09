@@ -248,15 +248,15 @@ functionalPage =
           , spec = Worksheet "sheet04.pdf"
           , materials = sheets 4 ++ answers 4
           }
-      -- , Entry
-      --     { title = "Structural Inductive Proofs"
-      --     , spec = WorksheetBonus "sheetBonus1.pdf"
-      --     , materials = sheetsBonus 1 ++ [note "Structural Inductive Proofs" "StructuralInductiveProofs.pdf"] ++ answersBonus 1
-      --     }
+      , Entry
+          { title = "Structural Inductive Proofs"
+          , spec = WorksheetBonus "sheetBonus1.pdf"
+          , materials = sheetsBonus 1 ++ [note "Structural Inductive Proofs" "StructuralInductiveProofs.pdf"] ++ answersBonus 1
+          }
       ]
 
     -- Reading week
-    , []
+    , [    ]
 
     -- Week 7
     , [ Entry
@@ -312,64 +312,69 @@ functionalPage =
               ]
           }
       ]
-
-  --   -- Week 8
-  --   , [ Entry
-  --         { title = "Function Composition and Data Transformations"
-  --         , spec = Lectures
-  --             { slidesFile = BB "function-machine-composition.pdf"
-  --             , revisionVideos =
-  --                 [ "https://mediasite.bris.ac.uk/Mediasite/Play/d1580512ac654fdd951562f63c18fd691d"
-  --                 , "https://mediasite.bris.ac.uk/Mediasite/Play/2f9bb8f91901479a90886db304e28bf81d"
-  --                 ]
-  --             }
-  --         , materials =
-  --             [ code "data-transformations-lecture-solutions.hs"
-  --             , code "data-transformations-jess-solutions.hs"
-  --             ]
-  --         }
-  --     , Entry
-  --         { title = "List Comprehensions, Type-Classes, and Trees"
-  --         , spec = Lectures
-  --             { slidesFile = BB "week8.pdf"
-  --             , revisionVideos = []
-  --             }
-  --         , materials = [code "questions.hs"]
-  --         }
-  --     , Entry
-  --         { title = "Binary Trees with Alex Kavvos"
-  --         , spec = LectureExtra
-  --             { videoLink = "https://mediasite.bris.ac.uk/Mediasite/Play/b3fcbbfaf52a4ea0a850d131b088c8ac1d"
-  --             }
-  --         , materials = []
-  --         }
-  --     , Entry
-  --         { title = ""
-  --         , spec = NotesExtra
-  --         , materials = map (uncurry note)
-  --             [ ("How to Design \"Co\"-Programs", "copro.pdf")
-  --             , ("Functions Cheatsheet", "PreludeFunctionsCheatsheet.pdf")
-  --             
-  --             ]
-  --         }
-  --     , Entry
-  --         { title = "List Comprehensions, Type Classes, and Trees"
-  --         , spec = Worksheet "sheet06.pdf"
-  --         , materials = sheets 6 ++ answers 6
-  --         }
-  --     , Entry
-  --         { title = "Simplify"
-  --         , spec = Coursework
-  --             { instructions = "CW2/CW2-Instrs.pdf"
-  --             , submissionLink = "https://www.ole.bris.ac.uk/webapps/assignment/uploadAssignment?content_id=_7367856_1&course_id=_252989_1"
-  --             , deadline = "13:00 Thurs 01/12/22<br/>(submit at least 1 hour early)"
-  --             }
-  --         , materials = map (coursework "CW2")
-  --             [ "CW2-Instrs.pdf"
-  --             , "CW2-Simplify.zip" ]
-  --         }
-  --     ]
-
+    -- Week 8
+    , [ Entry
+          { title = "Folds I"
+          , spec = Lecture
+              { firstOrSecond = First
+              , slidesFile' = Just (BB "week7.pdf")
+              , lectureRecording = Nothing
+              }
+          , materials =
+              [ code "FoldsBP.hs"
+              , slide "week7.pdf"
+              -- , code "Folds.hs"
+              , code "MinuteSheetQR.png"
+              ]
+          }
+        , Entry
+            { title = "Folds II"
+            , spec = Lecture
+                { firstOrSecond = Second
+                , slidesFile' = Just (BB "week7.pdf")
+                , lectureRecording = Nothing
+                }
+            , materials =
+                [ code "FoldsBP.hs"
+                , slide "week7.pdf"
+                -- , code "Folds.hs"
+                , code "MinuteSheetQR.png"
+                ]
+            }
+      , Entry
+          { title = "Binary Trees with Alex Kavvos"
+          , spec = LectureExtra
+              { videoLink = "https://mediasite.bris.ac.uk/Mediasite/Play/b3fcbbfaf52a4ea0a850d131b088c8ac1d"
+              }
+          , materials = []
+          }
+      , Entry
+          { title = ""
+          , spec = NotesExtra
+          , materials =
+              [ note "Folds" "Folds.pdf"
+              , note "How to Design \"Co\"-Programs" "copro.pdf"
+              , external "Design Patterns as Higher-Order Datatype-Generic Programs" "https://www.cs.ox.ac.uk/jeremy.gibbons/publications/hodgp-journal.pdf"
+              ]
+          }
+      , Entry
+          { title = "HO Functions"
+          , spec = Worksheet "sheet06.pdf"
+          , materials = sheets 6 -- ++ answers 6
+          }
+      , Entry -- TODO CW or can i put monoids?
+          { title = "Simplify"
+          , spec = Coursework
+              { instructions = "CW2/CW2-Instrs.pdf"
+              , submissionLink = "https://www.ole.bris.ac.uk/webapps/assignment/uploadAssignment?content_id=_7367856_1&course_id=_252989_1"
+              , deadline = "13:00 Thurs 01/12/22<br/>(submit at least 1 hour early)"
+              }
+          , materials = map (coursework "CW2")
+              [ "CW2-Instrs.pdf"
+              , "CW2-Simplify.zip" ]
+          }
+      ]
+  -- -- week 9
   --   , [ Entry
   --         { title = "IO and QuickCheck Generators"
   --         , spec = Lectures
@@ -392,7 +397,7 @@ functionalPage =
   --         , spec = Worksheet "sheet07.pdf"
   --         , materials = sheets 7 ++ answers 7
   --         }
-  --     , Entry
+  --     , Entry -- we do want this to go up, Sam promised it last week
   --         { title = "Monoids"
   --         , spec = WorksheetBonus "sheetBonus2.pdf"
   --         , materials = sheetsBonus 2 ++ [note "Monoids notes" "Monoids.pdf"] ++ answersBonus 2
