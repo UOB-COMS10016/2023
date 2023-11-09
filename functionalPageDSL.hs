@@ -367,7 +367,7 @@ functionalPage =
       --     , spec = Coursework
       --         { instructions = "CW2/CW2-Instrs.pdf"
       --         , submissionLink = "https://www.ole.bris.ac.uk/webapps/assignment/uploadAssignment?content_id=_8307456_1&course_id=_257219_1"
-      --         , deadline = "12:00 Thurs 30/11/22<br/>(submit at least 1 hour early)"
+      --         , deadline = "12:00 Thurs 30/11/23<br/>(submit at least 1 hour early)"
       --         }
       --     , materials = map (coursework "CW2")
       --         [ "CW2-Instrs.pdf"
