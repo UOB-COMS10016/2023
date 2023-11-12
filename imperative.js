@@ -1,5 +1,5 @@
 //LAYOUT CUSTOMIZATION
-var currentWeek   = 7;                         // current week [releases content fully visible up to this week]
+var currentWeek   = 8;                         // current week [releases content fully visible up to this week]
 var activityNum   = 8;                         // number of activities per week (empty slots possible)
 var columnNum     = 4;                         // desired columns per week (yet, autofitted to max 2 rows per week)
 var title         = "IMPERATIVE PROGRAMMING";  // content title (different to unitName since multiple content streams maybe in one unit)
@@ -121,14 +121,14 @@ var activities = [
 ["8", "",                     "",                                 "", "", "0", "0"],
  
 //WEEK 08 - 
-//["4", "in your own time",   "CELLULAR",                   "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_Task05.pdf", "", "88", "1"],
-//["0", "Tue 14/11/23<br/>04:00pm-04:50pm<br/>PHYS BLDG G42 Powell",   "FUNCTION POINTERS",     "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_18.pdf",          "https://mediasite.bris.ac.uk/Mediasite/Play/434d2a8c7d8940c5ada2244ed17243bb1d", "101", "3"],
-//["10", "",                     "",                                 "", "", "0", "0"],
-//["6", "Wed 15/11/23<br/>10:00am-01:00pm<br/>MVB2.11/1.15", "TEXT CHALLENGE<br/></a target='_blank' href='https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week08/sample/text.c' target='_blank'>(Text Solution)<a><br/></a target='_blank' href='https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week08/sample/bits.c' target='_blank'>(Bits Solution)<a>", "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week08/index.html", "", "96", "4"],
-//["10", "",                     "",                                 "", "", "0", "0"],
-//["0", "Thu 16/11/23<br/>11:00am-11:50am<br/>PHYS BLDG G42 Powell",   "INPUT &amp; OUTPUT",  "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_19_NA.pdf",  "https://mediasite.bris.ac.uk/Mediasite/Play/5d0479bdadf5499a8c252f4911f5883f1d",  "121", "9"],
-//["10", "",                     "",                                 "", "", "0", "0"],
-//["8", "",                     "",                                 "", "", "0", "0"],
+["3", "in your own time",   "CELLULAR",                   "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_Task05.pdf", "", "88", "1"],
+["0", "Tue 14/11/23<br/>04:00pm-04:50pm<br/>PHYS BLDG G42 Powell",   "FUNCTION POINTERS",     "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_18.pdf",          "https://mediasite.bris.ac.uk/Mediasite/Play/434d2a8c7d8940c5ada2244ed17243bb1d", "101", "3"],
+["10", "",                     "",                                 "", "", "0", "0"],
+["6", "Wed 15/11/23<br/>10:00am-01:00pm<br/>MVB2.11/1.15", "TEXT CHALLENGE<br/></a target='_blank' href='https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week08/sample/text.c' target='_blank'>(Text Solution)<a><br/></a target='_blank' href='https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week08/sample/bits.c' target='_blank'>(Bits Solution)<a>", "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week08/index.html", "", "96", "4"],
+["10", "",                     "",                                 "", "", "0", "0"],
+["0", "Thu 16/11/23<br/>11:00am-11:50am<br/>PHYS BLDG G42 Powell",   "INPUT &amp; OUTPUT",  "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_19_NA.pdf",  "https://mediasite.bris.ac.uk/Mediasite/Play/5d0479bdadf5499a8c252f4911f5883f1d",  "121", "9"],
+["10", "",                     "",                                 "", "", "0", "0"],
+["8", "",                     "",                                 "", "", "0", "0"],
  
 //WEEK 09 - 
 //["4", "in your own time",   "BUBBLE",                   "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_Task06.pdf", "", "95", "1"],
