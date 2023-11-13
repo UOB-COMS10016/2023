@@ -323,7 +323,7 @@ functionalPage =
           , materials =
               [ code "FoldsBP.hs"
               , slide "week7.pdf"
-              -- , code "Folds.hs"
+              , code "Folds.hs"
               , code "MinuteSheetQR.png"
               ]
           }
@@ -337,7 +337,7 @@ functionalPage =
             , materials =
                 [ code "FoldsBP.hs"
                 , slide "week7.pdf"
-                -- , code "Folds.hs"
+                , code "Folds.hs"
                 , code "MinuteSheetQR.png"
                 ]
             }
