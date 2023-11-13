@@ -325,6 +325,7 @@ functionalPage =
               , slide "week7.pdf"
               , code "Folds.hs"
               , code "MinuteSheetQR.png"
+              , code "Recap.hs"
               ]
           }
         , Entry
