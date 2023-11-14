@@ -299,7 +299,7 @@ functionalPage =
       , Entry
           { title = "List Comprehensions, Property Tests, and Evaluation"
           , spec = Worksheet "sheet05.pdf"
-          , materials = sheets 5 -- ++ answers 5
+          , materials = sheets 5 ++ answers 5
           }
       , Entry
           { title = "Sudoku"
