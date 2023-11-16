@@ -363,17 +363,17 @@ functionalPage =
           , spec = Worksheet "sheet06.pdf"
           , materials = sheets 6 -- ++ answers 6
           }
-      -- , Entry -- TODO CW or can i put monoids?
-      --     { title = "Simplify"
-      --     , spec = Coursework
-      --         { instructions = "CW2/CW2-Instrs.pdf"
-      --         , submissionLink = "https://www.ole.bris.ac.uk/webapps/assignment/uploadAssignment?content_id=_8307456_1&course_id=_257219_1"
-      --         , deadline = "12:00 Thurs 30/11/23<br/>(submit at least 1 hour early)"
-      --         }
-      --     , materials = map (coursework "CW2")
-      --         [ "CW2-Instrs.pdf"
-      --         , "CW2-Simplify.zip" ]
-      --     }
+      , Entry
+          { title = "Simplify"
+          , spec = Coursework
+              { instructions = "CW2/CW2-Instrs.pdf"
+              , submissionLink = "https://www.ole.bris.ac.uk/webapps/assignment/uploadAssignment?content_id=_8307456_1&course_id=_257219_1"
+              , deadline = "12:00 Thurs 30/11/23<br/>(submit at least 1 hour early)"
+              }
+          , materials = map (coursework "CW2")
+              [ "CW2-Instrs.pdf"
+              , "CW2-Simplify.zip" ]
+          }
       ]
   -- -- week 9
   --   , [ Entry
