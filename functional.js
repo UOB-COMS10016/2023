@@ -1,4 +1,4 @@
-const currentWeek   = 8;
+const currentWeek   = 9;
 const activityNum   = 8;
 const columnNum     = 4;
 const title         = "FUNCTIONAL PROGRAMMING";
@@ -28,6 +28,7 @@ var categories = [
 ["9","Bonus Worksheet","#FCC981","1","","Materials",],
 ["10","Formative Practical","#EEEEDD","1","","Materials",],
 ["11","Bonus Lecture","#D8CCFF","0","","",],
+["12","Lectures","#CCCFFF","0","","Materials",],
 
 ];
 
@@ -91,11 +92,19 @@ const activities = [
 ["0","","","","","0","0",],
 ["2","Mon 11:00-11:50<br/>PHYS BLDG 1.11 TYNDALL","Folds I","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/slides/week7.pdf","","78","5",],
 ["2","Thurs 16:00-16:50<br/>PHYS BLDG 1.11 TYNDALL","Folds II","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/slides/week7.pdf","","83","4",],
-["4","Mon 15:00-18:00<br/>MVB2.11/1.15","HO Functions","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/sheets/sheet06.pdf","","87","2",],
+["4","Mon 15:00-18:00<br/>MVB2.11/1.15","HO Functions","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/sheets/sheet06.pdf","","87","5",],
 ["0","","","","","0","0",],
 ["11","(optional)","Binary Trees with Alex Kavvos","https://mediasite.bris.ac.uk/Mediasite/Play/b3fcbbfaf52a4ea0a850d131b088c8ac1d","","0","0",],
-["7","in your own time","","","","89","3",],
-["8","Deadline: 12:00 Thurs 30/11/23<br/>(submit at least 1 hour early)","Simplify","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/coursework/CW2/CW2-Instrs.pdf","https://www.ole.bris.ac.uk/webapps/assignment/uploadAssignment?content_id=_8307456_1&course_id=_257219_1","92","2",],
+["7","in your own time","","","","92","3",],
+["8","Deadline: 12:00 Thurs 30/11/23<br/>(submit at least 1 hour early)","Simplify","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/coursework/CW2/CW2-Instrs.pdf","https://www.ole.bris.ac.uk/webapps/assignment/uploadAssignment?content_id=_8307456_1&course_id=_257219_1","95","2",],
+["0","","","","","0","0",],
+["12","Mon 11:00-11:50<br/>Thurs 16:00-16:50<br/>PHYS BLDG 1.11 TYNDALL","<a href='https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/slides/week9.pdf' target='_blank'>IO and QuickCheck Generators</a>","","","97","2",],
+["7","in your own time","","","","99","1",],
+["4","Mon 15:00-18:00<br/>MVB2.11/1.15","Folds","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/sheets/sheet07.pdf","","100","2",],
+["0","","","","","0","0",],
+["0","","","","","0","0",],
+["0","","","","","0","0",],
+["9","(optional)","Monoids","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/sheets/sheetBonus2.pdf","","102","5",],
 ["0","","","","","0","0",],
 ["0","","","","","0","0",],
 ["0","","","","","0","0",],
@@ -205,11 +214,24 @@ const files = [
 ["86","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/code/MinuteSheetQR.png","MinuteSheetQR.png",],
 ["87","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/sheets/sheet06.pdf","sheet06.pdf",],
 ["88","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/sheets/sheet06Dyslexic.pdf","sheet06Dyslexic.pdf",],
-["89","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/notes/Folds.pdf","Folds",],
-["90","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/notes/copro.pdf","How to Design \"Co\"-Programs",],
-["91","https://www.cs.ox.ac.uk/jeremy.gibbons/publications/hodgp-journal.pdf","Design Patterns as Higher-Order Datatype-Generic Programs",],
-["92","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/coursework/CW2/CW2-Instrs.pdf","CW2-Instrs.pdf",],
-["93","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/coursework/CW2/CW2-Simplify.zip","CW2-Simplify.zip",],
+["89","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/sheets/answer06.pdf","answer06.pdf",],
+["90","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/sheets/answer06Dyslexic.pdf","answer06Dyslexic.pdf",],
+["91","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/sheets/code06.hs","code06.hs",],
+["92","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/notes/Folds.pdf","Folds",],
+["93","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/notes/copro.pdf","How to Design \"Co\"-Programs",],
+["94","https://www.cs.ox.ac.uk/jeremy.gibbons/publications/hodgp-journal.pdf","Design Patterns as Higher-Order Datatype-Generic Programs",],
+["95","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/coursework/CW2/CW2-Instrs.pdf","CW2-Instrs.pdf",],
+["96","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/coursework/CW2/CW2-Simplify.zip","CW2-Simplify.zip",],
+["97","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/slides/week9.pdf","week9.pdf",],
+["98","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/code/ExampleIO.hs","ExampleIO.hs",],
+["99","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/notes/Intro-to-IO.pdf","Intro to IO",],
+["100","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/sheets/sheet07.pdf","sheet07.pdf",],
+["101","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/sheets/sheet07Dyslexic.pdf","sheet07Dyslexic.pdf",],
+["102","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/sheets/sheetBonus2.pdf","sheetBonus2.pdf",],
+["103","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/sheets/sheetBonus2Dyslexic.pdf","sheetBonus2Dyslexic.pdf",],
+["104","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/notes/Monoids.pdf","Monoids notes",],
+["105","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/sheets/answerBonus2.pdf","answerBonus2.pdf",],
+["106","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/sheets/answerBonus2Dyslexic.pdf","answerBonus2Dyslexic.pdf",],
 
 ];
 

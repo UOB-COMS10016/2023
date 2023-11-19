@@ -15,7 +15,7 @@ main = putStr $ pageToJS functionalPage config
 config :: Config
 config =
   MkConfig
-    { currentWeek = 8,
+    { currentWeek = 9,
       activityNum = 8,
       columnNum = 4,
       title = "FUNCTIONAL PROGRAMMING",
@@ -361,7 +361,7 @@ functionalPage =
       , Entry
           { title = "HO Functions"
           , spec = Worksheet "sheet06.pdf"
-          , materials = sheets 6 -- ++ answers 6
+          , materials = sheets 6 ++ answers 6
           }
       , Entry
           { title = "Simplify"
@@ -375,35 +375,35 @@ functionalPage =
               , "CW2-Simplify.zip" ]
           }
       ]
-  -- -- week 9
-  --   , [ Entry
-  --         { title = "IO and QuickCheck Generators"
-  --         , spec = Lectures
-  --             { slidesFile = BB "week9.pdf"
-  --             , revisionVideos =
-  --                 [ "https://mediasite.bris.ac.uk/Mediasite/Play/a18e66283df649239452b70e7794cffc1d" 
-  --                 , "https://mediasite.bris.ac.uk/Mediasite/Play/f48f5649eea243049ed5852b9de08c941d"
-  --                 ]
-  --             }
-  --         , materials = [code "ExampleIO.hs"]
-  --         }
-  --     , Entry
-  --         { title = ""
-  --         , spec = NotesExtra
-  --         , materials = map (uncurry note)
-  --             [ ("Intro to IO", "Intro-to-IO.pdf") ]
-  --         }
-  --     , Entry
-  --         { title = "IO and Properties of Trees"
-  --         , spec = Worksheet "sheet07.pdf"
-  --         , materials = sheets 7 ++ answers 7
-  --         }
-  --     , Entry -- we do want this to go up, Sam promised it last week
-  --         { title = "Monoids"
-  --         , spec = WorksheetBonus "sheetBonus2.pdf"
-  --         , materials = sheetsBonus 2 ++ [note "Monoids notes" "Monoids.pdf"] ++ answersBonus 2
-  --         }
-  --     ]
+  -- week 9
+    , [ Entry
+          { title = "IO and QuickCheck Generators"
+          , spec = Lectures
+              { slidesFile = BB "week9.pdf"
+              , revisionVideos = []
+              }
+          , materials =
+              [ slide "week9.pdf"
+              , code "ExampleIO.hs"
+              ]
+          }
+      , Entry
+          { title = ""
+          , spec = NotesExtra
+          , materials = map (uncurry note)
+              [ ("Intro to IO", "Intro-to-IO.pdf") ]
+          }
+      , Entry
+          { title = "Folds"
+          , spec = Worksheet "sheet07.pdf"
+          , materials = sheets 7 -- ++ answers 7
+          }
+      , Entry -- we do want this to go up, Sam promised it last week
+          { title = "Monoids"
+          , spec = WorksheetBonus "sheetBonus2.pdf"
+          , materials = sheetsBonus 2 ++ [note "Monoids notes" "Monoids.pdf"] ++ answersBonus 2
+          }
+      ]
   --   -- Week 10
   --   , [ Entry
   --         { title = "Functors and Applicatives"
