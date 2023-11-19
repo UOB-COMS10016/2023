@@ -1,5 +1,5 @@
 //LAYOUT CUSTOMIZATION
-var currentWeek   = 8;                         // current week [releases content fully visible up to this week]
+var currentWeek   = 9;                         // current week [releases content fully visible up to this week]
 var activityNum   = 8;                         // number of activities per week (empty slots possible)
 var columnNum     = 4;                         // desired columns per week (yet, autofitted to max 2 rows per week)
 var title         = "IMPERATIVE PROGRAMMING";  // content title (different to unitName since multiple content streams maybe in one unit)
@@ -121,7 +121,7 @@ var activities = [
 ["8", "",                     "",                                 "", "", "0", "0"],
  
 //WEEK 08 - 
-["3", "in your own time",   "CELLULAR",                   "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_Task05.pdf", "", "88", "1"],
+["4", "in your own time",   "CELLULAR",                   "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_Task05.pdf", "", "88", "1"],
 ["0", "Tue 14/11/23<br/>04:00pm-04:50pm<br/>PHYS BLDG G42 Powell",   "FUNCTION POINTERS",     "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_18.pdf",          "https://mediasite.bris.ac.uk/Mediasite/Play/434d2a8c7d8940c5ada2244ed17243bb1d", "101", "3"],
 ["10", "",                     "",                                 "", "", "0", "0"],
 ["6", "Wed 15/11/23<br/>10:00am-01:00pm<br/>MVB2.11/1.15", "TEXT CHALLENGE<br/></a target='_blank' href='https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week08/sample/text.c' target='_blank'>(Text Solution)<a><br/></a target='_blank' href='https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week08/sample/bits.c' target='_blank'>(Bits Solution)<a>", "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week08/index.html", "", "96", "4"],
@@ -131,13 +131,14 @@ var activities = [
 ["8", "",                     "",                                 "", "", "0", "0"],
  
 //WEEK 09 - 
-//["4", "in your own time",   "BUBBLE",                   "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_Task06.pdf", "", "95", "1"],
-//["0", "Tue 21/11/23<br/>04:00pm-04:50pm<br/>PHYS BLDG G42 Powell",   "MODULES",     "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_20_OR.pdf",          "https://mediasite.bris.ac.uk/Mediasite/Play/2b6abb9643bb40d5a6b4b0b1e42deef11d", "113", "8"],
-//["10", "",                     "",                                 "", "", "0", "0"],
-//["6", "Wed 22/11/23<br/>10:00am-01:00pm<br/>MVB2.11/1.15", "GRAPHICS CHALLENGE", "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week09/index.html", "", "107", "6"],
-//["10", "",                     "",                                 "", "", "0", "0"],
-//["0", "Thu 23/11/23<br/>11:00am-11:50am<br/>PHYS BLDG G42 Powell",   "PREPROCESSOR",  "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_21_OR.pdf",  "https://mediasite.bris.ac.uk/Mediasite/Play/554d0dcf701a44eca46968749456ee851d",  "112", "1"],
-//["10", "",                     "",                                 "", "", "0", "0"],
+["3", "in your own time",   "BUBBLE",                   "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_Task06.pdf", "", "95", "1"],
+["0", "Tue 21/11/23<br/>04:00pm-04:50pm<br/>PHYS BLDG G42 Powell",   "MODULES",     "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_20_OR.pdf",          "https://mediasite.bris.ac.uk/Mediasite/Play/2b6abb9643bb40d5a6b4b0b1e42deef11d", "113", "8"],
+["10", "",                     "",                                 "", "", "0", "0"],
+["6", "Wed 22/11/23<br/>10:00am-01:00pm<br/>MVB2.11/1.15", "GRAPHICS CHALLENGE", "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week09/index.html", "", "107", "6"],
+["10", "",                     "",                                 "", "", "0", "0"],
+["0", "Thu 23/11/23<br/>11:00am-11:50am<br/>PHYS BLDG G42 Powell",   "PREPROCESSOR",  "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_21_OR.pdf",  "https://mediasite.bris.ac.uk/Mediasite/Play/554d0dcf701a44eca46968749456ee851d",  "112", "1"],
+["10", "",                     "",                                 "", "", "0", "0"],
+["8", "",                     "",                                 "", "", "0", "0"],
 //["7", "in your own time", "</a>SKETCH ASSIGNMENT<hr/><a>", "", "", "0", "0"],
  
 //WEEK 10 - 
