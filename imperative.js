@@ -134,7 +134,7 @@ var activities = [
 ["3", "in your own time",   "BUBBLE",                   "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_Task06.pdf", "", "95", "1"],
 ["0", "Tue 21/11/23<br/>04:00pm-04:50pm<br/>PHYS BLDG G42 Powell",   "MODULES",     "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_20_OR.pdf",          "https://mediasite.bris.ac.uk/Mediasite/Play/2b6abb9643bb40d5a6b4b0b1e42deef11d", "113", "8"],
 ["10", "",                     "",                                 "", "", "0", "0"],
-["6", "Wed 22+29/11/23<br/>10:00am-01:00pm<br/>MVB2.11/1.15", "GRAPHICS CHALLENGE", "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week09/index.html", "", "107", "6"],
+["6", "Wed 22/11/23<br/>10:00am-01:00pm<br/>MVB2.11/1.15", "GRAPHICS CHALLENGE", "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week09/index.html", "", "107", "6"],
 ["10", "",                     "",                                 "", "", "0", "0"],
 ["0", "Thu 23/11/23<br/>11:00am-11:50am<br/>PHYS BLDG G42 Powell",   "PREPROCESSOR",  "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_21_OR.pdf",  "https://mediasite.bris.ac.uk/Mediasite/Play/554d0dcf701a44eca46968749456ee851d",  "112", "1"],
 ["10", "",                     "",                                 "", "", "0", "0"],
