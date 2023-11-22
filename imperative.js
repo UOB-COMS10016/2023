@@ -136,7 +136,7 @@ var activities = [
 ["10", "",                     "",                                 "", "", "0", "0"],
 ["6", "Wed 22/11/23<br/>10:00am-01:00pm<br/>MVB2.11/1.15", "GRAPHICS CHALLENGE", "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week09/index.html", "", "107", "6"],
 ["10", "",                     "",                                 "", "", "0", "0"],
-["10", "",                     "",                                 "", "", "0", "0"],
+["9", "",                     "",                                 "", "", "0", "0"],
 ["10", "",                     "",                                 "", "", "0", "0"],
 ["8", "",                     "",                                 "", "", "0", "0"],
 //["7", "in your own time", "</a>SKETCH ASSIGNMENT<hr/><a>", "", "", "0", "0"],
