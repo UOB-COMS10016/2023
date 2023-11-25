@@ -15,7 +15,7 @@ main = putStr $ pageToJS functionalPage config
 config :: Config
 config =
   MkConfig
-    { currentWeek = 9,
+    { currentWeek = 10,
       activityNum = 8,
       columnNum = 4,
       title = "FUNCTIONAL PROGRAMMING",
@@ -264,7 +264,7 @@ functionalPage =
           , spec = Lecture
               { firstOrSecond = First
               , slidesFile' = Just (BB "week7.pdf")
-              , lectureRecording = Nothing
+              , lectureRecording = Just "https://mediasite.bris.ac.uk/Mediasite/Play/4cbcea53e1b7462ea0bee7ac686cbf011d"
               }
           , materials =
               [ code "HObp.hs"
@@ -278,7 +278,7 @@ functionalPage =
             , spec = Lecture
                 { firstOrSecond = Second
                 , slidesFile' = Just (BB "week7.pdf")
-                , lectureRecording = Nothing
+                , lectureRecording = Just "https://mediasite.bris.ac.uk/Mediasite/Play/66b95c12968545049d366df2b9cbb25a1d"
                 }
             , materials =
                 [ code "HObp.hs"
@@ -318,7 +318,7 @@ functionalPage =
           , spec = Lecture
               { firstOrSecond = First
               , slidesFile' = Just (BB "week7.pdf")
-              , lectureRecording = Nothing
+              , lectureRecording = Just "https://mediasite.bris.ac.uk/Mediasite/Play/34caa8c6a85c47348b4108030ca0bc641d"
               }
           , materials =
               [ code "FoldsBP.hs"
@@ -333,7 +333,7 @@ functionalPage =
             , spec = Lecture
                 { firstOrSecond = Second
                 , slidesFile' = Just (BB "week7.pdf")
-                , lectureRecording = Nothing
+                , lectureRecording = Just "https://mediasite.bris.ac.uk/Mediasite/Play/7fc5773adbe8447cb64102bf84d61ace1d"
                 }
             , materials =
                 [ code "FoldsBP.hs"
@@ -377,13 +377,14 @@ functionalPage =
       ]
   -- week 9
     , [ Entry
-          { title = "IO and QuickCheck Generators"
-          , spec = Lectures
-              { slidesFile = BB "week9.pdf"
-              , revisionVideos = []
+          { title = "IO and Generators"
+          , spec = Lecture
+              { firstOrSecond = Second
+              , slidesFile' = Just (BB "IO-and-Gen.pdf")
+              , lectureRecording = Nothing
               }
           , materials =
-              [ slide "week9.pdf"
+              [ slide "IO-and-Gen.pdf"
               , code "ExampleIO.hs"
               ]
           }
@@ -396,7 +397,7 @@ functionalPage =
       , Entry
           { title = "Folds"
           , spec = Worksheet "sheet07.pdf"
-          , materials = sheets 7 -- ++ answers 7
+          , materials = sheets 7 ++ answers 7
           }
       , Entry -- we do want this to go up, Sam promised it last week
           { title = "Monoids"
@@ -405,43 +406,63 @@ functionalPage =
           }
       ]
   --   -- Week 10
-  --   , [ Entry
-  --         { title = "Functors and Applicatives"
-  --         , spec = Lectures
-  --             { slidesFile = External "https://quizizz.com/admin/presentation/619be26fa9afb8001d4e68fa"
-  --             , revisionVideos =
-  --                 [ "https://mediasite.bris.ac.uk/Mediasite/Play/64071d2d5e274e2e938715454a7488521d"
-  --                 , "https://mediasite.bris.ac.uk/Mediasite/Play/2bc2d5f933834dc2b1d12eb1820f11651d"
-  --                 ]
-  --             }
-  --         , materials =
-  --             [ code "Functors-Livecode.hs"
-  --             , code "Functor2021.hs"
-  --             , code "ApplicativeLive2022.hs"
-  --             ]
-  --         }
-  --     , Entry
-  --         { title = "Mock Test"
-  --         , spec = MockTest{ test = noteLink "COMS10016-Mock.pdf" }
-  --         , materials = map (uncurry note)
-  --             [ ("COMS10016-Mock.pdf", "COMS10016-Mock.pdf")
-  --             , ("COMS10016-Mock-Answer.txt", "COMS10016-Mock-Answer.txt")
-  --             ]
-  --         }
-  --     , Entry
-  --         { title = "Functors and Applicatives"
-  --         , spec = Worksheet "sheet08.pdf"
-  --         , materials = sheets 8 ++ answers 8
-  --         }
-  --     , Entry
-  --         { title = "Maps, Tries, Sets, and Perfect Trees"
-  --         , spec = WorksheetBonus "sheetBonus3.pdf"
-  --         , materials = sheetsBonus 3 ++ answersBonus 3
-  --         }
-  --     ]
+    , [ Entry
+          { title = "QuickCheck Generators: II"
+          , spec = Lecture
+              { firstOrSecond = First
+              , slidesFile' = Just (BB "Generators.pdf")
+              , lectureRecording = Nothing
+              }
+          , materials =
+              [ code "questions.hs"
+              ]
+          }
+      , Entry
+          { title = "Functors and Applicatives"
+          , spec = Lecture
+              { firstOrSecond = Second
+              , slidesFile' = Nothing
+              , lectureRecording = Nothing
+              }
+          , materials =
+              [ -- code "Functors-Livecode.hs"
+              -- , code "Functor2021.hs"
+              ]
+          }
+      -- , Entry
+      --     { title = "Mock Test"
+      --     , spec = MockTest{ test = noteLink "COMS10016-Mock.pdf" }
+      --     , materials = map (uncurry note)
+      --         [ ("COMS10016-Mock.pdf", "COMS10016-Mock.pdf")
+      --         , ("COMS10016-Mock-Answer.txt", "COMS10016-Mock-Answer.txt")
+      --         ]
+      --     }
+      , Entry
+          { title = "IO"
+          , spec = Worksheet "sheet08.pdf"
+          , materials = sheets 8 -- ++ answers 8
+          }
+      , Entry
+          { title = "Maps, Tries, Sets, and Perfect Trees"
+          , spec = WorksheetBonus "sheetBonus3.pdf"
+          , materials = sheetsBonus 3 ++ answersBonus 3
+          }
+      ]
 
   --   -- Week 11
   --   , [ Entry
+        --     { title = "Functors and Applicatives"
+        --     , spec = 
+        --       Lecture
+        --         { firstOrSecond = First
+        --         , slidesFile' = Just (External "https://quizizz.com/admin/presentation/619be26fa9afb8001d4e68fa")
+        --         , lectureRecording = Nothing
+        --         }
+        --     , materials =
+        --         [ code "ApplicativeLive2022.hs"
+        --         ]
+        --     }
+        --  , Entry
   --         { title = "Monads"
   --         , spec = Lectures
   --             { slidesFile = External "https://quizizz.com/admin/presentation/61a1077bf56186001dc1301e"
