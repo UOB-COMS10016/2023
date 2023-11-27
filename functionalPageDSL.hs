@@ -445,7 +445,7 @@ functionalPage =
       , Entry
           { title = "Maps, Tries, Sets, and Perfect Trees"
           , spec = WorksheetBonus "sheetBonus3.pdf"
-          , materials = sheetsBonus 3 ++ answersBonus 3
+          , materials = note "Data.Map" "DataMap.pdf" : sheetsBonus 3 ++ answersBonus 3
           }
       ]
 
