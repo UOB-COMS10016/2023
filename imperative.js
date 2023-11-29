@@ -145,7 +145,7 @@ var activities = [
 ["10", "",                     "",                                 "", "", "0", "0"],
 ["0", "Tue 28/11/23<br/>04:00pm-04:50pm<br/>PHYS BLDG G42 Powell",   "DESIGN", "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_22_Design_NA.pdf", "https://mediasite.bris.ac.uk/Mediasite/Play/f205eea1d0014aa286f0bf98d613ee5f1d",  "112", "1"],
 ["10", "",                     "",                                 "", "", "0", "0"],
-["7", "in your own time<hr/>support labs:<br/>Wed 29/11/23+<br/>Wed 06/12/23<br/>10:00am-01:00pm<br/>MVB2.11/1.15<hr/>", "</a>SKETCH ASSIGNMENT<hr/>release<br/>29/11/23<br/>10:00am UK time<hr/>deadline<br/>13/12/23<br/>01:00pm UK time<a>", "", "", "0", "0"],
+["7", "in your own time<hr/>support labs:<br/>Wed 29/11/23+<br/>Wed 06/12/23<br/>10:00am-01:00pm<br/>MVB2.11/1.15<hr/>", "SKETCH ASSIGNMENT<hr/>deadline<br/>13/12/23<br/>01:00pm UK time<a>", "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/week10CW/index.html", "", "133", "19"],
 ["10", "",                     "",                                 "", "", "0", "0"],
 ["0", "Thu 30/11/23<br/>11:00am-11:50am<br/>PHYS BLDG G42 Powell",   "ADVANCED CONCEPTS",  "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_24.pdf", "https://mediasite.bris.ac.uk/Mediasite/Play/ff1c3ff560064ad0b8101bbe6cb2c90d1d", "152", "7"],
 ["10", "",                     "",                                 "", "", "0", "0"],
