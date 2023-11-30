@@ -1,6 +1,8 @@
 {-# LANGUAGE DuplicateRecordFields #-}
 {-# LANGUAGE NamedFieldPuns, RecordWildCards #-}
 {-# LANGUAGE ImportQualifiedPost #-}
+{-# OPTIONS_GHC -Wno-unrecognised-pragmas #-}
+{-# HLINT ignore "Evaluate" #-}
 
 module Main where
 
@@ -15,7 +17,7 @@ main = putStr $ pageToJS functionalPage config
 config :: Config
 config =
   MkConfig
-    { currentWeek = 10,
+    { currentWeek = 11,
       activityNum = 8,
       columnNum = 4,
       title = "FUNCTIONAL PROGRAMMING",
@@ -414,11 +416,12 @@ functionalPage =
               , lectureRecording = Nothing
               }
           , materials =
-              [ code "questions.hs"
+              [ slide "Generators.pdf"
+              , code "questions.hs"
               ]
           }
       , Entry
-          { title = "Functors and Applicatives"
+          { title = "Functors"
           , spec = Lecture
               { firstOrSecond = Second
               , slidesFile' = Nothing
@@ -429,18 +432,11 @@ functionalPage =
               -- , code "Functor2021.hs"
               ]
           }
-      -- , Entry
-      --     { title = "Mock Test"
-      --     , spec = MockTest{ test = noteLink "COMS10016-Mock.pdf" }
-      --     , materials = map (uncurry note)
-      --         [ ("COMS10016-Mock.pdf", "COMS10016-Mock.pdf")
-      --         , ("COMS10016-Mock-Answer.txt", "COMS10016-Mock-Answer.txt")
-      --         ]
-      --     }
+
       , Entry
           { title = "IO"
           , spec = Worksheet "sheet08.pdf"
-          , materials = sheets 8 -- ++ answers 8
+          , materials = sheets 8 ++ answers 8
           }
       , Entry
           { title = "Maps, Tries, Sets, and Perfect Trees"
@@ -450,51 +446,69 @@ functionalPage =
       ]
 
   --   -- Week 11
-  --   , [ Entry
-        --     { title = "Functors and Applicatives"
-        --     , spec = 
-        --       Lecture
-        --         { firstOrSecond = First
-        --         , slidesFile' = Just (External "https://quizizz.com/admin/presentation/619be26fa9afb8001d4e68fa")
-        --         , lectureRecording = Nothing
-        --         }
-        --     , materials =
-        --         [ code "ApplicativeLive2022.hs"
-        --         ]
-        --     }
-        --  , Entry
-  --         { title = "Monads"
-  --         , spec = Lectures
-  --             { slidesFile = External "https://quizizz.com/admin/presentation/61a1077bf56186001dc1301e"
-  --             , revisionVideos = ["https://mediasite.bris.ac.uk/Mediasite/Play/284bff6ffeaa4d13907d7773a8ad0f501d"]
-  --             }
-  --         , materials = [ code "Monads.hs" ]
-  --         }
-  --     , Entry
-  --         { title = "Embedding"
-  --         , spec = Lectures
-  --             { slidesFile = External "https://docs.google.com/presentation/d/1_VBk9BFqwWpJZxg4sPm-TMPbHTUxos8sSBwyC8aC3KU"
-  --             , revisionVideos = ["https://mediasite.bris.ac.uk/Mediasite/Play/80396178d0094388982b5b4dde092e331d"]
-  --             }
-  --         , materials =
-  --             [ code "EmbeddingPartI.hs"
-  --             , external "Part II video" "https://web.microsoftstream.com/video/85b52444-fbe7-4f67-a7e2-b9083f2690a6"
-  --             , external "Folding Domain Specific Languages: Deep and Shallow" "https://dl.acm.org/doi/10.1145/2628136.2628138"
-  --             , external "CircuitFlow" "https://arxiv.org/abs/2111.12420"
-  --             , external "Bristol Quidditch Club" "https://www.bristolsu.org.uk/groups/bristol-quidditch-club-00bf"
-  --             ]
-  --         }
-  --     , Entry
-  --         { title = "Monads"
-  --         , spec = Worksheet "sheet09.pdf"
-  --         , materials = sheets 9 ++ answers 9
-  --         }
-  --     , Entry
-  --         { title = "Sheet of Death"
-  --         , spec = WorksheetBonus "sheetBonus4.pdf"
-  --         , materials = sheetsBonus 4 ++ answersBonus 4
-  --         }
-  --     ]
+    , [ Entry
+            { title = "Applicatives (and Functors recap)"
+            , spec = 
+              Lecture
+                { firstOrSecond = First
+                , slidesFile' = Just (External "https://quizizz.com/admin/presentation/619be26fa9afb8001d4e68fa")
+                , lectureRecording = Nothing
+                }
+            , materials =
+                [ external "Functors and Applicatives slides + quiz"
+                           "https://quizizz.com/admin/presentation/619be26fa9afb8001d4e68fa"
+                -- ,  code "ApplicativeLive2022.hs"
+                ]
+            }
+         , Entry
+          { title = "Monads"
+          , spec = Lecture
+              { firstOrSecond = Second
+              , slidesFile' = Just (External "https://quizizz.com/admin/presentation/61a1077bf56186001dc1301e")
+              , lectureRecording = Nothing
+              }
+          , materials =
+              [ external "Monads slides and quiz"
+                         "https://quizizz.com/admin/presentation/61a1077bf56186001dc1301e"
+              -- , code "Monads.hs"
+              ]
+          }
+      -- , Entry
+      --     { title = "Embedding"
+      --     , spec = Lectures
+      --         { slidesFile = External "https://docs.google.com/presentation/d/1_VBk9BFqwWpJZxg4sPm-TMPbHTUxos8sSBwyC8aC3KU"
+      --         , revisionVideos = ["https://mediasite.bris.ac.uk/Mediasite/Play/80396178d0094388982b5b4dde092e331d"]
+      --         }
+      --     , materials =
+      --         [ code "EmbeddingPartI.hs"
+      --         , external "Part II video" "https://web.microsoftstream.com/video/85b52444-fbe7-4f67-a7e2-b9083f2690a6"
+      --         , external "Folding Domain Specific Languages: Deep and Shallow" "https://dl.acm.org/doi/10.1145/2628136.2628138"
+      --         , external "CircuitFlow" "https://arxiv.org/abs/2111.12420"
+      --         , external "Bristol Quidditch Club" "https://www.bristolsu.org.uk/groups/bristol-quidditch-club-00bf"
+      --         ]
+      --     }
+        , Entry
+          { title = "Mock Test"
+          , spec = MockTest{ test = noteLink "COMS10016-Mock.pdf" }
+          , materials = map note'
+              [ "COMS10016-Mock.pdf"
+              -- , "COMS10016-Mock-answers.pdf"
+              ]
+          }
+      , Entry
+          { title = "Monads"
+          , spec = Worksheet "sheet09.pdf"
+          , materials = sheets 9 -- ++ answers 9
+          }
+      ]
+
+    -- Week 12/revision week
+    , [ Entry
+          { title = "Sheet of Death"
+          , spec = WorksheetBonus "sheetBonus4.pdf"
+          , materials = sheetsBonus 4 ++ answersBonus 4
+          }
+      ]
 
     -- Spare couple weeks of lectures, to make sure site doesn't break
     , []
@@ -808,6 +822,9 @@ instance Monoid ActivitiesMaterials where
 
 note :: String -> String -> Material
 note name file = MkMaterial name (noteLink file)
+
+note' :: String -> Material
+note' file = MkMaterial file (noteLink file)
 
 code :: String -> Material
 code file = MkMaterial file (codeLink file)
