@@ -424,12 +424,11 @@ functionalPage =
           { title = "Functors"
           , spec = Lecture
               { firstOrSecond = Second
-              , slidesFile' = Nothing
+              , slidesFile' = Just (External $ codeLink "Functor2023.hs")
               , lectureRecording = Nothing
               }
           , materials =
-              [ -- code "Functors-Livecode.hs"
-              -- , code "Functor2021.hs"
+              [ code "Functor2023.hs"
               ]
           }
 
