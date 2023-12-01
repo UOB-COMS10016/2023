@@ -429,6 +429,7 @@ functionalPage =
               }
           , materials =
               [ code "Functor2023.hs"
+              , note' "kinds.png"
               ]
           }
 
