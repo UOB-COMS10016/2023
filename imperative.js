@@ -156,11 +156,11 @@ var activities = [
 ["10", "",                     "",                                 "", "", "0", "0"],
 ["0", "Tue 05/12/23<br/>04:00pm-04:50pm<br/>PHYS BLDG G42 Powell", "LIBRARIES", "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_23_Libraries_NA.pdf", "https://mediasite.bris.ac.uk/Mediasite/Play/3d51c01de15c41ad8a6492b99775bb981d",  "108", "3"],
 ["10", "",                     "",                                 "", "", "0", "0"],
-["9", "",                     "",                                 "", "", "0", "0"],
+["8", "",                     "",                                 "", "", "0", "0"],
 ["10", "",                     "",                                 "", "", "0", "0"],
 ["0", "Thu 07/12/23<br/>11:00am-11:50am<br/>PHYS BLDG G42 Powell", "CORRECTNESS", "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_25_OR.pdf", "https://mediasite.bris.ac.uk/Mediasite/Play/40295c2ae05c4abeb18672a60c925a7d1d",  "7", "1"],
 ["10", "",                     "",                                 "", "", "0", "0"],
-["9", "",                     "",                                 "", "", "0", "0"],
+["8", "",                     "",                                 "", "", "0", "0"],
 
 //////////////////////
 // Old 2021 Code Start
