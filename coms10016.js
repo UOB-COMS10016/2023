@@ -2,7 +2,7 @@
 var unitName      = "Imperative and Functional Programming 2023";
 var unitCode      = "COMS10016";
 var startWeekNum  = 1;                         // start week number [usual start is week 1 or 13]
-var totalWeeks    = 11; // 11;                  // total teaching weeks for unit [usually 12]
+var totalWeeks    = 12; // 11;                  // total teaching weeks for unit [usually 12]
 
 //PAGE TITLE CONTENT (IF ANY)
 var topicsNum = 10; // num of topics to render in title, that is 1 plus max index, -1 for no topics

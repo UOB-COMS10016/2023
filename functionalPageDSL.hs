@@ -447,7 +447,7 @@ functionalPage =
 
   --   -- Week 11
     , [ Entry
-            { title = "Applicatives (and Functors recap)"
+            { title = "Applicatives"
             , spec = 
               Lecture
                 { firstOrSecond = First
@@ -457,11 +457,11 @@ functionalPage =
             , materials =
                 [ external "Functors and Applicatives slides + quiz"
                            "https://quizizz.com/admin/presentation/619be26fa9afb8001d4e68fa"
-                -- ,  code "ApplicativeLive2022.hs"
+                , code "ApplicativeLive2023.hs"
                 ]
             }
          , Entry
-          { title = "Monads"
+          { title = "Applicatives cont. and Monads"
           , spec = Lecture
               { firstOrSecond = Second
               , slidesFile' = Just (External "https://quizizz.com/admin/presentation/61a1077bf56186001dc1301e")
@@ -496,7 +496,7 @@ functionalPage =
               ]
           }
       , Entry
-          { title = "Functor, Applicative, Monad"
+          { title = "Functor, Applicative, and Monad"
           , spec = Worksheet "sheet09.pdf"
           , materials = sheets 9 -- ++ answers 9
           }
@@ -504,6 +504,36 @@ functionalPage =
 
     -- Week 12/revision week
     , [ Entry
+          { title = "Mock Test Walkthrough"
+          , spec = 
+            Lecture
+              { firstOrSecond = First
+              , slidesFile' = Just (External $ noteLink "COMS10016-Mock.pdf")
+              , lectureRecording = Nothing
+              }
+          , materials =
+              [ note' "COMS10016-Mock.pdf"
+              -- , note' "COMS10016-Mock-answers.pdf"
+              ]
+          }
+      , Entry
+          { title = "Functor/Applicative recap and Quiz + Q&A"
+          , spec = Lecture
+              { firstOrSecond = Second
+              , slidesFile' = Just (External "https://quizizz.com/admin/presentation/619be26fa9afb8001d4e68fa")
+              , lectureRecording = Nothing
+              }
+          , materials =
+              [ external "Functors and Applicatives slides + quiz"
+                          "https://quizizz.com/admin/presentation/619be26fa9afb8001d4e68fa"
+              ]
+          }
+      , Entry
+          { title = "Revision of previous sheets"
+          , spec = Worksheet "sheet09.pdf"
+          , materials = sheets 9 -- ++ answers 9
+          }
+      , Entry
           { title = "Sheet of Death"
           , spec = WorksheetBonus "sheetBonus4.pdf"
           , materials = sheetsBonus 4 ++ answersBonus 4
