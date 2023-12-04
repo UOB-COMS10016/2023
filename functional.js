@@ -116,7 +116,7 @@ const activities = [
 ["12","in your own time","Mock Test","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/notes/COMS10016-Mock.pdf","","124","1",],
 ["2","Mon 11:00-11:50<br/>PHYS BLDG 1.11 TYNDALL","Applicatives (and Functors recap)","https://quizizz.com/admin/presentation/619be26fa9afb8001d4e68fa","","125","1",],
 ["2","Thurs 16:00-16:50<br/>PHYS BLDG 1.11 TYNDALL","Monads","https://quizizz.com/admin/presentation/61a1077bf56186001dc1301e","","126","1",],
-["4","Mon 15:00-18:00<br/>MVB2.11/1.15","Monads","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/sheets/sheet09.pdf","","127","2",],
+["4","Mon 15:00-18:00<br/>MVB2.11/1.15","Functor, Applicative, Monad","https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/functional/sheets/sheet09.pdf","","127","2",],
 ["0","","","","","0","0",],
 ["0","","","","","0","0",],
 ["0","","","","","0","0",],

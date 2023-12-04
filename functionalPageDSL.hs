@@ -496,7 +496,7 @@ functionalPage =
               ]
           }
       , Entry
-          { title = "Monads"
+          { title = "Functor, Applicative, Monad"
           , spec = Worksheet "sheet09.pdf"
           , materials = sheets 9 -- ++ answers 9
           }
