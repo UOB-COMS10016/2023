@@ -1,5 +1,5 @@
 //LAYOUT CUSTOMIZATION
-var currentWeek   = 10;                         // current week [releases content fully visible up to this week]
+var currentWeek   = 11;                         // current week [releases content fully visible up to this week]
 var activityNum   = 8;                         // number of activities per week (empty slots possible)
 var columnNum     = 4;                         // desired columns per week (yet, autofitted to max 2 rows per week)
 var title         = "IMPERATIVE PROGRAMMING";  // content title (different to unitName since multiple content streams maybe in one unit)
@@ -153,14 +153,14 @@ var activities = [
 ////["8", "Support Labs<br/>Wed 30/11/22<br/>Wed 07/12/22<br/>10:00am-01:00pm<br/>MVB2.11/1.15<hr/>Extra Help via<br/><a href='https://teams.microsoft.com/l/channel/19%3a6bdf63f6ee8b4aab95c84f75f1b25e7e%40thread.tacv2/Week%252009-11%2520(Imp)%2520-%2520Sketch%2520Assignment?groupId=7830f761-4803-4b75-8a0d-36308e7d5c31&tenantId=b2e47f30-cd7d-4a4e-a5da-b18cf1a4151b' target='_blank'>MS Teams Channel</a><hr/>",                     "",                              "", "", "0", "0"],
  
 //WEEK 11 - READING WEEK
-//["10", "",                     "",                                 "", "", "0", "0"],
-//["0", "Tue 05/12/23<br/>04:00pm-04:50pm<br/>PHYS BLDG G42 Powell", "LIBRARIES", "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_23_Libraries_NA.pdf", "https://mediasite.bris.ac.uk/Mediasite/Play/3d51c01de15c41ad8a6492b99775bb981d",  "108", "3"],
-//["10", "",                     "",                                 "", "", "0", "0"],
-//["9", "",                     "",                                 "", "", "0", "0"],
-//["10", "",                     "",                                 "", "", "0", "0"],
-//["0", "Thu 07/12/23<br/>11:00am-11:50am<br/>PHYS BLDG G42 Powell", "CORRECTNESS", "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_25_OR.pdf", "https://mediasite.bris.ac.uk/Mediasite/Play/40295c2ae05c4abeb18672a60c925a7d1d",  "7", "1"],
-//["10", "",                     "",                                 "", "", "0", "0"],
-//["9", "",                     "",                                 "", "", "0", "0"],
+["10", "",                     "",                                 "", "", "0", "0"],
+["0", "Tue 05/12/23<br/>04:00pm-04:50pm<br/>PHYS BLDG G42 Powell", "LIBRARIES", "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_23_Libraries_NA.pdf", "https://mediasite.bris.ac.uk/Mediasite/Play/3d51c01de15c41ad8a6492b99775bb981d",  "108", "3"],
+["10", "",                     "",                                 "", "", "0", "0"],
+["8", "",                     "",                                 "", "", "0", "0"],
+["10", "",                     "",                                 "", "", "0", "0"],
+["0", "Thu 07/12/23<br/>11:00am-11:50am<br/>PHYS BLDG G42 Powell", "CORRECTNESS", "https://www.ole.bris.ac.uk/bbcswebdav/courses/COMS10016_2023_TB-1/content/imperative/COMS10016_25_OR.pdf", "https://mediasite.bris.ac.uk/Mediasite/Play/40295c2ae05c4abeb18672a60c925a7d1d",  "7", "1"],
+["10", "",                     "",                                 "", "", "0", "0"],
+["8", "",                     "",                                 "", "", "0", "0"],
 
 //////////////////////
 // Old 2021 Code Start
