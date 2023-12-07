@@ -17,7 +17,7 @@ main = putStr $ pageToJS functionalPage config
 config :: Config
 config =
   MkConfig
-    { currentWeek = 11,
+    { currentWeek = 12,
       activityNum = 8,
       columnNum = 4,
       title = "FUNCTIONAL PROGRAMMING",
@@ -470,7 +470,7 @@ functionalPage =
           , materials =
               [ external "Monads slides and quiz"
                          "https://quizizz.com/admin/presentation/61a1077bf56186001dc1301e"
-              -- , code "Monads.hs"
+              , code "ApplicativeLive2023Updated.hs"
               ]
           }
       -- , Entry
@@ -531,7 +531,7 @@ functionalPage =
       , Entry
           { title = "Revision of previous sheets"
           , spec = Worksheet "sheet09.pdf"
-          , materials = sheets 9 -- ++ answers 9
+          , materials = []
           }
       , Entry
           { title = "Sheet of Death"
