@@ -498,7 +498,7 @@ functionalPage =
       , Entry
           { title = "Functor, Applicative, and Monad"
           , spec = Worksheet "sheet09.pdf"
-          , materials = sheets 9 -- ++ answers 9
+          , materials = sheets 9 ++ answers 9
           }
       ]
 
