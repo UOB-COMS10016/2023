@@ -513,6 +513,8 @@ functionalPage =
               }
           , materials =
               [ note' "COMS10016-Mock.pdf"
+              , code "Mock.hs"
+              , note' "SamMock.pdf"
               -- , note' "COMS10016-Mock-answers.pdf"
               ]
           }
