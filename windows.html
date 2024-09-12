@@ -98,9 +98,9 @@ It is your responsibility to keep your personal system and passwords safe.
   <li>Whenever using VSCode, make sure you're using a WSL window. The easiest way to do that is to look in the bottom-left corner of the window. If it's using WSL, it will say "WSL: Ubuntu". If it doesn't say that, click it and select one of the commands to open a WSL Window, e.g. "New WSL Window" or "Reopen Folder in WSL" if you have a folder open already. For more detailed information, see: <a href="https://code.visualstudio.com/docs/remote/wsl" target="_blank">Developing in WSL</a></li>
   <li>You can open an Ubuntu/WSL terminal from within a VSCode WSL window with "Terminal -> New Terminal" or Ctrl + Shift + `</li>
   <li>Make sure your VSCode window is in WSL mode, then open and install the "Haskell" extension by pressing Ctrl + P and entering "ext install haskell.haskell". It's important you do this in a WSL window, because it relies on GHCup, which is installed on WSL, not on Windows.</li>
-  <li>Test HLS is working by creating a new Haskell file named "test.hs" (e.g. with "File -> New File" and naming it "test.hs"). This should give you a prompt saying "How do you want the extension to manage/discover HLS and the relevant toolchain?". Select "Automatically via GHCup".</li>
+  <li>Test HLS is working by creating a new Haskell file named "test.hs" (e.g. with "File -> New File" and naming it "test.hs"). This might give you a prompt saying "How do you want the extension to manage/discover HLS and the relevant toolchain?". Select "Automatically via GHCup".</li>
   <li>If it says "Need to download stack, continue?", you can safely select either "Yes" or "No". We will not be using stack either way, but you may want to say "Yes" just to make the popup go away.</li>
-  <li>In "test.hs", start typing some invalid Haskell code, e.g. "x = True && 'c'". If HLS is working, you should see that VSCode underlines the error.</li>
+  <li>In "test.hs", start typing some invalid Haskell code, e.g. <code>x = True && 'c'</code>. If HLS is working, you should see that VSCode underlines the error. You might need to give it a little bit of time to load.</li>
 </ul>
 
 <hr/>
