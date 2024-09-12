@@ -66,14 +66,14 @@ If all of that fails, as a last resort install 'Xcode' from the App Store on you
 <h2>INSTALL HASKELL, QUICKCHECK, and HLS</h2>
 
 <ul>
-  <li><b>Apple silicon Macs only</b> (to check if your Mac uses Apple silicon, see: <a href="https://support.apple.com/en-gb/HT211814" target="_blank">Mac computers with Apple silicon</a>) :
+  <!-- <li><b>Apple silicon Macs only</b> (to check if your Mac uses Apple silicon, see: <a href="https://support.apple.com/en-gb/HT211814" target="_blank">Mac computers with Apple silicon</a>) :
     <ul>
       <li>In a terminal, run <code>brew install llvm@14</code> (It has to be version 14, because version 15 makes a breaking API change which GHC has not caught up with at the time of writing, see: <a href="https://gitlab.haskell.org/ghc/ghc/-/issues/21936" target="_blank">GHC Issue #21936</a>)</li>
       <li>Run <code>echo 'export PATH="/opt/homebrew/opt/llvm@14/bin:$PATH"' >> ~/.zshrc</code></li>
       <li>Restart terminal.</li>
     </ul>
 
-  </li>
+  </li> -->
    
   <li>In a terminal, run <code>curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh</code></li>
   
