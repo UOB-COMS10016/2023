@@ -52,9 +52,15 @@ If all of that fails, as a last resort install 'Xcode' from the App Store on you
 
 <ul>
   <li>In a terminal, run <code>brew</code> to check if the <a href="https://brew.sh" target="_blank">Homebrew</a> package manager is already installed.
-  <li>If a 'command not found' error is shown, run the following command in your terminal and follow the instructions, including the commands it tells you to run in the "Next steps" section after the installation finishes:<br/>
+  <li>If a 'command not found' error is shown, run the following command in your terminal and follow the instructions:<br/>
     <code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code></li>
   <li>If you encounter a permissions issue on your device you may want to check out this <a href="https://gist.github.com/irazasyed/7732946" target="_blank">discussion</a>.</li>
+  <li>In case you missed them, run the commands in the "Next steps" section after the installation finishes, which are:
+    <ol>
+      <li><code>(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> ~/.zprofile</code></li>
+      <li><code>eval "$(/opt/homebrew/bin/brew shellenv)"</code></li>
+    </ol>
+  </li>
   <li>Run:
     <ol>
       <li><code>brew update</code></li>
