@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
+
+<head>
+<meta name="style" content="cs" />
+<title>University of Bristol - Computer Science - COMS10016: Imperative and Functional Programming</title>
+<link rel="stylesheet" type="text/css" href="corporate.css">
+<link rel="stylesheet" type="text/css" href="uob.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/9.9.0/styles/xcode.min.css"/>
+<script src="https://cdn.jsdelivr.net/highlight.js/9.9.0/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/highlight.js/9.9.0/languages/cpp.min.js"></script>
+<script>
+  addEventListener('load', start);
+  function start() {
+    var pres = document.querySelectorAll("pre");
+    for (var i in pres) hljs.highlightBlock(pres[i]);
+  }
+</script>
+<style>
+  body { font-size: 120%; }
+  pre, .indent { margin-left: 40px; }
+  details[open] { background-color: #cfc; }
+  body { counter-reset: step; }
+  h2::before { counter-increment: step; content: "Step " counter(step) ": "; }
+</style>
+</head>
+<body bgcolor="#EEEEFF" style="margin:0; padding:30px;">
+
+<div align="center"><img src="win.jpg" width="100px"><br/>COMS10016 | Week 01 | Preparation<br/><h1>SYSTEM SETUP FOR WINDOWS 10 or 11</h1></div>
+
+This is a brief tutorial on how to setup your personal Windows 10 or 11 64bit Home or Professional system to be ready for the COMS10016 unit. 
+The below steps represent one out of many ways of setting up your Windows 10 or 11 system for the unit. Before you start make sure Windows 10 or 11 is up-to-date with respect to updates and features. 
+It is your responsibility to keep your personal system and passwords safe.
+
+<h2>TROUBLESHOOTING TIPS</h2>
+
+If you have any problems while installing, try these tips:
+
+<ul>
+<li><b>Reread the steps closely:</b> It's easy to skim instructions and assume you know what they're saying, but if you run into problems, make sure to <i>actually</i> read them. You might have missed something important.</li>
+<li><b>Turn it off and on again:</b> It might seem silly, but this works ~90% of the time because <i>initialising</i> a program with a valid state is much easier than <i>maintaining</i> a valid state. This could mean restarting a program, the terminal, or even your laptop.</li>
+<li><b>Try using a different WiFi network:</b> The most annoying problems are caused by the network, which can be particularly unreliable when 200-300 students are all trying to download a lot of data at the same time in the same place. Try switching from 'eduroam' to 'UoB Guest' (or vice versa), or even using a mobile hotspot if you have a particularly generous data plan (you will need to download gigabytes of data for this setup). You could also try doing the setup in a different place and/or at a different time. There's always the second lab, which should have fewer people.</li>
+<li><b>Check your firewall/antivirus/VPN:</b> It could be that your firewall, antivirus, or VPN is blocking network requests. Try temporarily disabling them to see if they're causing the problem. Third-party antivirus software is particularly bad for this sort of thing. The built-in Windows Defender is much better than most other antiviruses and it's less invasive too. In fact, you should probably go ahead and delete your third-party antivirus, it's almost certainly bloatware. If you have McAfee, you should nuke it from orbit.</li>
+<li><b>Ask a TA for help:</b> That's what they're there for! They might not know the solution immediately, especially if none of the above helped, but they can help you try to diagnose the problem and work towards a solution.</li>
+</ul>
+
+<h2>CHECK SYSTEM COMPATIBILITY</h2>
+<ul>
+<li>Windows search "about" (i.e. hold the Windows key down and simultaneously press "s" so the Windows search bar appears, then type "about" into the search bar).</li>
+<li>Click "About your PC" in the results and the system specifications window should open.</li>
+<li>Your system is compatible only if:</li>
+  <ul>
+    <li>Your "System type" is "64-bit operating system, x64-based processor".</li>
+    <li>Your system is not in S-Mode and your "Edition" is either "Windows 10 Home" or "Windows 10 Professional" or "Windows 11 Home" or "Windows 11 Professional" without "S Mode". If you need to switch out of S-Mode, follow the instructions on the <a href="https://support.microsoft.com/en-gb/help/4456067/windows-10-switch-out-of-s-mode" target="_blank">Microsoft Support Page</a>.</li>
+    <li>If you use Windows 10 then "Version" must be at least 2004, including 20H2, 20H2, 21H1, 21H2. Version 1909 and before are unsupported. If you are running Version 1909 or earlier, you must update your system by going to "Settings -> Update & Security -> Windows Update", then checking for updates and installing any that are available.</li>
+  </ul>
+</ul> 
+
+
+<h3>ACTIVATE WSL2 (WINDOWS SUBSYSTEM FOR LINUX) IN WINDOWS 10 or 11</h3>
+
+<ul>
+  <li>Windows search "powershell".</li> 
+  <li>Right-click "Windows PowerShell" (<strong>not</strong> "Windows Powershell (x86)") and click "Run as administrator".</li> 
+  <li>Click yes on the consent prompt and an elevated PowerShell will open.</li>
+  <li>In PowerShell, run <code>wsl --set-default-version 2</code> (i.e. type "wsl --set-default-version 2" and press enter), then run <code>wsl --install -d Ubuntu</code>. If PowerShell can't find the <code>wsl</code> command, make sure your Windows is fully updated, then try again. If it still isn't there, make sure PowerShell is in 64-bit mode by running <code>[Environment]::Is64BitProcess</code> (which will return "True" if it is and "False" if it isn't). </li>
+  <li>Once the command finishes, restart your computer (unless an Ubuntu window opens immediately, in which case just continue to the next step).</li>
+  <li>Soon after your computer reboots, an Ubuntu window should open and complete the installation process. This may take a few minutes.</li>
+  <li>Once the installation is complete, you will be prompted to enter a UNIX username and password in the Ubuntu window. Make sure you remember them. You can use any username, but many people just use their name in lowercase (eg. "tilo"). <strong>Important:</strong> When you enter your password it won't display any characters as you type. <strong>This is not a bug, your password is still being entered.</strong></li>
+  <li>Update Ubuntu by running <code>sudo apt update</code> (this checks for upgrades), then <code>sudo apt upgrade</code> (this installs the upgrades). When asked "Do you want to continue? [Y/n]", press enter to select the default "Y"/"Yes" option, and wait for the upgrade to complete. [Side note: <code>apt</code> is a "package manager", which does what it says on the tin and manages packages/software on your system. <code>sudo</code> stands for "SuperUser DO" and you add it to the front of a command to run that command as the superuser (a.k.a. administrator or "root").]</li>
+  <li>Your Ubuntu files are stored in a separate filesystem to your Windows files, which makes difficult to access from Windows (and you shouldn't try to). However, you can access your Windows C drive from Ubuntu by going to the "/mnt/c" directory in the Ubuntu terminal (if your Windows is on the D drive, it would be "/mnt/d" instead etc.). For convenience, you can create a "symbolic link" (similar to a shortcut) from your Linux home directory to your Windows files by running: <code>ln -s /mnt/c/Users/[insert your Windows username here]/Documents ~/WindowsDocuments</code> (e.g. <code>ln -s /mnt/c/Users/tilo/Documents ~/WindowsDocuments</code>)</li>
+  <li>Whenever you want to open a new Ubuntu terminal, you can Windows search "Ubuntu" and click the Ubuntu application.</li>
+</ul>
+
+<h2>INSTALL THE CLANG COMPILER</h2>
+
+<ul>
+  <li>In an Ubuntu terminal, run <code>sudo apt install clang</code></li>
+</ul>
+
+<h2>INSTALL HASKELL, QUICKCHECK, and HLS</h2>
+
+
+<ul>
+<li>In an Ubuntu terminal, first install the dependencies for GHCup by running <code>sudo apt install build-essential curl libffi-dev libffi8 libgmp-dev libgmp10 libncurses-dev libncurses5 libtinfo5</code></li>
+
+<li>Once that's done, run <code>curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh</code></li>
+
+<li>Press enter to proceed</li>
+<li>When asked about adding the required PATH variable to .bashrc, select "Yes, prepend" by typing "P" and pressing enter. [Side note: Your PATH variable contains a list of directories your terminal will look through to find executables, e.g. when you use <code>curl</code> as a command, your terminal looks for an executable named "curl" in those directories. GHCup creates a new directory where it will put executables, so this has to be added to your PATH if you want to use them in your terminal.]</li>
+<li>When asked about installing haskell-language-server, select "Yes" by entering "Y".</li>
+<li>When asked about enabling better integration of stack, select "Yes" by entering "Y".</li>
+<li>Press enter to proceed and wait for the installation to finish.</li>
+<li>This will install <code>ghc</code> (the Haskell compiler), <code>ghci</code> (the Haskell <a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop" target="_blank">REPL</a>), <code>cabal</code> (a Haskell package manager), and the Haskell Language Server (a.k.a. HLS, which adds <a href="https://en.wikipedia.org/wiki/Integrated_development_environment" target="_blank">IDE</a> support for Haskell)</li>
+<li>Close and reopen your Ubuntu terminal so the updated PATH variable in .bashrc can take effect, giving you access to the programs you just installed.</li>
+<li>Check they're working by running <code>ghc --version</code>, <code>cabal --version</code>, and <code>haskell-language-server-wrapper --version</code>. If they've installed correctly, each of these commands should print out version information.</li>
+<li>Update cabal's package list by running <code>cabal update</code></li>
+<li>Install QuickCheck by running <code>cabal install --lib QuickCheck</code></li>
+
+</ul>
+
+<h2>INSTALL THE VSCODE EDITOR</h2>
+<ul>
+  <li>go to <a href="https://code.visualstudio.com/" target="_blank">https://code.visualstudio.com/</a>
+  <li>download and run the installer for <b>Windows</b></li>
+  <li>During installation, under the Additional Tasks step, ensure all the checkboxes under "Other:" are checked.</li>
+  <li>Once VSCode is installed, open it.</li>
+  <li>Install the "Remote - WSL" extension by pressing Ctrl + P and then entering "ext install ms-vscode-remote.remote-wsl".</li>
+  <li>Whenever using VSCode, make sure you're using a WSL window. The easiest way to do that is to look in the bottom-left corner of the window. If it's using WSL, it will say "WSL: Ubuntu". If it doesn't say that, click it and select one of the commands to open a WSL Window, e.g. "New WSL Window" or "Reopen Folder in WSL" if you have a folder open already. For more detailed information, see: <a href="https://code.visualstudio.com/docs/remote/wsl" target="_blank">Developing in WSL</a></li>
+  <li>You can open an Ubuntu/WSL terminal from within a VSCode WSL window with "Terminal -> New Terminal" or Ctrl + Shift + `</li>
+  <li>Make sure your VSCode window is in WSL mode, then open and install the "Haskell" extension by pressing Ctrl + P and entering "ext install haskell.haskell". It's important you do this in a WSL window, because it relies on GHCup, which is installed on WSL, not on Windows.</li>
+  <li>Test HLS is working by creating a new Haskell file named "test.hs" (e.g. with "File -> New File" and naming it "test.hs"). This might give you a prompt saying "How do you want the extension to manage/discover HLS and the relevant toolchain?". Select "Automatically via GHCup".</li>
+  <li>If it says "Need to download stack, continue?", you can safely select either "Yes" or "No". We will not be using stack either way, but you may want to say "Yes" just to make the popup go away.</li>
+  <li>In "test.hs", start typing some invalid Haskell code, e.g. <code>x = True && 'c'</code>. If HLS is working, you should see that VSCode underlines the error. You might need to give it a little bit of time to load.</li>
+</ul>
+
+<hr/>
+
+At this point your system is ready for most of the COMS10016 unit and you are ready to start programming in C and Haskell. Further installations
+are optional at the beginning of the unit. However, during the last part of the unit we will use graphics, and for this we will need the SDL2 graphics libraries 
+and a Linux desktop environment...
+
+
+<h2>INSTALL THE SDL2 DEVELOPMENT PACKAGE</h2>
+<ul>
+  <li>In an Ubuntu terminal, run <code>sudo apt install libsdl2-dev</code></li>
+</ul>
+
+<h2>INSTALL THE VCXSRV WINDOWS X-SERVER</h2>
+<ul>
+<li>Open a web browser and go to <a href="https://sourceforge.net/projects/vcxsrv/files/latest/download" target="_blank">https://sourceforge.net/projects/vcxsrv/files/latest/download</a> to download the installer</li> 
+<li>Run the installer</li>
+<li>If your windows administrator password is required, provide it and press enter to confirm</li>
+<li>The installation window should open. Click "Next", then "Install", and finally "Close".</li>  
+</ul>
+
+<h2>INSTALL THE LXDE LINUX DESKTOP</h2>
+<ul>
+<li>In an Ubuntu terminal, run <code>sudo apt install lxde</code></li>
+<li>If asked which display manager to use, select "lightdm"</li>
+<li>After some significant installation time, the LXDE Linux desktop should be installed</li>
+</ul>
+
+<h2>RUNNING THE LINUX DESKTOP AND CHECKING SDL2</h2>
+<ul>
+<li>Windows search "xlaunch" and click on "XLaunch" in the results. A display settings window should open.</li>
+<li>Select "One large window" and click "Next".</li>
+<li>Select "Start no client" and click "Next".</li>
+<li>Make sure "Clipboard", "Primary Selection", "Native opengl", and "Disable access control" are ticked, then click "Next".</li>
+<li>Click "Finish" and a black VcXsrv window should open</li>
+<li>If you get a security alert saying "Windows Defender Firewall has blocked some features of VcXsrv windows xserver on all public and private networks", under "Allow VcXsrv windows xserver to communicate on these networks:", make sure "Private networks" and "Public networks" are checked, then click "Allow access". Ideally this wouldn't be necessary, but it's been an <a href="https://github.com/microsoft/WSL/issues/4139" target="_blank">open issue since 2019</a>.</li>
+<li>In an Ubuntu terminal, run <code>export DISPLAY=$(grep -m 1 nameserver /etc/resolv.conf | awk '{print $2}'):0</code></li>
+<li>Run <code>export LIBGL_ALWAYS_INDIRECT=1</code></li>
+<li>Run <code>startlxde</code></li>
+<li>A Linux desktop should appear in the VcXsrv window</li>
+<li>Open a terminal on the Linux desktop by going to "System Tools" and selecting "LXTerminal"</li>
+<li>Download the program <a href="hellosdl.c" target="_blank">hellosdl.c</a> and save it into a new folder, e.g. you could make a folder called "SDL-Test" in your local "Documents" folder and save it there.</li>
+<li>In your Ubuntu terminal, change directory to folder where you just saved the file, e.g. if you saved it in "Documents\SDL-Test" and you set up the "WindowsDocuments" symlink earlier, you could run <code>cd ~/WindowsDocuments/SDL-Test</code>
+<li>Compile the program in that folder by running <code>clang -std=c11 -Wall hellosdl.c -I /usr/include/SDL2 -l SDL2 -o hellosdl</code> , where the 'I' (uppercase i) in <code>-I /usr/include/SDL2</code> stands for "Include" and the 'l' (lowercase L) in <code>-l SDL2</code> stands for "link".</li>
+<li>Run the compiled program by running <code>./hellosdl</code> - if you see a sky blue window appear then SDL2 is working properly!</li>
+<li>Note that some parts of the SDL library unfortunately have memory leaks, but there's nothing you can do about them, so don't be alarmed if you see some warnings.</li>
+</ul>
+</body>
+</html>

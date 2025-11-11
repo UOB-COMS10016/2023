@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
+
+<head>
+<meta name="style" content="cs" />
+<title>University of Bristol - Computer Science - COMS10016: Imperative and Functional Programming</title>
+<link rel="stylesheet" type="text/css" href="corporate.css">
+<link rel="stylesheet" type="text/css" href="uob.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/9.9.0/styles/xcode.min.css"/>
+<script src="https://cdn.jsdelivr.net/highlight.js/9.9.0/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/highlight.js/9.9.0/languages/cpp.min.js"></script>
+<script>
+  addEventListener('load', start);
+  function start() {
+    var pres = document.querySelectorAll("pre");
+    for (var i in pres) hljs.highlightBlock(pres[i]);
+  }
+</script>
+<style>
+  body { font-size: 120%; }
+  pre, .indent { margin-left: 40px; }
+  details[open] { background-color: #cfc; }
+  body { counter-reset: step; }
+  h2::before { counter-increment: step; content: "Step " counter(step) ": "; }
+</style>
+</head>
+<body bgcolor="#EEEEFF" style="margin:0; padding:30px;">
+
+<div align="center"><img src="linux.jpg" width="100px"><br/>COMS10016 | Week 01 | Preparation<br/><h1>SYSTEM SETUP FOR UBUNTU LINUX</h1></div>
+
+This is a brief tutorial on how to setup your personal Linux Ubuntu system to be ready for the COMS10016 unit. 
+The below steps represent one out of many ways of setting up your system for the unit. Before you start make sure your system is up-to-date with respect to updates and features. 
+It is your responsibility to keep your personal system and passwords safe.
+
+<h2>TROUBLESHOOTING TIPS</h2>
+
+If you have any problems while installing, try these tips:
+
+<ul>
+<li><b>Reread the steps closely:</b> It's easy to skim instructions and assume you know what they're saying, but if you run into problems, make sure to <i>actually</i> read them. You might have missed something important.</li>
+<li><b>Turn it off and on again:</b> It might seem silly, but this works ~90% of the time because <i>initialising</i> a program with a valid state is much easier than <i>maintaining</i> a valid state. This could mean restarting a program, the terminal, or even your laptop.</li>
+<li><b>Try using a different WiFi network:</b> The most annoying problems are caused by the network, which can be particularly unreliable when 200-300 students are all trying to download a lot of data at the same time in the same place. Try switching from 'eduroam' to 'UoB Guest' (or vice versa), or even using a mobile hotspot if you have a particularly generous data plan (you will need to download gigabytes of data for this setup). You could also try doing the setup in a different place and/or at a different time. There's always the second lab, which should have fewer people.</li>
+<li><b>Check your firewall/antivirus/VPN:</b> It could be that your firewall, antivirus, or VPN is blocking network requests. Try temporarily disabling them to see if they're causing the problem.</li>
+<li><b>Ask a TA for help:</b> That's what they're there for! They might not know the solution immediately, especially if none of the above helped, but they can help you try to diagnose the problem and work towards a solution.</li>
+</ul>
+
+<h2>INSTALL THE CLANG COMPILER</h2>
+<ul>
+<li>Right-click on the desktop and click on "Open Terminal", a Linux terminal window will open</li>
+<li>Update Ubuntu by running <code>sudo apt update</code> (this checks for upgrades), then <code>sudo apt upgrade</code> (this installs the upgrades). When asked "Do you want to continue? [Y/n]", press enter to select the default "Y"/"Yes" option, and wait for the upgrade to complete. [Side note: <code>apt</code> is a "package manager", which does what it says on the tin and manages packages/software on your system. <code>sudo</code> stands for "SuperUser DO" and you add it to the front of a command to run that command as the superuser (a.k.a. administrator or "root").]</li>
+<li>If asked, enter the administrator password</li>
+<li>In case you are queried about disk usage during the installation type "Y" and press enter to confirm</li>
+<li>Once ready, run <code>sudo apt install clang</code></li>
+</ul>
+
+<h2>INSTALL HASKELL, QUICKCHECK, and HLS</h2>
+
+<ul>
+  <li>In a terminal, first install the dependencies for GHCup by running <code>sudo apt install build-essential curl libffi-dev libffi8 libgmp-dev libgmp10 libncurses-dev libncurses5 libtinfo5</code></li>
+  
+  <li>Once that's done, run <code>curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh</code></li>
+  
+  <li>Press enter to proceed</li>
+  <li>When asked about adding the required PATH variable to .bashrc, select "Yes, prepend" by typing "P" and pressing enter. [Side note: Your PATH variable contains a list of directories your terminal will look through to find executables, e.g. when you use <code>curl</code> as a command, your terminal looks for an executable named "curl" in those directories. GHCup creates a new directory where it will put executables, so this has to be added to your PATH if you want to use them in your terminal.]</li>
+  <li>When asked about installing haskell-language-server, select "Yes" by entering "Y".</li>
+  <li>When asked about enabling better integration of stack, select "Yes" by entering "Y".</li>
+  <li>Press enter to proceed and wait for the installation to finish.</li>
+  <li>This will install <code>ghc</code> (the Haskell compiler), <code>ghci</code> (the Haskell <a href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop" target="_blank">REPL</a>), <code>cabal</code> (a Haskell package manager), and the Haskell Language Server (a.k.a. HLS, which adds <a href="https://en.wikipedia.org/wiki/Integrated_development_environment" target="_blank">IDE</a> support for Haskell)</li>
+  <li>Close and reopen your terminal so the updated PATH variable in .bashrc can take effect, giving you access to the programs you just installed.</li>
+  <li>Check they're working by running <code>ghc --version</code>, <code>cabal --version</code>, and <code>haskell-language-server-wrapper --version</code>. If they've installed correctly, each of these commands should print out version information.</li>
+  <li>Update cabal's package list by running <code>cabal update</code></li>
+  <li>Install QuickCheck by running <code>cabal install --lib QuickCheck</code></li>
+  
+  <li>Note: if you have any further installation issues, the Teaching Assistants (TAs) will be there in the first lab to help you with this in the setup labs.</li>
+</ul>
+
+<h2>INSTALL THE VSCODE EDITOR</h2>
+
+<ul>
+  <li>Open Ubuntu Software Center</li>
+  <li>Search for 'vscode'</li>
+  <li>Select the 'code' result</li>
+  <li>Click install and enter your password</li>
+  <li>For alternative installation methods, see: <a href="https://code.visualstudio.com/docs/setup/linux" target="_blank">https://code.visualstudio.com/docs/setup/linux</a></li>
+  <li>Open a VSCode window.</li>
+  <li>Install the "Haskell" extension by pressing Ctrl + P and entering "ext install haskell.haskell".</li>
+  <li>Test HLS is working by creating a new Haskell file named "test.hs" (e.g. with "File -> New File" and naming it "test.hs"). This might give you a prompt saying "How do you want the extension to manage/discover HLS and the relevant toolchain?". Select "Automatically via GHCup".</li>
+  <li>If it says "Need to download stack, continue?", you can safely select either "Yes" or "No". We will not be using stack either way, but you may want to say "Yes" just to make the popup go away.</li>
+  <li>In "test.hs", start typing some invalid Haskell code, e.g. <code>x = True && 'c'</code>. If HLS is working, you should see that VSCode underlines the error. You might need to give it a little bit of time to load.</li>
+</ul>
+
+<hr/>
+
+At this point your system is ready for most of the COMS10016 unit and you are ready to start programming in C and Haskell. Further installations
+are optional at the beginning of the unit. However, during the last part of the unit we will use graphics, and for this we will need the SDL2 graphics libraries.
+
+<h2>INSTALL THE SDL2 DEVELOPMENT PACKAGE</h2>
+
+<ul>
+  <li>In a terminal, run <code>sudo apt install libsdl2-dev</code></li>
+</ul>
+
+<h2>CHECK SDL2 GRAPHICS</h2>
+
+<ul>
+  <li>Download the program <a href="hellosdl.c" target="_blank">hellosdl.c</a> and save it into a new folder, e.g. you could make a folder with <code>mkdir ~/SDL-Test</code> and save it there.</li>
+  <li>In your terminal, change directory to folder where you just saved the file, e.g. if you saved it in "~/SDL-Test" you could run <code>cd ~/SDL-Test</code>
+  <li>Compile the program in that folder by running <code>clang -std=c11 -Wall hellosdl.c -I /usr/include/SDL2 -l SDL2 -o hellosdl</code> , where the 'I' (uppercase i) in <code>-I /usr/include/SDL2</code> stands for "Include" and the 'l' (lowercase L) in <code>-l SDL2</code> stands for "link".</li>
+  <li>Run the compiled program by running <code>./hellosdl</code> - if you see a sky blue window appear then SDL2 is working properly!</li>
+  <li>Note that some parts of the SDL library unfortunately have memory leaks, but there's nothing you can do about them, so don't be alarmed if you see some warnings.</li>
+</ul>
+</body>
+</html>

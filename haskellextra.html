@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-gb" lang="en-gb">
+
+<head>
+<meta name="style" content="cs" />
+<title>University of Bristol - Computer Science - COMS10016: Imperative and Functional Programming</title>
+<link rel="stylesheet" type="text/css" href="corporate.css">
+<link rel="stylesheet" type="text/css" href="uob.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/highlight.js/9.9.0/styles/xcode.min.css"/>
+<script src="https://cdn.jsdelivr.net/highlight.js/9.9.0/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/highlight.js/9.9.0/languages/cpp.min.js"></script>
+<script>
+  addEventListener('load', start);
+  function start() {
+    var pres = document.querySelectorAll("pre");
+    for (var i in pres) hljs.highlightBlock(pres[i]);
+  }
+</script>
+<style>
+  body { font-size: 120%; }
+  pre, .indent { margin-left: 40px; }
+  details[open] { background-color: #cfc; }
+  body { counter-reset: step; }
+  h2::before { counter-increment: step; content: "Step " counter(step) ": "; }
+</style>
+</head>
+<body bgcolor="#EEEEFF" style="margin:0; padding:30px;">
+
+<h2>ALTERNATIVE INSTALLATION FOR HASKELL AND QUICKCHECK (only if main route does not work)</h2>
+<ul>
+<li>right-click on the desktop and click on "Open Terminal", a Linux terminal window will open</li>
+<li>type "sudo apt update", then press enter and the update process will begin</li>
+<li>in case you are queried about disk usage during the installation type "Y" and press enter to confirm</li>
+<li>once ready, type "sudo apt install haskell-platform", then press enter and the installation will begin</li>
+<li>in case you are queried about disk usage during the installation type "Y" and press enter to confirm</li>
+<li>once ready, type "cabal update", then press enter and another rather long (wait for it) update process will begin</li>
+<li>once finished, type "cabal install QuickCheck", then press enter and the installation will begin</li>
+<li>in case you are queried about disk usage during the installation type "Y" and press enter to confirm</li>
+<li>once ready, the Haskell platform and QuickCheck should be installed</li>
+<li>type "exit" and press enter to close the Linux terminal window</li>
+Note: once you verify that GHCi is running, you can use the :q command to exit it and go back to the command prompt.<br/>
+(Only if this Step is also unsuccessful, see <a href="https://gist.github.com/lambdabetaeta/714b221f7ef9c85269c7b8d98607a3d0" target="_blank">other alternatives</a>.)
+</ul>
+</body>
+</html>
